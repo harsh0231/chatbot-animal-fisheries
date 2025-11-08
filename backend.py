@@ -27,6 +27,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import threading
 from dotenv import load_dotenv
+import google.generativeai as genai
 
 # Load environment variables from chatbott-specific .env file
 # Explicitly use chatbott/.env, NOT the parent directory .env
@@ -101,11 +102,22 @@ DB_CONFIG = {
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
 GPT_MODEL = "gpt-4o"
 
-# Ollama configuration (for intent extraction and answer generation)
+# Gemini API configuration for answer generation
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+if GEMINI_API_KEY:
+    genai.configure(api_key=GEMINI_API_KEY)
+    ANSWER_GENERATOR_MODEL = "gemini-2.5-flash"
+    FAST_MODEL = "gemini-2.5-flash"
+else:
+    logger.warning("GEMINI_API_KEY not found in environment variables. Using Ollama fallback.")
+    # Ollama configuration (fallback)
+    OLLAMA_BASE_URL = "http://localhost:11434/api"
+    ANSWER_GENERATOR_MODEL = "llama3:latest"
+    FAST_MODEL = "llama3:latest"
+
+# Ollama configuration (for fallback if Gemini is unavailable)
 OLLAMA_BASE_URL = "http://localhost:11434/api"
 SQL_GENERATOR_MODEL = "gpt-4o"  # Using GPT-4o instead of qwen2.5-coder
-ANSWER_GENERATOR_MODEL = "llama3:latest"
-FAST_MODEL = "llama3:latest"
 
 # Evaluation logging configuration (REFINEMENT 6)
 EVAL_LOG_PATH = os.path.join(os.path.dirname(__file__), "evaluation_logs.jsonl")
@@ -2751,6 +2763,48 @@ def call_ollama(model: str, prompt: str, temperature: float = 0.3, stream: bool 
         logger.error(f"Ollama API error: {str(e)}")
         raise Exception(f"Ollama API error: {str(e)}")
 
+def call_gemini(model: str, prompt: str, temperature: float = 0.3, stream: bool = False):
+    """Call Google Gemini API - returns full text or yields streaming tokens"""
+    logger.debug(f"Calling Gemini API with model: {model}, temperature: {temperature}, stream: {stream}")
+    try:
+        genai_model = genai.GenerativeModel(model)
+
+        if not stream:
+            # Non-streaming: return full response
+            response = genai_model.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    temperature=temperature,
+                    max_output_tokens=512,
+                    top_p=0.85,
+                    top_k=40
+                )
+            )
+            result = response.text.strip() if response.text else ""
+            logger.debug(f"Gemini API response received, length: {len(result)}")
+            return result
+        else:
+            # Streaming: yield tokens as they arrive
+            def token_generator():
+                response = genai_model.generate_content(
+                    prompt,
+                    generation_config=genai.types.GenerationConfig(
+                        temperature=temperature,
+                        max_output_tokens=512,
+                        top_p=0.85,
+                        top_k=40
+                    ),
+                    stream=True
+                )
+                for chunk in response:
+                    if chunk.text:
+                        yield chunk.text
+            return token_generator()
+
+    except Exception as e:
+        logger.error(f"Gemini API error: {str(e)}")
+        raise Exception(f"Gemini API error: {str(e)}")
+
 # ============================================================================
 # Main SQL Generation with all improvements integrated
 # ============================================================================
@@ -3537,7 +3591,7 @@ def yield_json_line(stage: str, **data) -> str:
     return json.dumps(payload, default=str) + "\n"
 
 def generate_thinking_message(question: str) -> str:
-    """Generate an engaging, conversational thinking message using fast model"""
+    """Generate an engaging, conversational thinking message using fast model (Gemini or Ollama)"""
     prompt = f"""Generate a friendly, engaging response showing you're analyzing the question. Write 2-3 lines (60-90 words) that feels natural.
 
 Examples:
@@ -3550,7 +3604,12 @@ User question: {question}
 Response (2-3 lines only):"""
 
     try:
-        thinking_text = call_ollama(FAST_MODEL, prompt, temperature=0.8)
+        # Use Gemini if available, fall back to Ollama
+        if GEMINI_API_KEY:
+            thinking_text = call_gemini(FAST_MODEL, prompt, temperature=0.8)
+        else:
+            thinking_text = call_ollama(FAST_MODEL, prompt, temperature=0.8)
+
         thinking_text = thinking_text.strip()
         if len(thinking_text) > 200:
             thinking_text = thinking_text[:200].rstrip() + "..."
@@ -3615,15 +3674,25 @@ async def chat(request: ChatRequest):
                     # Build answer prompt
                     answer_prompt = build_answer_prompt(question, insights, data_summary, language)
 
-                    # Get streaming token generator
-                    token_stream = await asyncio.to_thread(
-                        lambda: call_ollama(
-                            ANSWER_GENERATOR_MODEL,
-                            answer_prompt,
-                            temperature=0.5,
-                            stream=True
+                    # Get streaming token generator (Gemini or Ollama)
+                    if GEMINI_API_KEY:
+                        token_stream = await asyncio.to_thread(
+                            lambda: call_gemini(
+                                ANSWER_GENERATOR_MODEL,
+                                answer_prompt,
+                                temperature=0.5,
+                                stream=True
+                            )
                         )
-                    )
+                    else:
+                        token_stream = await asyncio.to_thread(
+                            lambda: call_ollama(
+                                ANSWER_GENERATOR_MODEL,
+                                answer_prompt,
+                                temperature=0.5,
+                                stream=True
+                            )
+                        )
 
                     full_answer = ""
                     for token in token_stream:
