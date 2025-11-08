@@ -1580,7 +1580,7 @@
                     <div class="hero-logo-aura"></div>
                     <div class="hero-logo-ring"></div>
                     <div class="hero-logo-image">
-                        <img src="http://localhost:8000/static/logo.jpg" alt="Bihar Logo">
+                        <img src="/static/logo.jpg" alt="Bihar Logo">
                     </div>
                     <div class="hero-logo-shine"></div>
                 </div>
@@ -1627,11 +1627,11 @@
         const clearBtn = document.getElementById('clear-btn');
         const langButtons = document.querySelectorAll('.lang-btn');
 
-        const API_URL = 'http://localhost:8000/chat';
+        const API_URL = '/chat';
 
         // Back button function to return to dashboard
         function goBackToDashboard() {
-            window.location.href = 'http://localhost:8000';
+            window.location.href = '/';
         }
 
         // Language selector
@@ -2441,7 +2441,7 @@
                 };
 
                 // Send request to backend
-                const response = await fetch('http://localhost:8000/download-report', {
+                const response = await fetch('/download-report', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -2585,7 +2585,7 @@
             if (!container) return;
 
             try {
-                const response = await fetch('http://localhost:8000/visualize', {
+                const response = await fetch('/visualize', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -2638,7 +2638,7 @@
             chartContainer.innerHTML = '<div class="visualization-loading"><div class="spinner"></div><span>Generating visualization...</span></div>';
 
             try {
-                const response = await fetch('http://localhost:8000/visualize', {
+                const response = await fetch('/visualize', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
