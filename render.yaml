@@ -1,0 +1,55 @@
+services:
+  - type: web
+    name: chatbot-animal-fisheries
+    env: python
+    plan: standard
+
+    # Build configuration
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn backend:app --host 0.0.0.0 --port $PORT
+
+    # Python version
+    pythonVersion: 3.11
+
+    # Environment variables
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+      - key: ENV
+        value: production
+      - key: API_HOST
+        value: 0.0.0.0
+      - key: API_PORT
+        value: $PORT
+
+      # Database Configuration - Set these in Render Dashboard
+      - key: CHATBOT_DB_HOST
+        sync: false
+      - key: CHATBOT_DB_USER
+        sync: false
+      - key: CHATBOT_DB_PASSWORD
+        sync: false
+      - key: CHATBOT_DB_DATABASE
+        sync: false
+      - key: CHATBOT_DB_PORT
+        value: "3306"
+
+      # API Keys - Set these in Render Dashboard (NEVER commit these)
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+
+      # CORS Configuration
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: ALLOW_CREDENTIALS
+        value: "false"
+
+    # Health check
+    healthCheckPath: /health
+
+    # Autoscaling (optional - adjust based on needs)
+    autoDeploy: true
