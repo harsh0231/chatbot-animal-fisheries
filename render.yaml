@@ -2,7 +2,7 @@ services:
   - type: web
     name: chatbot-animal-fisheries
     env: python
-    plan: standard
+    plan: free
 
     # Build configuration
     buildCommand: pip install -r requirements.txt
