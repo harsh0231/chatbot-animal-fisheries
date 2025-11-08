@@ -3,6 +3,7 @@ services:
     name: chatbot-animal-fisheries
     env: python
     plan: free
+    pythonVersion: 3.11
 
     # Build configuration
     buildCommand: pip install -r requirements.txt
