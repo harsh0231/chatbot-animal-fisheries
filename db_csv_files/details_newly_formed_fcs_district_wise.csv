@@ -1,0 +1,514 @@
+id,division_name,district_name,name_of_newly_formed_cooperative_societies,block_name,total_number_of_members_enrolled,total_number_of_male_members_enrolled,total_number_of_female_members_enrolled,date_of_registration,year,whether_Inland_or_Marine_FCS
+1,Tirhut,Vaishali,Hajipur Fisheries Cooperative Society,Hajipur,814,789,25,30.12.2010,2010,Inland
+2,Tirhut,Vaishali,Bhagwanpur Fisheries Cooperative Society,Bhagwanpur,697,432,265,29.09.2010,2010,Inland
+3,Tirhut,Vaishali,Vaishali Fisheries Cooperative Society,Vaishali,600,271,329,29.09.2010,2010,Inland
+4,Tirhut,Vaishali,Patedhi Belsar Fisheries Cooperative Society,Patedhi Belsar,356,305,51,29.09.2010,2010,Inland
+5,Tirhut,Vaishali,Lalganj Fisheries Cooperative Society,Lalganj,1355,959,396,29.09.2010,2010,Inland
+6,Tirhut,Vaishali,Bidupur Fisheries Cooperative Society,Bidupur,127,87,40,29.09.2010,2010,Inland
+7,Tirhut,Vaishali,Mahnaar Fisheries Cooperative Society,Mahnaar,135,114,21,29.09.2010,2010,Inland
+8,Tirhut,Vaishali,Desari Fisheries Cooperative Society,Desari,184,142,42,29.09.2010,2010,Inland
+9,Tirhut,Vaishali,Sahdei Bujurg Fisheries Cooperative Society,Sahdei Bujurg,214,138,76,29.09.2010,2010,Inland
+10,Tirhut,Vaishali,Mahua Fisheries Cooperative Society,Mahua,465,386,79,29.09.2011,2011,Inland
+11,Tirhut,Vaishali,Jandaha Fisheries Cooperative Society,Jandaha,1413,1089,324,29.09.2010,2010,Inland
+12,Tirhut,Vaishali,Chehrakala Fisheries Cooperative Society,Chehrakala,841,628,213,29.09.2010,2010,Inland
+13,Tirhut,Vaishali,Patepur Chehrakala Fisheries Cooperative Society,Patepur,1926,1235,691,29.09.2010,2010,Inland
+14,Tirhut,Vaishali,Goraul Patepur Chehrakala Fisheries Cooperative Society,Goraul,672,558,114,29.09.2010,2010,Inland
+15,Tirhut,Vaishali,Rajapakar Goraul Patepur Chehrakala Fisheries Cooperative Society,Rajapakar,1102,895,207,09.11.2010,2010,Inland
+16,Tirhut,Sitamarhi,Dumra Fishermen Cooperative Society,Dumra,1817,1272,545,14.12.2010,2010,Inland
+17,Tirhut,Sitamarhi,Sursand Fishermen Cooperative Society,Sursand,1936,1161,775,15.12.2010,2010,Inland
+18,Tirhut,Sitamarhi,Parsauni Fishermen Fishermen,Parsauni,1403,896,507,14.12.2010,2010,Inland
+19,Tirhut,Sitamarhi,Belsand Fishermen Cooperative Society,Belsand,377,264,113,14.12.2010,2010,Inland
+20,Tirhut,Sitamarhi,Mejorganj Fishermen Cooperative Society,Mejorganj,186,131,55,15.12.2010,2010,Inland
+21,Tirhut,Sitamarhi,Bathanha Fishermen Cooperative Society,Bathnaha,3353,1500,1853,14.12.2010,2010,Inland
+22,Tirhut,Sitamarhi,Nanpur Fishermen Cooperative Society,Nanpur,3136,1690,1446,15.12.2010,2010,Inland
+23,Tirhut,Sitamarhi,Sonbarsa Fishermen Cooperative Society,Sonbarsa,3832,1512,2320,14.12.2010,2010,Inland
+24,Tirhut,Sitamarhi,Parihar Fishermen Cooperative Society,Parihar,3534,1834,1700,14.12.2010,2010,Inland
+25,Tirhut,Sitamarhi,Runni Saidpur Fishermencooperative Society,Runni Saidpur,4647,3160,1487,15.12.2010,2010,Inland
+26,Tirhut,Sitamarhi,Bajpatti Fishermen Cooperative Society,Bajpatti,1861,1302,559,15.12.2010,2010,Inland
+27,Tirhut,Sitamarhi,Choraut Fishermen Cooperative Society,Choraut,970,582,388,15.12.2010,2010,Inland
+28,Tirhut,Sitamarhi,Riga Fishermen Cooperative Society,Riga,2530,1518,1012,14.12.2010,2010,Inland
+29,Tirhut,Sitamarhi,Suppi Fishermen Cooperative Society,Suppi,207,109,98,15.12.2010,2010,Inland
+30,Tirhut,Sitamarhi,Pupari Fishermen Cooperative Society,Pupari,2025,1215,810,15.12.2010,2010,Inland
+31,Tirhut,Sitamarhi,Bokhara Fishermen Cooperative Society,Bokhara,1824,611,1213,15.12.2010,2010,Inland
+32,Tirhut,Sitamarhi,Bairganiya Fishermen Cooperative Society,Bairganiya,558,450,108,15.12.2010,2010,Inland
+33,Tirhut,West Champaran,"Bagaha 1, Fishermen Cooperative Society",Bagaha 1,208,180,28,Not Available,Not Available,Inland
+34,Tirhut,West Champaran,"Bagaha 2, Fishermen Cooperative Society",Bagaha 2,356,306,50,Not Available,2010,Inland
+35,Tirhut,West Champaran,"Bairiya, Fishermen Cooperative Society",Bairiya,2116,2076,40,Not Available,2010,Inland
+36,Tirhut,West Champaran,"Bettiah, Fishermen Cooperative Society",Bettiah,959,929,30,Not Available,2010,Inland
+37,Tirhut,West Champaran,"Bhitaha, Fishermen Cooperative Society",Bhitaha,194,178,16,Not Available,2010,Inland
+38,Tirhut,West Champaran,"Chanpatia, Fishermen Cooperative Society",Chanpatia,293,223,70,Not Available,2010,Inland
+39,Tirhut,West Champaran,"Gaunaha, Fishermen Cooperative Society",Gaunaha,59,59,0,Not Available,2010,Inland
+40,Tirhut,West Champaran,"Yogapatti, Fishermen Cooperative Society",Yogapatti,1611,1500,111,Not Available,2010,Inland
+41,Tirhut,West Champaran,"Lauriya, Fishermen Cooperative Society",Lauriya,371,326,45,Not Available,1959,Inland
+42,Tirhut,West Champaran,"Madhubani, Fishermen Cooperative Society",Madhubani,563,538,25,Not Available,2010,Inland
+43,Tirhut,West Champaran,"Mainatand, Fishermen Cooperative Society",Mainatand,1084,984,100,Not Available,2010,Inland
+44,Tirhut,West Champaran,"Majhaulia, Fishermen Cooperative Society",Majhaulia,3984,3834,150,Not Available,2010,Inland
+45,Tirhut,West Champaran,"Narkatiaganj, Fishermen Cooperative Society",Narkatiaganj,1850,1825,25,Not Available,2010,Inland
+46,Tirhut,West Champaran,"Nautan, Fishermen Cooperative Society",Nautan,2750,2670,80,Not Available,2010,Inland
+47,Tirhut,West Champaran,"Ramnagar, Fishermen Cooperative Society",Ramnagar,836,816,20,Not Available,2010,Inland
+48,Tirhut,West Champaran,"Sikta, Fishermen Cooperative Society",Sikta,1141,1121,20,Not Available,2010,Inland
+49,Tirhut,West Champaran,"Thakaraha, Fishermen Cooperative Society",Thakaraha,101,90,11,17.09.1982,1982,Inland
+50,Tirhut,Sheohar,Piprahi Matasay Jivi Sahyog Samiti Ltd,Piprarhi,247,176,71,Not Available,2007,Inland
+51,Tirhut,Sheohar,Purnahiya Matsay Jivi Sahyog Samiti Ltd,Purnahiya,819,597,222,20.10.1982,1982,Inland
+52,Tirhut,Sheohar,"Sheohar Matasay Jivi Sahyog Samati Ltd , Sheohar",Sheohar/Dumri Katsari,258,196,62,22.02.1986,1986,Inland
+53,Tirhut,Sheohar,Tariyani Prakhand Matsay Jivi Sahyog Samati Ltd,Tariyani,330,292,38,26.04.2011,2011,Inland
+54,Tirhut,East Champaran,Adapur Prakhand Matsyajivi Sahyog Samiti Limited,Adapur,5691,3415,2276,28.12.2010,2010,Inland
+55,Tirhut,East Champaran,Kotwa Prakhand Matsyajivi Sahyog Samiti Limited,Kotwa,1626,1301,325,09.02.2011,2011,Inland
+56,Tirhut,East Champaran,Banjariya Prakhand Matsyajivi Sahyog Samiti Limited,Banjariya,744,495,249,26.04.2011,2011,Inland
+57,Tirhut,East Champaran,Raxaul Prakhand Matsyajivi Sahyog Samiti Limited,Raxaul,2214,1459,755,09.02.2011,2011,Inland
+58,Tirhut,East Champaran,Turkauliya Prakhand Matsyajivi Sahyog Samiti Limited,Turkaulia,691,453,238,10.01.2011,2011,Inland
+59,Tirhut,East Champaran,Dhaka Prakhand Matsyajivi Sahyog Samiti Limited.,Dhaka,3144,2516,628,Not Available,2011,Inland
+60,Tirhut,East Champaran,Kesaria Prakhand Matsyajivi Sahyog Samiti Limited,Kesaria,900,525,375,28.12.2010,2010,Inland
+61,Tirhut,East Champaran,Bankatwa Prakhand Matsyajivi Sahyog Samiti Limited.,Bankatwa,5107,3607,1500,Not Available,2010,Inland
+62,Tirhut,East Champaran,Kalyanpur Fishries Cooperative Societies Limited,Kalyanpur,2070,1656,414,23.06.2011,2011,Inland
+63,Tirhut,East Champaran,Pakridyal Prakhand Matsyajivi Sahyog Samiti Limited,Pakridayal,6257,4870,1387,31.03.1994,1994,Inland
+64,Tirhut,East Champaran,Pipra Thana Prakhand Matsyajivi Sahyog Samiti Limited,Chakia (Pipra),1264,982,282,31.03.1994,1994,Inland
+65,Tirhut,East Champaran,Mehsi Prakhand Matsyajivi Sahyog Samiti Limited.,Mehsi,1079,755,324,28.12.2011,2011,Inland
+66,Tirhut,East Champaran,Harsidhi Prakhand Matsyajivi Sahyog Samiti Limited.,Harsidhi,5151,3606,1545,12.02.2020,2020,Inland
+67,Tirhut,East Champaran,Phenhara Prakhand Matsyajivi Sahyog Samiti Limited,Phenhara,58,37,21,26.04.2011,2011,Inland
+68,Tirhut,East Champaran,Tetaria Prakhand Matsyajivi Sahyog Samiti Limited,Tetariya,2735,1842,893,30.04.2011,2011,Inland
+69,Tirhut,East Champaran,Chawaradano Fishries Cooperative Society Limited,Chawradano,4027,3180,847,08.07.2011,2011,Inland
+70,Tirhut,East Champaran,Areraj Prakhand Matsyajivi Sahyog Samiti Limited,Areraj,1065,745,320,09.07.2012,2012,Inland
+71,Tirhut,East Champaran,Motihari Prakhand Matsyajivi Sahyog Samiti Limited.,Motihari,3210,2087,1123,28.12.2010,2010,Inland
+72,Tirhut,East Champaran,Paharpur Prakhand Matsyajivi Sahyog Samiti Limited,Paharpur,378,284,94,28.12.2010,2010,Inland
+73,Tirhut,East Champaran,Ghorasahan Prakhand Matsyajivi Sahyog Samiti Limited,Ghorasahan,8116,6492,1624,10.09.2012,2012,Inland
+74,Tirhut,East Champaran,Patahi Prakhand Matsyajivi Sahyog Samiti Limited.,Patahi,1867,1493,374,23.06.2011,2011,Inland
+75,Tirhut,East Champaran,Ramgarhwa Matsyajivi Sahyog Samiti Limited,Ramgarhwa,2082,1652,430,09.02.2011,2011,Inland
+76,Tirhut,East Champaran,Sugauli Prakhand Matsyajivi Sahyog Samiti Limited,Sugauli,1077,754,323,26.04.2011,2011,Inland
+77,Tirhut,East Champaran,Madhuban Fishries Cooperative Society Limited,Madhuban,694,522,172,08.07.2011,2011,Inland
+78,Tirhut,East Champaran,Pipra Kothi Prakhand Matsyajivi Sahyog Samiti Limited,Pipra Kothi,2563,1793,770,12.02.2010,2010,Inland
+79,Tirhut,East Champaran,Chiriya Prakhand Matsyajivi Sahyog Samiti Limited,Chiriya,6059,4241,1818,03.09.2011,2011,Inland
+80,Tirhut,East Champaran,Sangrampur Prakhand Matsyajivi Sahyog Samiti Limited,Sangrampur,1590,1113,477,27.11.2010,2010,Inland
+81,Tirhut,Muzaffarpur,"Motipur Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Motipur,650,300,350,27.11.2010,2010,Inland
+82,Tirhut,Muzaffarpur,"Paru Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Paru,1660,1332,328,27.11.2010,2010,Inland
+83,Tirhut,Muzaffarpur,"Murol Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Murol,1203,815,388,27.11.2010,2010,Inland
+84,Tirhut,Muzaffarpur,"Bandra Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Bandra,2751,1978,773,27.11.2010,2010,Inland
+85,Tirhut,Muzaffarpur,"Kudhani Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Kudhani,2491,1619,872,27.11.2010,2010,Inland
+86,Tirhut,Muzaffarpur,"Bochaha Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Bochaha,3204,1461,1743,27.11.2010,2010,Inland
+87,Tirhut,Muzaffarpur,"Katra Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Katra,5226,3425,1801,27.11.2010,2010,Inland
+88,Tirhut,Muzaffarpur,"Gayghat Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Gayghat,7371,3484,3887,27.11.2010,2010,Inland
+89,Tirhut,Muzaffarpur,"Marwan Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Marwan,2014,1289,725,27.11.2010,2010,Inland
+90,Tirhut,Muzaffarpur,"Minapur Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Minapur,977,716,261,27.11.2010,2010,Inland
+91,Tirhut,Muzaffarpur,"Sahebganj Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Sahebganj,846,799,47,27.11.2010,2010,Inland
+92,Tirhut,Muzaffarpur,"Mushahri Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Mushahri,3715,2852,863,27.11.2010,2010,Inland
+93,Tirhut,Muzaffarpur,"Aurai Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Aurai,2260,1603,657,27.11.2010,2010,Inland
+94,Tirhut,Muzaffarpur,"Saraiya Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Saraiya,569,486,83,27.11.2010,2010,Inland
+95,Tirhut,Muzaffarpur,"Sakra Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Sakra,1576,1132,444,27.11.2010,2010,Inland
+96,Tirhut,Muzaffarpur,"Kanti Prakhand Matsya
+Jiwi Sahyog Samiti Ltd.",Kanti,1694,1144,550,Not Available,1967,Inland
+97,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Kahara,Kahara,1265,822,443,Not Available,2011,Inland
+98,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Simri Bakhtiyarpur,Simri Bakhtiyarpur,3275,2128,1147,Not Available,2011,Inland
+99,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Saurbazar,Saurbazar,511,332,179,Not Available,2011,Inland
+100,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Salkhua,Salkhua,1313,853,460,Not Available,2011,Inland
+101,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Mahishi,Mahishi,2101,1301,800,Not Available,2012,Inland
+102,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Banma Itahari,Banma Itahari,573,383,190,Not Available,2011,Inland
+103,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Nauhatta,Nauhatta,349,226,123,Not Available,2021,Inland
+104,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Patarghat,Patarghat,66,52,14,Not Available,1968,Inland
+105,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Sonbarsha,Sonbarsha,784,511,273,Not Available,2011,Inland
+106,Koshi,Saharsa,Matsyajivi Sahyog Samiti Ltd. Sattarkataiya,Sattarkataiya,462,299,163,04.03.1996,1996,Inland
+107,Koshi,Madhepura,Puraini Prakhand Matasayajivi Sahyog Samiti Ltd,Purani,897,704,193,30.06.1968,1968,Inland
+108,Koshi,Madhepura,Madhepura Prakhand Matasayajivi Sahyog Samiti Ltd,Madhepura,458,420,38,Not Available,2013,Inland
+109,Koshi,Madhepura,Ghailardh Prakhand Matasayajivi Sahyog Samiti Ltd,Ghailardh,309,193,116,22.11.2013,2013,Inland
+110,Koshi,Madhepura,Ghamhariya Prakhand Matasayajivi Sahyog Samiti Ltd,Ghamhariya,643,409,234,30.06.1965,1965,Inland
+111,Koshi,Madhepura,Singheswar Prakhand Matasayajivi Sahyog Samiti Ltd,Singheswar,177,149,28,18.10.1975,1975,Inland
+112,Koshi,Madhepura,Kumarkhand Prakhand Matasayajivi Sahyog Samiti Ltd,Kumarkhand,436,371,65,Not Available,1975,Inland
+113,Koshi,Madhepura,Murliganj Prakhand Matasayajivi Sahyog Samiti Ltd,Murliganj,189,149,40,08.04.2011,2011,Inland
+114,Koshi,Madhepura,Alamnagar Prakhand Matasayajivi Sahyog Samiti Ltd,Alamnagar,3477,2467,1010,15.10.2008,2008,Inland
+115,Koshi,Madhepura,Udakishunganj Prakhand Matasayajivi Sahyog Samiti Ltd,Udakishunganj,335,304,31,08.04.2011,2011,Inland
+116,Koshi,Madhepura,Gwalparah Prakhand Matasayajivi Sahyog Samiti Ltd,Gwalparah,102,102,0,30.01.1970,1970,Inland
+117,Koshi,Madhepura,Chausa Prakhand Matasayajivi Sahyog Samiti Ltd,Chausa,3327,3089,238,08.09.2010,2010,Inland
+118,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Supaul,Supaul,2796,1677,1119,01.07.1968,1968,Inland
+119,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Chatapur,Chatapur,750,442,308,Not Available,2011,Inland
+120,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Basantpur,Basantpur,341,252,89,17.08.1955,1955,Inland
+121,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Kisanpur,Kisanpur,396,274,122,Not Available,2010,Inland
+122,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Saraigarh,Saraigarh,540,356,184,01.11.1968,1968,Inland
+123,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Marauna,Marauna,191,176,15,24.07.1964,1964,Inland
+124,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Nirmali,Nirmali,424,303,121,24.03.1990,1990,Inland
+125,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Pipra,Pipra,659,374,285,24.08.1972,1972,Inland
+126,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Raghopur,Raghopur,0,0,0,08.09.2010,2010,Inland
+127,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Pratapgunj,Pratapgunj,75,46,29,08.09.2010,2010,Inland
+128,Koshi,Supaul,Matsyajivi Sahyog Samiti Ltd Trivenigunj,Trivenigunj,0,0,0,Not Available,2010,Inland
+129,Saran,Saran,"Amnour, Fishermen Cooperative Society",Amnour,233,173,60,Not Available,Not Available,Inland
+130,Saran,Saran,"Baniyapur, Fishermen Cooperative Society",Baniyapur,243,208,35,Not Available,2010,Inland
+131,Saran,Saran,"Chhapra, Fishermen Cooperative Society",Chhapra,1311,1276,35,Not Available,2010,Inland
+132,Saran,Saran,"Dariyapur, Fishermen Cooperative Society",Dariyapur,792,601,191,Not Available,2010,Inland
+133,Saran,Saran,"Dighwara, Fishermen Cooperative Society",Dighwara,1373,925,448,Not Available,2010,Inland
+134,Saran,Saran,"Ekma, Fishermen Cooperative Society",Ekma,758,622,136,Not Available,2010,Inland
+135,Saran,Saran,"Garkha, Fishermen Cooperative Society",Garkha,2969,2053,916,Not Available,2010,Inland
+136,Saran,Saran,"Isuapur, Fishermen Cooperative Society",Isuapur,322,220,102,Not Available,2010,Inland
+137,Saran,Saran,"Jalalpur, Fishermen Cooperative Society",Jalalpur,1626,1320,306,Not Available,2010,Inland
+138,Saran,Saran,"Lahladpur, Fishermen Cooperative Society",Lahladpur,70,67,3,Not Available,2010,Inland
+139,Saran,Saran,"Maker, Fishermen Cooperative Society",Maker,176,145,31,Not Available,2010,Inland
+140,Saran,Saran,"Manjhi, Fishermen Cooperative Society",Manjhi,3447,2427,1020,Not Available,2010,Inland
+141,Saran,Saran,"Madhura, Fishermen Cooperative Society",Madhura,376,367,9,Not Available,2010,Inland
+142,Saran,Saran,"Mashrakh, Fishermen Cooperative Society",Mashrakh,73,65,8,Not Available,2010,Inland
+143,Saran,Saran,"Nagra, Fishermen Cooperative Society",Nagra,159,147,12,Not Available,2010,Inland
+144,Saran,Saran,"Panapur, Fishermen Cooperative Society",Panapur,284,192,92,Not Available,2010,Inland
+145,Saran,Saran,"Parsa, Fishermen Cooperative Society",Parsa,602,450,152,Not Available,2010,Inland
+146,Saran,Saran,"Rivilganj, Fishermen Cooperative Society",Rivilganj,1509,1143,366,Not Available,Not Available,Inland
+147,Saran,Saran,"Sonpur, Fishermen Cooperative Society",Sonpur,397,384,13,Not Available,2010,Inland
+148,Saran,Saran,"Taraiya, Fishermen Cooperative Society",Taraiya,806,531,275,Not Available,Not Available,Inland
+149,Saran,Gopalganj,"Baikunthpur, Fishermen Cooperative Society",Baikunthpur,271,246,25,10.01.2011,2011,Inland
+150,Saran,Gopalganj,"Barauli, Fishermen Cooperative Society",Barauli,590,430,160,25.02.1966,1966,Inland
+151,Saran,Gopalganj,"Bhorey, Fishermen Cooperative Society",Bhorey,254,214,40,11.02.1972,1972,Inland
+152,Saran,Gopalganj,"Bijaipur, Fishermen Cooperative Society",Bijaipur,299,265,34,10.01.2011,2011,Inland
+153,Saran,Gopalganj,"Gopalganj, Fishermen Cooperative Society",Gopalganj,389,326,63,08.05.1980,1980,Inland
+154,Saran,Gopalganj,"Hathua, Fishermen Cooperative Society",Hathua,181,141,40,Not Available,1971,Inland
+155,Saran,Gopalganj,"Katiya, Fishermen Cooperative Society",Katiya,98,97,1,03.01.2011,2011,Inland
+156,Saran,Gopalganj,"Kuchaikote, Fishermen Cooperative Society",Kuchaikote,866,702,164,10.01.2011,2011,Inland
+157,Saran,Gopalganj,"Manjha, Fishermen Cooperative Society",Manjha,296,242,54,17.01.2011,2011,Inland
+158,Saran,Gopalganj,"Panch Deuri, Fishermen Cooperative Society",Panch Deuri,112,88,24,17.01.2011,2011,Inland
+159,Saran,Gopalganj,"Phulwaria, Fishermen Cooperative Society",Phulwaria,120,90,30,17.01.2011,2011,Inland
+160,Saran,Gopalganj,"Sidhwalia, Fishermen Cooperative Society",Sidhwalia,88,57,31,03.01.2011,2011,Inland
+161,Saran,Gopalganj,"Thawe, Fishermen Cooperative Society",Thawe,305,231,74,17.01.2011,2011,Inland
+162,Saran,Gopalganj,"Uchkagaon, Fishermen Cooperative Society",Uchkagaon,247,196,51,25.11.2010,2010,Inland
+163,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Barharia,Barharia,2028,1548,480,25.11.2010,2010,Inland
+164,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Lakrinabiganj,Lakrinabiganj,129,110,19,25.11.2010,2010,Inland
+165,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Pachrukhi,Pachrukhi,695,600,95,25.11.2010,2010,Inland
+166,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Andar,Andar,287,223,64,25.11.2010,2010,Inland
+167,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Darauli,Darauli,820,672,148,25.11.2010,2010,Inland
+168,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Daraundha,Daraundha,582,500,82,25.11.2010,2010,Inland
+169,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Raghunathpur,Raghunathpur,1650,1500,150,25.11.2010,2010,Inland
+170,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Siswan,Siswan,954,800,154,25.11.2010,2010,Inland
+171,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Hasanpura,Hasanpura,350,310,40,25.11.2010,2010,Inland
+172,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Maharajganj,Maharajganj,633,500,133,25.11.2010,2010,Inland
+173,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Basantpur,Basantpur,46,41,5,25.11.2010,2010,Inland
+174,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Ziradei,Ziradei,139,109,30,25.11.2010,2010,Inland
+175,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Siwan Sadar,Siwan Sadar,478,418,60,25.11.2010,2010,Inland
+176,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Hussianganj,Hussianganj,98,86,12,25.11.2010,2010,Inland
+177,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Nautan,Nautan,41,35,6,25.11.2010,2010,Inland
+178,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Mairwa,Mairwa,132,102,30,25.11.2010,2010,Inland
+179,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Bhagwanpur Hat,Bhagwanpur Hat,319,280,39,25.11.2010,2010,Inland
+180,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Goreya Kothi,Goreya Kothi,462,400,62,25.11.2010,2010,Inland
+181,Saran,Siwan,Matsyajivi Sahyog Samiti Ltd Guthani,Guthani,540,420,120,Not Available,2010,Inland
+182,Darbhanga,Madhubani,Basopatti Prakhand Matsyajeevi Sahyog Samiti Limited,Basopatti,1460,1189,271,Not Available,2010,Inland
+183,Darbhanga,Madhubani,Bisfi Prakhand Matsyajeevi Sahyog Samiti Limited,Bisfi,1822,1555,267,Not Available,2010,Inland
+184,Darbhanga,Madhubani,Madhwapur Prakhand Matsyajeevi Sahyog Samiti Limited,Madhwapur,1297,1003,294,Not Available,2011,Inland
+185,Darbhanga,Madhubani,Kaluahi Prakhand Matsyajeevi Sahyog Samiti Limited,Kaluahi,381,232,149,Not Available,2011,Inland
+186,Darbhanga,Madhubani,Khajauli Prakhand Matsyajeevi Sahyog Samiti Limited,Khajauli,411,217,194,Not Available,2010,Inland
+187,Darbhanga,Madhubani,Andhrathari Prakhand Matsyajeevi Sahyog Samiti Limited,Andharathdi,853,429,424,Not Available,2011,Inland
+188,Darbhanga,Madhubani,Harlakhi Prakhand Matsyajeevi Sahyog Samiti Limited,Harlakhi,1331,1053,278,Not Available,2010,Inland
+189,Darbhanga,Madhubani,Jaynagar Prakhand Matsyajeevi Sahyog Samiti Limited,Jaynagar,860,640,220,Not Available,2011,Inland
+190,Darbhanga,Madhubani,Lakhnaur Prakhand Matsyajeevi Sahyog Samiti Limited,Lakhnaur,262,206,56,Not Available,2010,Inland
+191,Darbhanga,Madhubani,Khutauna Prakhand Matsyajeevi Sahyog Samiti Limited,Khutauna,674,450,224,Not Available,1958,Inland
+192,Darbhanga,Madhubani,Ghoghardiha Prakhand Matsyajeevi Sahyog Samiti Limited,Ghoghardiha,710,278,432,Not Available,2010,Inland
+193,Darbhanga,Madhubani,Jhanjharpur Prakhand Matsyajeevi Sahyog Samiti Limited,Jhanjharpur,435,238,197,Not Available,2011,Inland
+194,Darbhanga,Madhubani,Babubarhi Prakhand Matsyajeevi Sahyog Samiti Limited,Babubarhi,1015,627,388,Not Available,2011,Inland
+195,Darbhanga,Madhubani,Ladaniya Prakhand Matsyajeevi Sahyog Samiti Limited,Ladaniya,821,600,221,Not Available,2010,Inland
+196,Darbhanga,Madhubani,Rajnagar Prakhand Matsyajeevi Sahyog Samiti Limited,Rajnagar,436,324,112,Not Available,2013,Inland
+197,Darbhanga,Madhubani,Madhepur Prakhand Matsyajeevi Sahyog Samiti Limited,Madhepur,399,221,178,Not Available,2010,Inland
+198,Darbhanga,Madhubani,Pandaul Prakhand Matsyajeevi Sahyog Samiti Limited,Pandaul,3034,2340,694,Not Available,2011,Inland
+199,Darbhanga,Madhubani,Phulparas Prakhand Matsyajeevi Sahyog Samiti Limited,Phulparas,701,266,435,Not Available,2011,Inland
+200,Darbhanga,Madhubani,Rahika Prakhand Matsyajeevi Sahyog Samiti Limited,Rahika,2806,2387,419,Not Available,2010,Inland
+201,Darbhanga,Madhubani,Benipatti Prakhand Matsyajeevi Sahyog Samiti Limited,Benipatti,1854,1263,591,Not Available,2011,Inland
+202,Darbhanga,Madhubani,Laukahi Prakhand Matsyajeevi Sahyog Samiti Limited,Laukahi,712,435,277,18.12.2010,2010,Inland
+203,Darbhanga,Samastipur,"Klayanpur, Fishermen Cooperative Society",Klayanpur,2363,1743,620,18.12.2010,2010,Inland
+204,Darbhanga,Samastipur,"Shivajinagar , Fishermen Cooperative Society",Shivajinagar,4900,3087,1813,18.11.2010,2010,Inland
+205,Darbhanga,Samastipur,"Khanpur , Fishermen Cooperative Society",Khanpur,4803,3026,1777,18.12.2010,2010,Inland
+206,Darbhanga,Samastipur,"Singhiya , Fishermen Cooperative Society",Singhiya,4410,2779,1631,18.12.2010,2010,Inland
+207,Darbhanga,Samastipur,"Sarayranjan , Fishermen Cooperative Society",Sarayranjan,3171,2145,1026,13.08.1962,1962,Inland
+208,Darbhanga,Samastipur,"Morwa , Fishermen Cooperative Society",Morwa,372,370,2,19.01.1980,1980,Inland
+209,Darbhanga,Samastipur,"Pusa , Fishermen Cooperative Society",Pusa,60,55,5,18.12.2012,2012,Inland
+210,Darbhanga,Samastipur,"Tajpur , Fishermen Cooperative Society",Tajpur,224,171,53,18.12.2010,2010,Inland
+211,Darbhanga,Samastipur,"Ujiyarpur, Fishermen Cooperative Society",Ujiyarpur,4398,2771,1627,18.12.2010,2010,Inland
+212,Darbhanga,Samastipur,"Dalsinghsarai , Fishermen Cooperative Society",Dalsinghsarai,2528,2008,520,18.12.2010,2010,Inland
+213,Darbhanga,Samastipur,"Mohanpur , Fishermen Cooperative Society",Mohanpur,692,432,260,18.12.2010,2010,Inland
+214,Darbhanga,Samastipur,"Samastipur , Fishermen Cooperative Society",Samastipur,1157,902,255,18.12.2010,2010,Inland
+215,Darbhanga,Samastipur,"Bithaan , Fishermen Cooperative Society",Bithaan,7124,4702,2422,13.08.1957,1957,Inland
+216,Darbhanga,Samastipur,"Mohiuddinnagar, Fishermen Cooperative Society",Mohiuddinnagar,1255,913,342,Not Available,1961,Inland
+217,Darbhanga,Samastipur,"Patori, Fishermen Cooperative Society",Patori,381,365,16,18.12.2010,2010,Inland
+218,Darbhanga,Samastipur,"Vidhyapatinagar , Fishermen Cooperative Society",Vidhyapatinagar,855,574,281,18.12.2010,2010,Inland
+219,Darbhanga,Samastipur,"Vibhutipur , Fishermen Cooperative Society",Vibhutipur,632,373,259,18.12.2010,2010,Inland
+220,Darbhanga,Samastipur,"Rosara , Fishermen Cooperative Society",Rosara,2165,1644,521,16.12.2010,2010,Inland
+221,Darbhanga,Samastipur,"Varisnagar , Fishermen Cooperative Society",Varisnagar,479,297,182,18.12.2010,2010,Inland
+222,Darbhanga,Samastipur,"Hasanpur , Fishermen Cooperative Society",Hasanpur,3832,2800,1032,Not Available,2011,Inland
+223,Darbhanga,Darbhanga,"Kusheshwar Asthan East, Fishermen Cooperative Society",Kusheshwar Asthan East,3320,2362,958,Not Available,2011,Inland
+224,Darbhanga,Darbhanga,"Manigachhi, Fishermen Cooperative Society",Manigachhi,3407,1737,1670,Not Available,2011,Inland
+225,Darbhanga,Darbhanga,"Biraul, Fishermen Cooperative Society",Biraul,7800,4434,3366,Not Available,2011,Inland
+226,Darbhanga,Darbhanga,"Ghanshyampur, Fishermen Cooperative Society",Ghanshyampur,860,516,344,Not Available,2011,Inland
+227,Darbhanga,Darbhanga,"Singhwara, Fishermen Cooperative Society",Singhwara,4575,2755,1820,Not Available,2011,Inland
+228,Darbhanga,Darbhanga,"Bahadurpur, Fishermen Cooperative Society",Bahadurpur,1445,765,680,Not Available,2011,Inland
+229,Darbhanga,Darbhanga,"Darbhanga Sadar, Fishermen Cooperative Society",Darbhanga Sadar,3503,2018,1485,Not Available,2011,Inland
+230,Darbhanga,Darbhanga,"Kusheshwar Asthan, Fishermen Cooperative Society",Kusheshwar Asthan,6498,5283,1215,Not Available,2011,Inland
+231,Darbhanga,Darbhanga,"Alinagar, Fishermen Cooperative Society",Alinagar,8221,5036,3185,Not Available,2011,Inland
+232,Darbhanga,Darbhanga,"Hayaghat, Fishermen Cooperative Society",Hayaghat,1232,687,545,Not Available,2011,Inland
+233,Darbhanga,Darbhanga,"Tardih, Fishermen Cooperative Society",Tardih,1504,851,653,Not Available,2011,Inland
+234,Darbhanga,Darbhanga,"Gaura Bauram, Fishermen Cooperative Society",Gaura Bauram,1921,1100,821,Not Available,2011,Inland
+235,Darbhanga,Darbhanga,"Hanuman Nagar, Fishermen Cooperative Society",Hanuman Nagar,2161,1103,1058,Not Available,2011,Inland
+236,Darbhanga,Darbhanga,"Baheri, Fishermen Cooperative Society",Baheri,2766,1411,1355,Not Available,2011,Inland
+237,Darbhanga,Darbhanga,"Benipur, Fishermen Cooperative Society",Benipur,1417,1107,310,Not Available,2011,Inland
+238,Darbhanga,Darbhanga,"Jale, Fishermen Cooperative Society",Jale,3568,1946,1622,Not Available,2011,Inland
+239,Darbhanga,Darbhanga,"Keoti, Fishermen Cooperative Society",Keoti,844,516,328,Not Available,2011,Inland
+240,Darbhanga,Darbhanga,"Kiratpur, Fishermen Cooperative Society",Kiratpur,569,282,287,Not Available,2011,Inland
+241,Munger,Munger,Tarapur Fishery Co-Operative Society Ltd,Tarapur,46,38,8,25.10.2010,2010,Inland
+242,Munger,Munger,Haweli Kharagpur Fishery Co-Operative Society Ltd,Kharagpur,909,697,212,25.10.2010,2010,Inland
+243,Munger,Munger,Bariyarpur Fishery Co-Operative Society Ltd,Bariyarpur,2325,1666,659,25.10.2010,2010,Inland
+244,Munger,Munger,Dharhra Fishery Co-Operative Society Ltd,Dharhara,195,185,10,25.10.2010,2010,Inland
+245,Munger,Munger,Jamalpur Fishery Co-Operative Society Ltd,Jamalpur,750,584,166,25.10.2010,2010,Inland
+246,Munger,Munger,Asarganj Fishery Co-Operative Society Ltd,Asarganj,435,243,192,25.10.2010,2010,Inland
+247,Munger,Munger,Tetia Bambar Fishery Co-Operative Society Ltd,Tetiabambar,113,83,30,Not Available,Not Available,Inland
+248,Munger,Munger,Sangrampur Fishery Co-Operative Society Ltd,Sangrampur,51,51,0,Not Available,Not Available,Inland
+249,Munger,Munger,Munger Fishery Co-Operative Society Ltd,Munger,1341,933,408,25.10.2010,2010,Inland
+250,Munger,Lakhisarai,"Balguder Fisheries Cooperative Society, Lakhisarai",Lakhisarai,606,418,188,18.03.1954,1954,Inland
+251,Munger,Lakhisarai,"Surygarha Fisheries Cooperative Society, Surygarha",Surygarha,1319,937,382,11.10.2010,2010,Inland
+252,Munger,Lakhisarai,"Brahiya Fisheries Cooperative Society, Brahiya",Brahiya,369,358,11,18.10.2010,2010,Inland
+253,Munger,Lakhisarai,"Piparia Fisheries Cooperative Society, Piparia",Piparia,62,48,14,03.01.2020,2020,Inland
+254,Munger,Lakhisarai,"Halsi Fisheries Cooperative Society, Halsi",Halsi,57,49,8,03.01.2010,2010,Inland
+255,Munger,Lakhisarai,"Ramgarhachowk Fisheries Cooperative Society, Ramgarhchowk",Ramgarhchowk,123,89,34,11.10.2010,2010,Inland
+256,Munger,Lakhisarai,"Chanan Fisheries Cooperative Society, Chanan",Chanan,59,44,15,18.06.2019,2019,Inland
+257,Munger,Sheikhpura,"Ariyari, Fishermen Cooperative Society",Ariyari,1727,1231,496,09.07.2011,2011,Inland
+258,Munger,Sheikhpura,"Chewara, Fishermen Cooperative Society",Chewara,111,96,15,09.07.2011,2011,Inland
+259,Munger,Sheikhpura,"Ghat Kusumbha, Fishermen Cooperative Society",Ghat Kusumbha,406,395,11,09.07.2011,2011,Inland
+260,Munger,Sheikhpura,"Sheikhpura, Fishermen Cooperative Society",Sheikhpura,1118,970,148,09.07.2011,2011,Inland
+261,Munger,Sheikhpura,Barbigha Fisheries Coperative Society,Barbigha,0,0,0,09.07.2011,2011,Inland
+262,Munger,Sheikhpura,"Shekhopur Sarai, Fishermen Cooperative Society",Shekhopur Sarai,36,34,2,Not Available,2010,Inland
+263,Munger,Khagaria,"Beldaur, Fishermen Cooperative Society",Beldaur,3556,2393,1163,29.01.2011,2011,Inland
+264,Munger,Khagaria,"Mansi, Fishermen Cooperative Society",Mansi,691,436,255,29.01.2011,2011,Inland
+265,Munger,Khagaria,"Chautham, Fishermen Cooperative Society",Chautham,4617,3322,1295,29.01.2011,2011,Inland
+266,Munger,Khagaria,"Khagaria, Fishermen Cooperative Society",Khagaria,8182,5356,2826,20.01.2011,2011,Inland
+267,Munger,Khagaria,"Parbatta, Fishermen Cooperative Society",Parbatta,2678,1844,834,20.07.1965,1965,Inland
+268,Munger,Khagaria,"Gogari, Fishermen Cooperative Society",Gogari,8702,5918,2784,29.01.2011,2011,Inland
+269,Munger,Khagaria,"Alauli, Fishermen Cooperative Society",Alauli,3840,2504,1336,29.01.2011,2011,Inland
+270,Munger,Jamui,LAXMIPUR FISHERY COOPERATIVE SOCIETY LIMITED,LAXMIPUR,53,53,0,02.08.2010,2010,Not Specified
+271,Munger,Jamui,ALIGANJ FISHERY SOCIETY LIMITED,ISLAMNAGAR ALIGANJ,0,0,0,09.01.2021,2021,Not Specified
+272,Munger,Jamui,JAMUI FISHERY SOCIETY LIMITED,JAMUI,98,81,17,14.07.2011,2011,Not Specified
+273,Munger,Jamui,CHAKAI FISHERY SOCIETY LIMITED,CHAKAI,0,0,0,01.04.2011,2011,Not Specified
+274,Munger,Jamui,GIDHAUR FISHERY SOCIETY LIMITED,GIDHOR,25,22,3,18.11.2021,2021,Not Specified
+275,Munger,Jamui,KHAIRA FISHERY SOCIETY LIMITED,KHAIRA,0,0,0,14.07.2011,2011,Not Specified
+276,Munger,Jamui,SONO FISHERY SOCIETY LIMITED,SONO,44,38,6,18.07.1988,1988,Not Specified
+277,Munger,Jamui,"BARHAT, FISHERIES COOPERATIVE SOCIETY",BARHAT,-,Not Available,,Not Available,2024,Not Specified
+278,Munger,Jamui,JHAJHA FISHERY SOCIETY LIMITED,JHAJHA,32,25,7,15.07.2011,2011,Not Specified
+279,Munger,Begusarai,ALIGANJ FISHERY SOCIETY LIMITED,Samho Akha Kurha,83,55,28,30.12.2010,2010,Inland
+280,Munger,Begusarai,JAMUI FISHERY SOCIETY LIMITED,Gadhpura,111,75,36,24.09.2015,2015,Inland
+281,Munger,Begusarai,CHAKAI FISHERY SOCIETY LIMITED,Barauni,844,534,310,30.12.2010,2010,Inland
+282,Munger,Begusarai,GIDHAUR FISHERY SOCIETY LIMITED,Teghra,1888,1285,603,24.01.1970,1970,Inland
+283,Munger,Begusarai,KHAIRA FISHERY SOCIETY LIMITED,Bachhwara,1135,731,404,30.10.2010,2010,Inland
+284,Munger,Begusarai,SONO FISHERY SOCIETY LIMITED,Chhaurahi,559,345,214,30.12.2010,2010,Inland
+285,Munger,Begusarai,JHAJHA FISHERY SOCIETY LIMITED,Matihani,606,401,205,13.08.1965,1965,Inland
+286,Munger,Begusarai,Sahebpur Kamal Block Matasyajivi Sahyog Samiti Limited,Sahebpur Kamal,2996,1871,1125,20.09.2008,2008,Inland
+287,Munger,Begusarai,Nawkothi Matasyajivi Sahyog Samiti Limited,Nawkothi,852,540,312,06.06.1997,1997,Inland
+288,Munger,Begusarai,Dandari Block Matsyajivi Sahyog Samiti Ltd,Dandari,2580,1745,835,31.03.2010,2010,Inland
+289,Munger,Begusarai,Cheriya Bariyarpur Block Matasyajivi Sahyog Samiti Limited,Cheria Bariarpur,1270,930,340,30.12.2010,2010,Inland
+290,Munger,Begusarai,Begusarai Matasyajivi Sahyog Samiti Limited,Begusarai,3975,2529,1446,30.12.2010,2010,Inland
+291,Munger,Begusarai,Birpur Block Matasyajivi Sahyog Samiti Limited,Birpur,2298,1651,647,30.12.2010,2010,Inland
+292,Munger,Begusarai,Bhagwanpur Block Matsyajivi Sahyog Samiti Ltd,Bhagwanpur,2100,1636,464,30.12.2010,2010,Inland
+293,Munger,Begusarai,Bakhri Block Matsyajivi Sahyog Samiti Ltd,Bakhri,1735,1095,640,14.07.1956,1956,Inland
+294,Munger,Begusarai,Mansurchak Block Matsyajivi Sahyog Samiti Ltd,Mansurchak,191,121,70,16.02.2008,2008,Inland
+295,Munger,Begusarai,Khodawandpur Matasyajivi Sahyog Samiti Limited,Khodawandpur,906,605,301,30.12.2010,2010,Inland
+296,Munger,Begusarai,Baliya Block Matasyajivi Sahyog Samiti Limited,Ballia,405,331,74,01.01.1970,1970,Inland
+297,Patna,Kaimur(Bhabua),"Kudra, Fishermen Cooperative Society",Kudra,236,170,66,14.05.2011,2011,Inland
+298,Patna,Kaimur(Bhabua),"Chainpur, Fishermen Cooperative Society",Chainpur,251,192,59,07.06.2011,2011,Inland
+299,Patna,Kaimur(Bhabua),"Rampur, Fishermen Cooperative Society",Rampur,138,138,0,09.06.2011,2011,Inland
+300,Patna,Kaimur(Bhabua),"Ramgarh, Fishermen Cooperative Society",Ramgarh,1117,897,220,30.12.2011,2011,Inland
+301,Patna,Kaimur(Bhabua),"Bhagwanpur, Fishermen Cooperative Society",Bhagwanpur,446,358,88,11.07.2011,2011,Inland
+302,Patna,Kaimur(Bhabua),"Chand, Fishermen Cooperative Society",Chand,273,206,67,07.06.2011,2011,Inland
+303,Patna,Kaimur(Bhabua),"Durgawati, Fishermen Cooperative Society",Durgawati,554,518,36,24.06.2011,2011,Inland
+304,Patna,Kaimur(Bhabua),"Bhabhua , Fishermen Cooperative Society",Bhabhua ,282,207,75,03.06.2011,2011,Inland
+305,Patna,Kaimur(Bhabua),"Adhuara , Fishermen Cooperative Society",Adhuara ,34,19,15,Not Available,2021,Inland
+306,Patna,Kaimur(Bhabua),"Nuaon, Fishermen Cooperative Society",Nuaon,178,155,23,16.08.2011,2011,Inland
+307,Patna,Kaimur(Bhabua),"Mohania, Fishermen Cooperative Society",Mohania,94,70,24,29.04.2011,2011,Inland
+308,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Shahpur Bhojpur,Sahpur,508,441,67,19.02.2011,2011,Inland
+309,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Jagdishpur Bhojpur,Jagdishpur,232,224,8,13.05.1905,1905,Inland
+310,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Koilwar Bhojpur,Koilwar,55,15,40,12.07.1905,1905,Inland
+311,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Barhra Bhojpur,Barahra,836,536,300,02.02.1962,1962,Inland
+312,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Charpokhari Bhojpur,Charpokhari,90,85,5,28.08.1978,1978,Inland
+313,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Tarari Bhojpur,Tarari,219,156,63,10.10.1983,1983,Inland
+314,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Udwant Nagar Bhojpur,Udwantnagar,136,106,30,08.06.1905,1905,Inland
+315,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Piro Bhojpur,Piro,243,203,40,Not Available,Not Available,Inland
+316,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Piro Agiawon,Agiawon,52,47,5,06.08.2021,2021,Not Specified
+317,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Piro Sahar,Sahar,0,0,0,13.10.1984,1984,Not Specified
+318,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Garahani Bhojpur,Garahani,51,43,8,14.07.1905,1905,Inland
+319,Patna,Bhojpur,Mtashy Jivi Sahyog Samiti Ltd Ara Bhojpur,Ara,900,795,105,05.06.1985,1985,Inland
+320,Patna,Buxar,"Block Fisherman Cooperative Society , Itarhi",Itarhi,245,245,0,15.06.1956,1956,Inland
+321,Patna,Buxar,"Block Fisherman Cooperative Society , Rajpur",Rajpur,115,112,3,19.02.2011,2011,Inland
+322,Patna,Buxar,"Block Fisherman Cooperative Society , Buxar",Buxar,257,231,26,Not Available,1949,Inland
+323,Patna,Buxar,"Block Fisherman Cooperative Society , Brahampur",Brahampur,451,350,101,28.04.1976,1976,Inland
+324,Patna,Buxar,"Block Fisherman Cooperative Society , Simri",Simri,147,144,3,15.03.1973,1973,Inland
+325,Patna,Buxar,"Block Fisherman Cooperative Society , Chausa",Chausa,55,48,7,Not Available,2020,Inland
+326,Patna,Buxar,"Block Fisherman Cooperative Society , Nawanagar",Nawanagar,157,87,70,Not Available,2020,Inland
+327,Patna,Buxar,"Block Fisherman Cooperative Society , Kesath",Kesath,24,7,17,Not Available,2021,Inland
+328,Patna,Buxar,"Block Fisherman Cooperative Society , Dumraon",Dumraon,67,67,0,10.04.1953,1953,Inland
+329,Patna,Nalanda,"Fisheries Cooperative Society, Griyak",Giryak,257,157,100,05.11.1979,1979,Inland
+330,Patna,Nalanda,"Fisheries Cooperative Society, Sarmera",Sarmera,237,196,41,Not Available,Not Available,Inland
+331,Patna,Nalanda,"Fisheries Cooperative Society, Islampur",Islampur,892,756,136,29.03.2011,2011,Inland
+332,Patna,Nalanda,"Fisheries Cooperative Society, Rahui",Rahui,212,193,19,11.08.2006,2006,Inland
+333,Patna,Nalanda,"Fisheries Cooperative Society, Tharthari",Tharthari,87,79,8,14.12.2010,2010,Inland
+334,Patna,Nalanda,"Fisheries Cooperative Society, Ben",Ben,66,55,11,29.03.2011,2011,Inland
+335,Patna,Nalanda,"Fisheries Cooperative Society, Rajgir",Rajgir,68,64,4,29.03.2011,2011,Inland
+336,Patna,Nalanda,"Fisheries Cooperative Society, Silao",Silao,136,129,7,08.01.2021,2021,Inland
+337,Patna,Nalanda,"Fisheries Cooperative Society, Noorsarai",Noorsarai,390,382,8,Not Available,2002,Inland
+338,Patna,Nalanda,"Fisheries Cooperative Society, Nagarnausa",Nagarnausa,20,10,10,14.12.2010,2010,Inland
+339,Patna,Nalanda,"Fisheries Cooperative Society, Hilsa",Hilsa,313,253,60,29.03.2011,2011,Inland
+340,Patna,Nalanda,"Fisheries Cooperative Society, Ekangarsarai",Ekangarsarai,1188,977,211,14.12.2010,2010,Inland
+341,Patna,Nalanda,"Fisheries Cooperative Society, Bind",Bind,321,268,53,14.12.2010,2010,Inland
+342,Patna,Nalanda,"Fisheries Cooperative Society, Harnaut",Harnaut,107,92,15,22.01.2011,2011,Inland
+343,Patna,Nalanda,"Fisheries Cooperative Society, Asthawan",Asthawan,161,147,14,29.03.2011,2011,Inland
+344,Patna,Nalanda,"Fisheries Cooperative Society, Chandi",Chandi,245,168,77,04.12.2010,2010,Inland
+345,Patna,Nalanda,"Fisheries Cooperative Society, Parwalpur",Parwalpur,118,79,39,27.03.2011,2011,Inland
+346,Patna,Nalanda,"Fisheries Cooperative Society, Biharsharif",Biharsharif,128,122,6,14.12.2010,2010,Inland
+347,Patna,Patna,Daniyawan Block Fisheries Cooperative Society,Daniyawan,598,406,192,Not Available,Not Available,Inland
+348,Patna,Patna,Mokama BlockFisheries Cooperative Society,Mokama,411,276,135,Not Available,2011,Inland
+349,Patna,Patna,Bakhtiyarpur Block Fisheries Cooperative Society,Bakhtiyarpur,313,297,16,Not Available,2010,Inland
+350,Patna,Patna,Maner Block Fisheries Cooperative Society,Maner,478,280,198,Not Available,Not Available,Inland
+351,Patna,Patna,Naubatpur Block Fisheries Cooperative Society,Naubatpur,271,120,151,Not Available,2021,Inland
+352,Patna,Patna,Patna Sadar Block Fisheries Cooperative Society,Patna Sadar,1106,842,264,Not Available,2012,Inland
+353,Patna,Patna,Pandarak Block Fisheries Cooperative Society,Pandarak,1120,776,344,Not Available,2011,Inland
+354,Patna,Patna,Khushrupur Block Fisheries Cooperative Society,Khushrupur,191,168,23,Not Available,Not Available,Inland
+355,Patna,Patna,Athmalgola Block Fisheries Cooperative Society,Athmalgola,237,205,32,Not Available,2010,Inland
+356,Patna,Patna,Punpun Block Fisheries Cooperative Society,Punpun,28,28,0,Not Available,2010,Inland
+357,Patna,Rohtas,"Akhorhi Gola, Fishermen Cooperative Society",Akhorhi Gola,171,152,19,09.03.2011,2011,Inland
+358,Patna,Rohtas,"Bikramganj, Fishermen Cooperative Society",Bikramganj,194,184,10,09.03.2011,2011,Inland
+359,Patna,Rohtas,"Chenari, Fishermen Cooperative Society",Chenari,303,299,4,09.03.2011,2011,Inland
+360,Patna,Rohtas,"Dawath, Fishermen Cooperative Society",Dawath,77,77,-,Not Available,Not Available,Inland
+361,Patna,Rohtas,"Dehri, Fishermen Cooperative Society",Dehri,146,112,34,09.03.2011,2011,Inland
+362,Patna,Rohtas,"Dinara, Fishermen Cooperative Society",Dinara,215,195,20,09.03.2011,2011,Inland
+363,Patna,Rohtas,"Karakat, Fishermen Cooperative Society",Karakat,126,60,66,09.03.2011,2011,Inland
+364,Patna,Rohtas,"Kargahar, Fishermen Cooperative Society",Kargahar,736,694,42,09.03.2011,2011,Inland
+365,Patna,Rohtas,"Kochas, Fishermen Cooperative Society",Kochas,287,257,30,09.03.2011,2011,Inland
+366,Patna,Rohtas,"Nasriganj, Fishermen Cooperative Society",Nasriganj,187,174,13,Not Available,1983,Inland
+367,Patna,Rohtas,"Nauhatta, Fishermen Cooperative Society",Nauhatta,224,215,9,09.03.2011,2011,Inland
+368,Patna,Rohtas,"Nokha, Fishermen Cooperative Society",Nokha,624,537,87,09.03.2011,2011,Inland
+369,Patna,Rohtas,"Rajpur, Fishermen Cooperative Society",Rajpur,34,29,5,09.03.2011,2011,Inland
+370,Patna,Rohtas,"Rohtas, Fishermen Cooperative Society",Rohtas,227,184,43,09.03.2011,2011,Inland
+371,Patna,Rohtas,"Sanjhauli, Fishermen Cooperative Society",Sanjhauli,56,56,-,Not Available,Not Available,Inland
+372,Patna,Rohtas,"Sasaram, Fishermen Cooperative Society",Sasaram,1013,963,50,09.03.2011,2011,Inland
+373,Patna,Rohtas,"Sheosagar, Fishermen Cooperative Society",Sheosagar,631,460,171,09.03.2011,2011,Inland
+374,Patna,Rohtas,"Tilouthu, Fishermen Cooperative Society",Tilouthu,107,104,3,09.03.2011,2011,Inland
+375,Magadh,Nawada,"Warisaliganj, Fishermen Cooperative Society",Warisaliganj,46,44,2,Not Available,2011,Inland
+376,Magadh,Nawada,"Hisua, Fishermen Cooperative Society",Hisua,51,50,1,Not Available,2011,Inland
+377,Magadh,Nawada,"Pakribarawan, Fishermen Cooperative Society",Pakribarawan,54,52,2,06.07.1993,1993,Inland
+378,Magadh,Nawada,"Rajauli, Fishermen Cooperative Society",Rajauli,80,71,9,Not Available,2011,Inland
+379,Magadh,Nawada,"Kawakole, Fishermen Cooperative Society",Kawakole,104,76,28,Not Available,1993,Inland
+380,Magadh,Nawada,"Nardiganj, Fishermen Cooperative Society",Nardiganj,73,69,4,Not Available,2012,Inland
+381,Magadh,Nawada,"Kashichak, Fishermen Cooperative Society",Kashichak,26,18,8,Not Available,2015,Inland
+382,Magadh,Nawada,"Roh, Fishermen Cooperative Society",Roh,75,54,21,Not Available,2011,Inland
+383,Magadh,Nawada,"Nawada, Fishermen Cooperative Society",Nawada,92,83,9,Not Available,Not Available,Inland
+384,Magadh,Nawada,"Akbarpur, Fishermen Cooperative Society",Akbarpur,0,,,15.04.1993,1993,Inland
+385,Magadh,Arwal,"Karpi, Block Level Fisheries Coo-Perative Society Ltd",Karpi,54,48,6,02.09.2020,2020,Inland
+386,Magadh,Arwal,"Kurtha ,Block Level Fisheries Coo-Perative Society Ltd",Kurtha,37,29,8,25.01.2021,2021,Inland
+387,Magadh,Arwal,"Kaler, Block Level Fisheries Coo-Perative Society Ltd",Kaler,43,37,6,26.04.2022,2022,Inland
+388,Magadh,Arwal,"Sonbhdra Banshi Surypur, Block Level Fisheries Coo-Perative Society Ltd",Sonbhdra Banshi Surypur,32,25,7,19.07.2022,2022,Inland
+389,Magadh,Arwal,"Arwal, Block Level Fisheries Coo-Perative Society Ltd",Arwal,363,336,27,01.11.1968,1968,Inland
+390,Magadh,Jehanabad,Makhdumpur Matsayajivi Sahyog Samiti Limited,Makhdumpur,143,130,13,11.06.2011,2011,Inland
+391,Magadh,Jehanabad,Modanganj Matsayajivi Sahyog Samiti Limited,Modanganj,72,60,12,28.04.2011,2011,Inland
+392,Magadh,Jehanabad,Ghoshi Matsayajivi Sahyog Samiti Limited,Ghoshi,92,76,16,02.07.2014,2014,Inland
+393,Magadh,Jehanabad,Jehanabad Matsayajivi Sahyog Samiti Limited,Jehanabad,263,251,12,26.02.1965,1965,Inland
+394,Magadh,Jehanabad,Ratni Faridpur Prakhand Matsayjivi Sahyog Samiti Limited,Ratni Faridpur,53,41,12,21.02.2022,2022,Inland
+395,Magadh,Jehanabad,Kako Prakhandstariya Matsayjivi Sahyog Samiti Limited,Kako,198,173,25,11.02.2011,2011,Inland
+396,Magadh,Gaya,"Barachatti, Fisheries Cooperative Society",Barachatti,56,56,0,21.11.2011,2011,Inland
+397,Magadh,Gaya,"Belaganj , Fisheries Cooperative Society",Belaganj,680,594,86,04.02.2011,2011,Inland
+398,Magadh,Gaya,"Bodhgaya , Fisheries Cooperative Society",Bodhgaya,194,172,22,20.12.2010,2010,Inland
+399,Magadh,Gaya,"Dobhi , Fisheries Cooperative Society",Dobhi,37,28,9,21.02.2011,2011,Inland
+400,Magadh,Gaya,"Dumaria , Fisheries Cooperative Society",Dumaria,35,19,16,06.05.2022,2022,Inland
+401,Magadh,Gaya,"Fatehpur , Fisheries Cooperative Society",Fatehpur,41,41,0,Not Available,2021,Inland
+402,Magadh,Gaya,"Guraru , Fisheries Cooperative Society",Guraru,180,152,28,07.08.2021,2021,Inland
+403,Magadh,Gaya,"Gurua , Fisheries Cooperative Society",Gurua,93,81,12,21.02.2011,2011,Inland
+404,Magadh,Gaya,"Imamganj , Fisheries Cooperative Society",Imamganj,35,20,15,28.02.2023,2023,Inland
+405,Magadh,Gaya,"Khizarsarai, Fisheries Cooperative Society",Khizarsarai,35,24,11,06.11.2020,2020,Inland
+406,Magadh,Gaya,"Konch , Fisheries Cooperative Society",Konch,201,142,59,20.12.2010,2010,Inland
+407,Magadh,Gaya,"Manpur , Fisheries Cooperative Society",Manpur,1105,851,254,21.02.2011,2011,Inland
+408,Magadh,Gaya,"Mohanpur , Fisheries Cooperative Society",Mohanpur,35,35,0,05.09.2023,2023,Inland
+409,Magadh,Gaya,"Mohra, Fisheries Cooperative Society",Mohra,35,27,8,20.07.2021,2021,Inland
+410,Magadh,Gaya,"Nagar , Fisheries Cooperative Society",Nagar,1175,842,333,21.12.2010,2010,Inland
+411,Magadh,Gaya,"Nimachak Bathani , Fisheries Cooperative Society",Nimachak Bathani,183,116,67,20.12.2010,2010,Inland
+412,Magadh,Gaya,"Paraiya , Fisheries Cooperative Society",Paraiya,36,33,3,06.11.2020,2020,Inland
+413,Magadh,Gaya,"Sherghati , Fisheries Cooperative Society",Sherghati,,,,21.02.2011,2011,Inland
+414,Magadh,Gaya,"Tankuppa , Fisheries Cooperative Society",Tankuppa,35,27,8,18.07.2022,2022,Inland
+415,Magadh,Gaya,"Tekari , Fisheries Cooperative Society",Tekari,1167,874,293,20.12.2010,2010,Inland
+416,Magadh,Gaya,"Aamas, Fisheries Cooperative Society",Aamas,-,-,-,05.09.2023,2023,Inland
+417,Magadh,Gaya,"Bankebazzar, Fisheries Cooperative Society",Bankebazzar,-,-,-,16.08.2024,2024,Inland
+418,Magadh,Gaya,"Wazirganj, Fisheries Cooperative Society",Wazirganj,44,39,5,21.02.2011,2011,Inland
+419,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Aurangabad",Aurangabad,322,268,54,14.03.2022,2022,Inland
+420,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Barun",Barun,1071,836,235,21.11.1958,1958,Inland
+421,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Deo",Deo,28,24,4,19.07.2022,2022,Inland
+422,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Kutumba",Kutumba,20,19,1,30.09.2019,2019,Inland
+423,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Madanpur",Madanpur,330,265,65,31.05.1980,1980,Inland
+424,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Nabinagar",Nabinagar,356,270,86,10.06.2019,2019,Inland
+425,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Obra",Obra,371,296,75,19.06.2022,2022,Inland
+426,Magadh,Aurangabad,"Matsyajivi Sahyog Samiti, Rafiganj",Rafiganj,531,414,117,19.07.2023,2023,Inland
+427,Purnia,Kishanganj,Bhadurganj Block Fcs Ltd.,Bahadurganj,336,274,62,11.04.2011,2011,Inland
+428,Purnia,Kishanganj,Dighalbank Block Fcs Ltd.,Dighalbank,190,164,26,11.04.2011,2011,Inland
+429,Purnia,Kishanganj,Kishanganj Block Fcs Ltd.,Kishanganj,431,378,53,11.04.2011,2011,Inland
+430,Purnia,Kishanganj,Kochadhaman Block Fcs Ltd.,Kochadhamin,1468,1134,334,11.04.2011,2011,Inland
+431,Purnia,Kishanganj,Pothia Block Fcs Ltd.,Pothia,157,153,4,23.03.1956,1956,Inland
+432,Purnia,Kishanganj,Terhagachh Block Fcs Ltd.,Terhagachh,519,387,132,11.04.2011,2011,Inland
+433,Purnia,Kishanganj,Thakurganj Block Fcs Ltd.,Thakurganj,350,265,85,02.03.1960,1960,Inland
+434,Purnia,Katihar,"Amdabad, Fishermen Cooperative Society",Amdabad,1602,1122,480,Not Available,2010,Inland
+435,Purnia,Katihar,"Azamnagar, Fishermen Cooperative Society",Azamnagar,1029,229,800,Not Available,2010,Inland
+436,Purnia,Katihar,"Balrampur, Fishermen Cooperative Society",Balrampur,1399,980,419,Not Available,2011,Inland
+437,Purnia,Katihar,"Barari, Fishermen Cooperative Society",Barari,6253,4375,1878,Not Available,2011,Inland
+438,Purnia,Katihar,"Barsoi, Fishermen Cooperative Society",Barsoi,550,510,40,Not Available,2012,Inland
+439,Purnia,Katihar,"Dandkhora, Fishermen Cooperative Society",Dandkhora,1383,1008,375,Not Available,2011,Inland
+440,Purnia,Katihar,"Falka, Fishermen Cooperative Society",Falka,627,600,27,Not Available,2012,Inland
+441,Purnia,Katihar,"Hasanganj, Fishermen Cooperative Society",Hasanganj,603,413,190,Not Available,2011,Inland
+442,Purnia,Katihar,"Kadwa, Fishermen Cooperative Society",Kadwa,3247,2797,450,Not Available,2011,Inland
+443,Purnia,Katihar,"Katihar, Fishermen Cooperative Society",Katihar,255,179,76,Not Available,2010,Inland
+444,Purnia,Katihar,"Korha, Fishermen Cooperative Society",Korha,1965,1376,589,Not Available,2011,Inland
+445,Purnia,Katihar,"Kursela, Fishermen Cooperative Society",Kursela,2812,1612,1200,Not Available,2009,Inland
+446,Purnia,Katihar,"Manihari, Fishermen Cooperative Society",Manihari,2511,2195,316,Not Available,2011,Inland
+447,Purnia,Katihar,"Mansahi, Fishermen Cooperative Society",Mansahi,1403,983,420,Not Available,2010,Inland
+448,Purnia,Katihar,"Pranpur, Fishermen Cooperative Society",Pranpur,2167,1953,214,Not Available,2011,Inland
+449,Purnia,Katihar,"Sameli, Fishermen Cooperative Society",Sameli,729,511,218,Not Available,2012,Inland
+450,Purnia,Araria,Araria Block Fcs Ltd,Araria,588,521,67,19.05.1959,1959,Inland
+451,Purnia,Araria,Forbesganj Block Fcs Ltd,Forbesganj,519,454,65,10.06.2011,2011,Inland
+452,Purnia,Araria,Jokihat Block Fcs Ltd,Jokihat,997,900,97,01.06.1976,1976,Inland
+453,Purnia,Araria,Kursakanta Block Fcs Ltd,Kursakatta,249,200,49,20.04.1965,1965,Inland
+454,Purnia,Araria,Narpatganj Block Fcs Ltd,Narpatganj,439,343,96,07.04.1974,1974,Inland
+455,Purnia,Araria,Palasi Block Fcs Ltd,Palasi,779,636,143,10.06.2011,2011,Inland
+456,Purnia,Araria,Raniganj Block Fcs Ltd,Raniganj,561,505,56,15.01.1964,1964,Inland
+457,Purnia,Araria,Sikti Block Fcs Ltd,Sikti,337,286,51,23.05.1972,1972,Inland
+458,Purnia,Purnia,Purnea East Block Fisheries Cooperative Society Ltd.,Purnea East,2549,1641,908,16.05.2011,2011,Inland
+459,Purnia,Purnia,Kasba Block Fisheries Cooperative Society Ltd.,Kasba,1014,716,298,16.05.2011,2011,Inland
+460,Purnia,Purnia,K. Nagar Block Fisheries Cooperative Society Ltd.,K. Nagar,1353,927,426,16.05.2011,2011,Inland
+461,Purnia,Purnia,Jalalgadh Block Fisheries Cooperative Society Ltd.,Jalalgadh,681,476,205,16.05.2011,2011,Inland
+462,Purnia,Purnia,Banmankhi Block Fisheries Cooperative Society Ltd.,Banmankhi,2331,1462,869,16.05.2011,2011,Inland
+463,Purnia,Purnia,Baisi Block Fisheries Cooperative Society Ltd.,Baisi,861,605,256,08.05.1956,1956,Inland
+464,Purnia,Purnia,Amour Block Fisheries Cooperative Society Ltd.,Amour,1509,1016,493,16.05.2011,2011,Inland
+465,Purnia,Purnia,Baisa Block Fisheries Cooperative Society Ltd.,Baisa,522,349,173,16.05.2011,2011,Inland
+466,Purnia,Purnia,Dagarua Block Fisheries Cooperative Society Ltd.,Dagarua,2069,1451,618,16.05.2011,2011,Inland
+467,Purnia,Purnia,Dhamdaha Block Fisheries Cooperative Society Ltd.,Dhamdaha,587,454,133,16.05.2011,2011,Inland
+468,Purnia,Purnia,Bhawanipur Block Fisheries Cooperative Society Ltd.,Bhawanipur,696,488,208,16.05.2011,2011,Inland
+469,Purnia,Purnia,B. Khothi Block Fisheries Cooperative Society Ltd.,Barhara,457,302,155,16.03.1983,1983,Inland
+470,Purnia,Purnia,Rupoli Block Fisheries Cooperative Society Ltd.,Rupoli,2541,1852,689,16.05.2011,2011,Inland
+471,Bhagalpur,Bhagalpur,"Barari Matsya Jivi Sahyog Smiti, Jagdishpur",Jagdishpur,1576,1252,324,17.12.2005,2005,Inland
+472,Bhagalpur,Bhagalpur,"Nathnagar Prakhand Matsya Jivi Sahyog Smiti, Nathnagar",Nathnagar,246,201,45,14.03.2011,2011,Inland
+473,Bhagalpur,Bhagalpur,"Sabour Prakhand Matsya Jivi Sahyog Smiti, Sabour",Sabaor,671,486,185,14.03.2011,2011,Inland
+474,Bhagalpur,Bhagalpur,"Goradih Prakhand Matsya Jivi Sahyog Smiti, Goradih",Goradih,243,221,22,14.03.2011,2011,Inland
+475,Bhagalpur,Bhagalpur,"Sultanganj Prakhand Matsya Jivi Sahyog Smiti, Sultanganj",Sultanganj,677,526,151,14.03.2011,2011,Inland
+476,Bhagalpur,Bhagalpur,"Shahkund Prakhand Matsya Jivi Sahyog Smiti, Shahkund",Shahkund,583,480,103,14.03.2011,2011,Inland
+477,Bhagalpur,Bhagalpur,"Sanhoula Prakhand Matsya Jivi Sahyog Smiti, Sanhoula",Sanhaula,1515,1296,219,14.03.2011,2011,Inland
+478,Bhagalpur,Bhagalpur,"Kahalgaon Prakhand Matsya Jivi Sahyog Smiti, Khalgaon",Kahalgaon,1797,1355,442,07.12.2013,2013,Inland
+479,Bhagalpur,Bhagalpur,"Pirpaiti Prakhand Matsya Jivi Sahyog Smiti, Pirpaiti",Pirpaiti,2137,1687,450,14.03.2011,2011,Inland
+480,Bhagalpur,Bhagalpur,"Naugachiya Prakhand Matsya Jivi Sahyog Smiti, Naugachiya",Naugachiya,1249,999,250,14.03.2011,2011,Inland
+481,Bhagalpur,Bhagalpur,"Rangra Ckowk Prakhand Matsya Jivi Sahyog Smiti, Rangra Chowk",Rangra Chowk,2037,1826,211,28.03.2012,2012,Inland
+482,Bhagalpur,Bhagalpur,"Gopalpur Prakhand Matsya Jivi Sahyog Smiti, Gopalpur",Gopalpur,1390,1318,72,28.03.2012,2012,Inland
+483,Bhagalpur,Bhagalpur,"Ismilepur Prakhand Matsya Jivi Sahyog Smiti, Ismilepur",Ismilepur,107,67,40,28.03.2012,2012,Inland
+484,Bhagalpur,Bhagalpur,"Kharik Prakhand Matsya Jivi Sahyog Smiti, Kharik",Kharik,1406,1201,205,14.03.2012,2012,Inland
+485,Bhagalpur,Bhagalpur,"Bihpur Prakhand Matsya Jivi Sahyog Smiti, Bihpur",Bihpur,3542,3000,542,07.12.2010,2010,Inland
+486,Bhagalpur,Bhagalpur,"Narayanpur Prakhand Matsya Jivi Sahyog Smiti, Narayanpur",Narayanpur,1486,930,556,14.03.2011,2011,Inland
+487,Bhagalpur,Banka,Fullidumar Prakhand Matasyjivi Sahyog Samiti Limited,Fullidumar,800,516,284,01.01.2018,2018,Inland
+488,Bhagalpur,Banka,Rajoun Prakhand Matasyajivi Sahyog Samiti Limited,Rajaun,1285,986,299,01.01.2011,2011,Inland
+489,Bhagalpur,Banka,Shambhuganj Prakhand Matasyajivi Sahyog Samiti Limited,Shambhuganj,64,50,14,28.03.2011,2011,Inland
+490,Bhagalpur,Banka,Banka Prakhand Matasyajivi Sahyog Samiti Limited,Banka,77,52,25,16.03.1983,1983,Inland
+491,Bhagalpur,Banka,Katoria Prakhand Matasyajivi Sahyog Samiti Limited,Katoria,261,190,71,02.09.1989,1989,Inland
+492,Bhagalpur,Banka,Bounsi Prakhand Matasyajivi Sahyog Samiti Limited,Bounsi,93,52,41,03.08.1988,1988,Inland
+493,Bhagalpur,Banka,Barahat Prakhand Matasyajivi Sahyog Samiti Limited,Barahat,390,266,124,26.03.2011,2011,Inland
+494,Bhagalpur,Banka,Chandan Prakhand Matasyajivi Sahyog Samiti Limited,Chandan,117,85,32,01.09.2011,2011,Inland
+495,Bhagalpur,Banka,Dhuraiya Prakhand Matasyajivi Sahyog Samiti Limited,Dhuraiya,202,169,33,26.03.2011,2011,Inland
+496,Bhagalpur,Banka,Belhar Prakhand Matasyajivi Sahyog Samiti Limited,Belhar,110,102,8,01.07.2011,2011,Inland
+497,Bhagalpur,Banka,Amarpur Prakhand Matasyajivi Sahyog Samiti Limited,Amarpur,430,382,48,01.07.2011,2011,Inland

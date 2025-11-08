@@ -1,0 +1,2689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal & Fisheries Department, Bihar - Chatbot</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::selection {
+            background-color: rgba(59, 130, 246, 0.3);
+            color: inherit;
+        }
+
+        *::-moz-selection {
+            background-color: rgba(59, 130, 246, 0.3);
+            color: inherit;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 0;
+            box-shadow: none;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f4c81 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            border-bottom: 2px solid #3b82f6;
+            gap: 20px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: 10%;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(232, 197, 71, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBg 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 5%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.04) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBg 10s ease-in-out infinite 1s;
+            pointer-events: none;
+        }
+
+        @keyframes floatBg {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            position: relative;
+            margin-left: 0;
+            margin-top: 0;
+            z-index: 5;
+        }
+
+        .header-logo-aura {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232, 197, 71, 0.15) 0%, rgba(232, 197, 71, 0.05) 50%, transparent 80%);
+            pointer-events: none;
+            z-index: 0;
+            animation: subtle-glow 4s ease-in-out infinite;
+        }
+
+        .header-logo-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #C0A050 0%, #E8C547 50%, #C0A050 100%);
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35), inset 0 -2px 8px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+            border: 2px solid #8B7520;
+        }
+
+        .header-logo-image {
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .header-logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .header-logo-shine {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.35) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .header-logo-shine-rotating {
+            position: absolute;
+            inset: -1px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, rgba(255, 255, 255, 0.2) 0deg, rgba(255, 255, 255, 0) 80deg, rgba(255, 255, 255, 0) 280deg, rgba(255, 255, 255, 0.2) 360deg);
+            pointer-events: none;
+            z-index: 1;
+            animation: gentle-shine 6s linear infinite;
+        }
+
+        @keyframes subtle-glow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes gentle-shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            position: relative;
+            z-index: 3;
+            flex: 1;
+        }
+
+        .header-subtitle {
+            font-size: 0.75em;
+            letter-spacing: 1.2px;
+            margin-bottom: 4px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            text-transform: uppercase;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            background: linear-gradient(180deg, #E8C547 0%, #F0D060 50%, #E8C547 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Trebuchet MS', 'Lucida Grande', sans-serif;
+            text-transform: uppercase;
+            word-spacing: 2px;
+            line-height: 1.1;
+        }
+
+        .llm-analytics-text {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg, #E8C547 0%, #F0D060 25%, #E8C547 50%, #F0D060 75%, #E8C547 100%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerFlow 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmerFlow {
+            0% {
+                background-position: 200% 0;
+                filter: drop-shadow(0 0 0px rgba(232, 197, 71, 0));
+            }
+            50% {
+                background-position: -200% 0;
+                filter: drop-shadow(0 0 8px rgba(232, 197, 71, 0.5));
+            }
+            100% {
+                background-position: 200% 0;
+                filter: drop-shadow(0 0 0px rgba(232, 197, 71, 0));
+            }
+        }
+
+        .header-description {
+            margin: 10px 0 0 0;
+            font-size: 0.85em;
+            opacity: 0.98;
+            letter-spacing: 0.7px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .back-button {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 24px;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            flex-shrink: 0;
+            margin-right: 16px;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .back-button:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 12px;
+            margin-left: auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .language-selector button {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+
+        .language-selector button.active {
+            background: white;
+            color: #1e40af;
+            border-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .language-selector button:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            padding: 60px 32px 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f0f4ff 100%);
+            border-bottom: 2px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            width: 100%;
+            min-height: auto;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBg 8s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -60px;
+            left: 8%;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(96, 165, 250, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: floatBg 10s ease-in-out infinite 1s;
+            pointer-events: none;
+        }
+
+        .hero-logo-small {
+            width: 80px;
+            height: 80px;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 5;
+            animation: subtle-glow 4s ease-in-out infinite;
+        }
+
+        .hero-logo-aura {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 80%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-logo-ring {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #1e40af 100%);
+            box-shadow: 0 6px 20px rgba(30, 64, 175, 0.25), inset 0 -2px 6px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+            border: 2px solid #1e3a8a;
+        }
+
+        .hero-logo-image {
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .hero-logo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-logo-shine {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            max-width: 600px;
+        }
+
+        .hero-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 12px 0;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 15px;
+            color: #4b5563;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            padding: 28px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #f8f9fa;
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes typeWriter {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .message.user {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .message.user .message-content {
+            max-width: 75%;
+        }
+
+        .message.assistant {
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .message.assistant .message-content {
+            max-width: 85%;
+        }
+
+        .message-content {
+            padding: 16px 20px;
+            border-radius: 14px;
+            word-wrap: break-word;
+            font-size: 15px;
+            line-height: 1.7;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            animation: slideIn 0.4s ease-out;
+        }
+
+        .user .message-content {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            border-radius: 14px 4px 14px 14px;
+            font-weight: 500;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+        }
+
+        .assistant .message-content {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+            color: #1f2937;
+            border-radius: 12px;
+            border: 1.5px solid #e0e7ff;
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.1), 0 0 1px rgba(30, 64, 175, 0.2);
+            position: relative;
+            overflow: visible;
+            padding-left: 20px;
+            max-width: 520px;
+            margin: 0;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            animation: messageSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes messageSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .assistant .message-content.loading {
+            overflow: hidden;
+            padding: 14px 16px;
+            padding-left: 14px;
+            min-height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 450px;
+            width: auto;
+            background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+            border: 1.5px solid #e0e7ff;
+            box-shadow: 0 8px 24px rgba(30, 64, 175, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .assistant .message-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, #1e40af 0%, #3b82f6 60%, #1e3a8a 100%);
+            border-radius: 12px 0 0 12px;
+            opacity: 0.9;
+        }
+
+        .assistant .message-content ul {
+            margin: 12px 0;
+            margin-left: 20px;
+            padding-left: 6px;
+        }
+
+        .assistant .message-content li {
+            margin: 10px 0;
+            list-style-type: disc;
+            color: #374151;
+        }
+
+        .assistant .message-content ul li::marker {
+            color: #1e40af;
+            font-weight: 700;
+        }
+
+        .assistant .message-content strong {
+            color: #1e40af;
+            font-weight: 700;
+            background: rgba(30, 64, 175, 0.08);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .assistant .message-content p {
+            margin: 12px 0;
+            color: #374151;
+        }
+
+        .loading {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 2px 0;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .loading-content {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .loading-text {
+            font-weight: 600;
+            color: #1e40af;
+            font-size: 13px;
+            line-height: 1.3;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .progress-percentage {
+            font-size: 12px;
+            color: #3b82f6;
+            font-weight: 700;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        .response-timer {
+            font-size: 11px;
+            color: #10b981;
+            font-weight: 600;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .timer-icon {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: timerPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes timerPulse {
+            0%, 100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.6;
+                transform: scale(1.15);
+            }
+        }
+
+        .agent-conversation {
+            margin-top: 6px;
+            margin-left: 0;
+            margin-right: 0;
+            padding: 8px;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.03) 0%, rgba(59, 130, 246, 0.01) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 6px;
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: fadeInUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .agent-conversation.fade-out {
+            opacity: 0;
+            animation: fadeOutDown 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeOutDown {
+            from {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+        }
+
+        .live-data-container {
+            margin-top: 0;
+            margin-bottom: 0;
+            max-height: 180px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            border-radius: 5px;
+            border: 1px solid rgba(30, 64, 175, 0.12);
+            background: #ffffff;
+            width: 100%;
+            box-sizing: border-box;
+            animation: slideInDown 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .live-data-container table {
+            font-size: 11px;
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+        }
+
+        .live-data-container th {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 6px 8px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .live-data-container td {
+            padding: 5px 8px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 11px;
+            color: #333333;
+            background: #ffffff;
+        }
+
+        .live-data-container tr {
+            background: #ffffff;
+        }
+
+        .live-data-container tr:nth-child(even) {
+            background: #fafbff;
+        }
+
+        .live-data-container tr:hover {
+            background: #f0f4ff;
+        }
+
+        .agent-text {
+            font-style: italic;
+            color: #1e40af;
+            opacity: 0.9;
+            font-size: 14px;
+            line-height: 1.6;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .cursor {
+            display: none;
+        }
+
+        .agent-thinking {
+            margin-top: 3px;
+            padding: 6px 8px;
+            font-style: italic;
+            color: #6b7280;
+            opacity: 0.82;
+            font-size: 12px;
+            line-height: 1.4;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            animation: fadeInQuick 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            letter-spacing: 0.2px;
+        }
+
+        @keyframes fadeInQuick {
+            from {
+                opacity: 0;
+                transform: translateY(4px);
+            }
+            to {
+                opacity: 0.82;
+                transform: translateY(0);
+            }
+        }
+
+        .thinking-cursor {
+            display: inline-block;
+            width: 1.5px;
+            height: 0.85em;
+            background: linear-gradient(180deg, #6b7280 0%, #9ca3af 100%);
+            animation: blinkThinkingCursor 0.75s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            vertical-align: baseline;
+            margin-left: 2px;
+            border-radius: 1px;
+            box-shadow: 0 0 3px rgba(107, 114, 128, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 0.9;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blinkThinkingCursor {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes blinkCursor {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .spinner {
+            width: 18px;
+            height: 18px;
+            position: relative;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1px;
+        }
+
+        .spinner::before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(30, 64, 175, 0.12);
+            border-top: 2px solid #1e40af;
+            border-right: 2px solid #3b82f6;
+            border-radius: 50%;
+            animation: spinnerRotate 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+            box-shadow: 0 0 6px rgba(30, 64, 175, 0.25), inset 0 0 4px rgba(30, 64, 175, 0.1);
+        }
+
+        .spinner::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid rgba(59, 130, 246, 0.15);
+            border-top: 1.5px solid #3b82f6;
+            border-left: 1.5px solid #1e40af;
+            border-radius: 50%;
+            animation: spinnerRotateReverse 1.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+            opacity: 0.6;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .loading-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #1e40af;
+            animation: loadingDotBounce 1.4s ease-in-out infinite;
+            box-shadow: 0 0 4px rgba(30, 64, 175, 0.5);
+        }
+
+        .loading-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .loading-dot:nth-child(2) {
+            animation-delay: 0.15s;
+            background: #3b82f6;
+            box-shadow: 0 0 6px rgba(59, 130, 246, 0.6);
+        }
+
+        .loading-dot:nth-child(3) {
+            animation-delay: 0.3s;
+            background: #1e40af;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, rgba(30, 64, 175, 0.06) 0%, rgba(30, 64, 175, 0.09) 100%);
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 5px 0 0 0;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(30, 64, 175, 0.08);
+            position: relative;
+            min-height: 5px;
+        }
+
+        .progress-bar-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: shimmer 2.5s ease-in-out infinite;
+            border-radius: 3px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #1e40af 0%, #3b82f6 50%, #1e3a8a 100%);
+            border-radius: 3px;
+            animation: progressAdvance 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            box-shadow: 0 0 10px rgba(30, 64, 175, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+            min-height: 5px;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+            animation: progressShimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            border-radius: 3px;
+            pointer-events: none;
+        }
+
+        @keyframes progressAdvance {
+            0% {
+                width: 5%;
+                box-shadow: 0 0 8px rgba(30, 64, 175, 0.3), 0 0 16px rgba(59, 130, 246, 0.15);
+            }
+            50% {
+                width: 75%;
+                box-shadow: 0 0 14px rgba(30, 64, 175, 0.7), 0 0 28px rgba(59, 130, 246, 0.4);
+            }
+            100% {
+                width: 100%;
+                box-shadow: 0 0 10px rgba(30, 64, 175, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+            }
+        }
+
+        @keyframes spinnerRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes spinnerRotateReverse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+
+        @keyframes loadingDotBounce {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10px) scale(1.2);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                left: -100%;
+            }
+            50% {
+                left: 100%;
+            }
+        }
+
+        @keyframes progressShimmer {
+            0%, 100% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+        }
+
+        .sql-query {
+            display: none;
+        }
+
+        .input-area {
+            padding: 24px 32px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 14px;
+            background: white;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .input-wrapper {
+            flex: 1;
+            display: flex;
+            gap: 12px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+            color: #1f2937;
+        }
+
+        input[type="text"]::placeholder {
+            color: #9ca3af;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #1e40af;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.08);
+        }
+
+        button.send-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+            font-size: 15px;
+        }
+
+        button.send-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(30, 64, 175, 0.4);
+        }
+
+        button.send-btn:active {
+            transform: translateY(0);
+        }
+
+        button.send-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        button.clear-btn {
+            background: #f3f4f6;
+            color: #374151;
+            border: 2px solid #e5e7eb;
+            padding: 12px 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+
+        button.clear-btn:hover {
+            background: #e5e7eb;
+            border-color: #d1d5db;
+            transform: translateY(-1px);
+        }
+
+        .error-message {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #dc2626;
+        }
+
+        .info-message {
+            background: #f0fdf4;
+            color: #15803d;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border-left: 4px solid #22c55e;
+        }
+
+        .data-table-container {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            margin: 16px 0 0 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .table-toggle-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            border: none;
+            padding: 10px 14px;
+            width: auto;
+            display: inline-flex;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.15);
+            white-space: nowrap;
+        }
+
+        .table-toggle-btn:hover {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .table-toggle-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 6px rgba(30, 64, 175, 0.15);
+        }
+
+        .table-toggle-btn .arrow {
+            transition: transform 0.2s ease;
+            font-size: 11px;
+        }
+
+        .table-toggle-btn.collapsed .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .table-content {
+            max-height: 400px;
+            overflow-y: auto;
+            overflow-x: auto;
+            display: block;
+            width: 100%;
+        }
+
+        .table-content.collapsed {
+            display: none;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            background: #ffffff;
+        }
+
+        .data-table th {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 11px 13px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid #1e3a8a;
+            position: sticky;
+            top: 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .data-table td {
+            padding: 10px 13px;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+            color: #333333;
+            background: #ffffff;
+        }
+
+        .data-table tr {
+            background: #ffffff;
+        }
+
+        .data-table tr:hover {
+            background: #f5f7ff;
+        }
+
+        .data-table tr:nth-child(even) {
+            background: #fafbff;
+        }
+
+        .table-actions {
+            padding: 14px 16px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 12px;
+        }
+
+        .table-actions.collapsed {
+            display: none;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            padding-top: 8px;
+            border-top: 1px solid rgba(30, 64, 175, 0.1);
+        }
+
+        .action-buttons button {
+            flex: 1;
+            min-width: 140px;
+            padding: 10px 16px;
+            font-size: 13px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .action-buttons button:hover {
+            transform: translateY(-2px);
+        }
+
+        .csv-download-btn {
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
+        }
+
+        .csv-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+        }
+
+        .visualization-btn {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.2);
+        }
+
+        .visualization-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+        }
+
+        .report-download-btn {
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.2);
+        }
+
+        .report-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+        }
+
+        .auto-visualization-container {
+            margin-top: 20px;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: linear-gradient(135deg, rgba(30, 64, 175, 0.04) 0%, rgba(59, 130, 246, 0.03) 100%);
+            border: 1px solid rgba(30, 64, 175, 0.1);
+            border-radius: 8px;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auto-visualization-container canvas {
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        .visualization-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .visualization-modal.active {
+            display: flex;
+        }
+
+        .visualization-modal-content {
+            background: white;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 1000px;
+            max-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+            animation: slideIn 0.4s ease-out;
+        }
+
+        .visualization-header {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: white;
+            padding: 24px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+        }
+
+        .visualization-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .visualization-close {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .visualization-close:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(90deg);
+        }
+
+        .visualization-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f8f9fa;
+        }
+
+        .chart-container {
+            width: 100%;
+            height: 100%;
+            max-height: 600px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chart-wrapper {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+            border: 1px solid #e5e7eb;
+        }
+
+        .chart-canvas {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .visualization-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .visualization-error {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 16px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #dc2626;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                height: 100vh;
+            }
+
+            .header {
+                padding: 20px;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .header-title {
+                min-width: auto;
+                width: 100%;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .header-subtitle {
+                font-size: 11px;
+            }
+
+            .language-selector {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .messages {
+                padding: 16px 20px;
+                gap: 16px;
+            }
+
+            .message-content {
+                max-width: 85%;
+                padding: 14px 16px;
+            }
+
+            .input-area {
+                padding: 16px 20px;
+                gap: 10px;
+                flex-direction: column;
+            }
+
+            .input-wrapper {
+                gap: 10px;
+            }
+
+            input[type="text"],
+            button.send-btn,
+            button.clear-btn {
+                font-size: 14px;
+            }
+
+            .data-table {
+                font-size: 12px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 8px;
+            }
+
+            .csv-download-btn,
+            .visualization-btn {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .visualization-modal-content {
+                max-height: 90vh;
+            }
+
+            .visualization-header {
+                padding: 16px 20px;
+            }
+
+            .visualization-header h2 {
+                font-size: 18px;
+            }
+
+            .visualization-body {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <!-- Back Button -->
+            <button class="back-button" onclick="goBackToDashboard()" title="Back to Dashboard">
+                ←
+            </button>
+
+            <!-- Title Section -->
+            <div class="header-title">
+                <div class="header-subtitle">पशु एवं मत्स्य संसाधन विभाग</div>
+                <h1>ASK ME - <span class="llm-analytics-text">मत्स्य साथी</span></h1>
+                <div class="header-description">Intelligent Assistant for Fisheries & Animal Resources Data</div>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="english">English</button>
+                <button class="lang-btn" data-lang="hindi">हिंदी</button>
+            </div>
+        </div>
+
+        <div class="messages" id="messages">
+            <div class="hero-section">
+                <div class="hero-logo-small">
+                    <div class="hero-logo-aura"></div>
+                    <div class="hero-logo-ring"></div>
+                    <div class="hero-logo-image">
+                        <img src="http://localhost:8000/logo.jpg" alt="Bihar Logo">
+                    </div>
+                    <div class="hero-logo-shine"></div>
+                </div>
+                <div class="hero-content">
+                    <h2 class="hero-title">Welcome to मत्स्य साथी</h2>
+                    <p class="hero-subtitle">Ask me any questions related to animal and fisheries data, and I will provide you with detailed reports and insights.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input
+                    type="text"
+                    id="question-input"
+                    placeholder="Ask a question..."
+                    autocomplete="off"
+                >
+                <button class="send-btn" id="send-btn">Send</button>
+            </div>
+            <button class="clear-btn" id="clear-btn">Clear</button>
+        </div>
+    </div>
+
+    <div class="visualization-modal" id="visualization-modal">
+        <div class="visualization-modal-content">
+            <div class="visualization-header">
+                <h2>Data Visualization</h2>
+                <button class="visualization-close" id="visualization-close">×</button>
+            </div>
+            <div class="visualization-body">
+                <div class="chart-container" id="chart-container">
+                    <canvas id="data-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentLanguage = 'english';
+        const messagesDiv = document.getElementById('messages');
+        const questionInput = document.getElementById('question-input');
+        const sendBtn = document.getElementById('send-btn');
+        const clearBtn = document.getElementById('clear-btn');
+        const langButtons = document.querySelectorAll('.lang-btn');
+
+        const API_URL = 'http://localhost:8002/chat';
+
+        // Back button function to return to dashboard
+        function goBackToDashboard() {
+            window.location.href = 'http://localhost:8000';
+        }
+
+        // Language selector
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                langButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentLanguage = btn.dataset.lang;
+            });
+        });
+
+        // Send message
+        sendBtn.addEventListener('click', sendMessage);
+        questionInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Clear chat
+        clearBtn.addEventListener('click', () => {
+            messagesDiv.innerHTML = '';
+        });
+
+        // Helper function to render instant table from fetched data
+        function renderInstantTable(queryResults) {
+            if (!queryResults || queryResults.length === 0) return;
+
+            const liveDataDiv = document.getElementById('live-data-container');
+            if (!liveDataDiv) return;
+
+            // Create a simple table just for streaming display (without toggle button)
+            const columns = Object.keys(queryResults[0]);
+            const table = document.createElement('table');
+            table.className = 'data-table';
+
+            // Create header
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            columns.forEach(col => {
+                const th = document.createElement('th');
+                th.textContent = col;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create body (show first 20 rows in streaming view)
+            const tbody = document.createElement('tbody');
+            queryResults.slice(0, 20).forEach(row => {
+                const tr = document.createElement('tr');
+                columns.forEach(col => {
+                    const td = document.createElement('td');
+                    const value = row[col];
+                    td.textContent = value !== null ? value : '-';
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            table.appendChild(tbody);
+
+            liveDataDiv.innerHTML = '';
+            liveDataDiv.appendChild(table);
+        }
+
+        // Render live visualization (called as charts arrive)
+        // Render live visualization with unit-aware styling
+        function renderLiveVisualization(chartConfig, loadingMsg) {
+            if (!chartConfig || !chartConfig.data) {
+                console.warn('[VIZ-AGENT] Invalid chart config:', chartConfig);
+                return;
+            }
+
+            try {
+                const agentConversation = loadingMsg.querySelector('.agent-conversation');
+                if (!agentConversation) return;
+
+                // Create container for this chart
+                const chartDiv = document.createElement('div');
+                chartDiv.className = 'live-chart-container';
+
+                // Unit-aware background colors
+                const unitBgColors = {
+                    "rupees": "#f0fdf4",     // Light green
+                    "hectares": "#fef3c7",   // Light orange
+                    "count": "#eff6ff",      // Light blue
+                    "tonnes": "#faf5ff",     // Light purple
+                    "percentage": "#fdf2f8"  // Light pink
+                };
+
+                const bgColor = unitBgColors[chartConfig.unit] || "#f9fafb";
+                chartDiv.style.cssText = `margin: 15px 0; padding: 12px; background: ${bgColor};
+                                         border-left: 4px solid ${chartConfig.colors?.border || 'rgba(102,126,234,1)'};
+                                         border-radius: 8px; animation: slideInUp 0.4s ease-out;`;
+
+                // Create title with unit info
+                const title = document.createElement('h4');
+                const unitText = chartConfig.unit ? ` [${chartConfig.unit.toUpperCase()}]` : '';
+                title.textContent = (chartConfig.title || 'Chart') + unitText;
+                title.style.cssText = 'margin: 5px 0 12px 0; color: #1f2937; font-size: 14px; font-weight: 600;';
+
+                // Create canvas element
+                const canvas = document.createElement('canvas');
+                canvas.id = `chart-${Date.now()}-${Math.random()}`;
+                canvas.style.cssText = 'max-height: 350px; margin: 10px 0;';
+
+                chartDiv.appendChild(title);
+                chartDiv.appendChild(canvas);
+                agentConversation.appendChild(chartDiv);
+
+                // Prepare data for Chart.js
+                const ctx = canvas.getContext('2d');
+
+                // Extract x and y values from chart data
+                const labels = chartConfig.data.map(d => d.x);
+                const dataValues = chartConfig.data.map(d => d.y);
+
+                // Use unit-aware colors or custom colors
+                const bgColor_rgba = chartConfig.colors?.bg || 'rgba(102, 126, 234, 0.7)';
+                const borderColor_rgba = chartConfig.colors?.border || 'rgba(102, 126, 234, 1)';
+
+                // Create Chart.js config
+                const chartData = {
+                    labels: labels,
+                    datasets: [{
+                        label: chartConfig.y || 'Value',
+                        data: dataValues,
+                        backgroundColor: chartConfig.type === 'bar' ? bgColor_rgba : 'rgba(102, 126, 234, 0.1)',
+                        borderColor: borderColor_rgba,
+                        borderWidth: 2,
+                        fill: chartConfig.type === 'line',
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointHoverRadius: 7,
+                        pointBackgroundColor: borderColor_rgba,
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2
+                    }]
+                };
+
+                const chartOptions = {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    animation: {
+                        duration: 400,
+                        easing: 'easeInOutQuad'
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: { size: 12, weight: '500' },
+                                padding: 12,
+                                usePointStyle: true,
+                                boxWidth: 8
+                            }
+                        },
+                        title: {
+                            display: false
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                            padding: 10,
+                            titleFont: { size: 12, weight: '600' },
+                            bodyFont: { size: 11 },
+                            borderColor: borderColor_rgba,
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: chartConfig.y || 'Value',
+                                font: { size: 12, weight: '600' }
+                            },
+                            grid: {
+                                drawBorder: false,
+                                color: 'rgba(0, 0, 0, 0.03)'
+                            },
+                            ticks: {
+                                font: { size: 11 }
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: chartConfig.x || 'Category',
+                                font: { size: 12, weight: '600' }
+                            },
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                font: { size: 11 },
+                                maxRotation: 45,
+                                minRotation: 0
+                            }
+                        }
+                    }
+                };
+
+                // Create chart
+                if (typeof Chart !== 'undefined') {
+                    new Chart(ctx, {
+                        type: chartConfig.type || 'bar',
+                        data: chartData,
+                        options: chartOptions
+                    });
+                    console.log('[VIZ-AGENT] ✓ Chart rendered:', chartConfig.title, '(' + chartConfig.unit + ')');
+                } else {
+                    console.warn('[VIZ-AGENT] Chart.js not loaded');
+                }
+
+                // Auto-scroll to show the new chart
+                setTimeout(() => {
+                    chartDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 150);
+
+            } catch (error) {
+                console.error('[VIZ-AGENT] Error rendering chart:', error);
+                console.error('[VIZ-AGENT] Chart config:', chartConfig);
+            }
+        }
+
+        // Helper function to append live LLM text chunks
+        // Animate thinking text with typing effect
+        function animateThinkingText(thinkingDiv, text) {
+            const textSpan = thinkingDiv.querySelector('.thinking-text');
+            const cursor = thinkingDiv.querySelector('.thinking-cursor');
+
+            if (!textSpan || !cursor) return;
+
+            textSpan.textContent = '';
+            let index = 0;
+
+            // Calculate variable speed - faster at start, natural pace
+            const speed = 20; // milliseconds per character
+
+            function typeNextChar() {
+                if (index < text.length) {
+                    textSpan.textContent += text.charAt(index);
+                    index++;
+
+                    // Slight variation in speed for natural feel
+                    let nextSpeed = speed;
+                    if (text.charAt(index) === '.' || text.charAt(index) === ',' || text.charAt(index) === '!') {
+                        nextSpeed = speed * 3; // Pause at punctuation
+                    }
+
+                    setTimeout(typeNextChar, nextSpeed);
+                } else {
+                    // Keep cursor visible after typing completes
+                    cursor.style.opacity = '1';
+                }
+            }
+
+            typeNextChar();
+        }
+
+        // Helper function to finalize and show final answer with table and buttons
+        function finalizeAnswer(answer, queryResults, sqlQuery, question, loadingMsg) {
+            // Fade out live stream
+            const agentConversation = loadingMsg.querySelector('.agent-conversation');
+            if (agentConversation) {
+                agentConversation.style.transition = 'opacity 0.4s ease-out';
+                agentConversation.style.opacity = '0';
+                setTimeout(() => {
+                    if (agentConversation.parentElement) {
+                        agentConversation.remove();
+                    }
+                }, 400);
+            }
+
+            // Schedule final message addition
+            setTimeout(() => {
+                if (loadingMsg.parentElement) {
+                    loadingMsg.remove();
+                }
+                addMessageWithSQL(answer, sqlQuery, 'assistant', queryResults, question);
+            }, 400);
+        }
+
+        async function sendMessage() {
+            const question = questionInput.value.trim();
+
+            if (!question) return;
+
+            // Add user message
+            addMessage(question, 'user');
+            questionInput.value = '';
+            sendBtn.disabled = true;
+
+            // Show loading
+            const loadingMsg = addLoadingMessage();
+            let progressValue = 0;
+            const startTime = Date.now();
+            let progressInterval;
+            let timerInterval;
+            let fullAnswer = '';
+            let sqlQuery = '';
+            let queryResults = [];
+            let dataFetched = false;
+
+            // Show thinking message INSTANTLY to engage user
+            function showInstantThinkingMessage() {
+                const agentConversation = loadingMsg.querySelector('.agent-conversation');
+                const existingThinking = agentConversation.querySelector('#agent-thinking-msg');
+
+                // Only show if not already present
+                if (!existingThinking) {
+                    const thinkingDiv = document.createElement('div');
+                    thinkingDiv.className = 'agent-thinking';
+                    thinkingDiv.id = 'agent-thinking-msg';
+                    thinkingDiv.innerHTML = `<span class="thinking-text"></span><span class="thinking-cursor"></span>`;
+                    agentConversation.appendChild(thinkingDiv);
+
+                    // Generate random thinking messages for instant engagement
+                    const thinkingMessages = [
+                        "Let me analyze that for you...",
+                        "Processing your request...",
+                        "Checking the data...",
+                        "Let me look into that...",
+                        "Analyzing your question...",
+                        "Gathering insights...",
+                        "Computing results...",
+                        "Examining the database..."
+                    ];
+                    const randomThinking = thinkingMessages[Math.floor(Math.random() * thinkingMessages.length)];
+
+                    // Animate thinking text with typing effect
+                    animateThinkingText(thinkingDiv, randomThinking);
+                }
+            }
+
+            // Show thinking message instantly within 100ms
+            setTimeout(showInstantThinkingMessage, 100);
+
+            // Helper function to update progress
+            function updateProgress(newValue) {
+                progressValue = Math.max(progressValue, Math.min(newValue, 100));
+                const progressElement = loadingMsg.querySelector('.progress-percentage');
+                const progressBar = loadingMsg.querySelector('.progress-bar');
+
+                if (progressElement) {
+                    progressElement.textContent = progressValue + '%';
+                }
+                if (progressBar) {
+                    progressBar.style.width = progressValue + '%';
+                }
+            }
+
+            // Update timer display
+            function updateTimer() {
+                const elapsedSeconds = ((Date.now() - startTime) / 1000).toFixed(1);
+                const timerElement = loadingMsg.querySelector('.timer-text');
+                if (timerElement) {
+                    timerElement.textContent = `Elapsed: ${elapsedSeconds}s`;
+                }
+            }
+
+            try {
+                // Stage 1: Initial request (10%)
+                updateProgress(10);
+
+                // Start timer update
+                timerInterval = setInterval(updateTimer, 100);
+
+                // Start smooth progress animation while waiting for response
+                progressInterval = setInterval(() => {
+                    const elapsedTime = Date.now() - startTime;
+                    let smoothProgress = 10 + (elapsedTime / 200);
+                    updateProgress(Math.min(85, Math.round(smoothProgress)));
+                }, 200);
+
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        question: question,
+                        language: currentLanguage
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network error');
+                }
+
+                // Check if streaming response available
+                const contentType = response.headers.get('content-type') || '';
+                const isStreaming = contentType.includes('ndjson') || contentType.includes('stream');
+                console.log('[CHAT] Content-Type:', contentType, 'Is Streaming:', isStreaming);
+
+                if (!isStreaming) {
+                    // Fallback: Static JSON response
+                    clearInterval(progressInterval);
+                    updateProgress(90);
+
+                    const data = await response.json();
+                    fullAnswer = data.answer;
+                    sqlQuery = data.sql_query;
+                    queryResults = data.query_results;
+
+                    // Show table immediately if available
+                    if (queryResults.length > 0) {
+                        renderInstantTable(queryResults);
+                        updateProgress(50);
+                        dataFetched = true;
+                    }
+
+                    updateProgress(95);
+                    await new Promise(resolve => setTimeout(resolve, 150));
+                    updateProgress(100);
+                } else {
+                    // Streaming response with staged events
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder();
+                    let buffer = '';
+
+                    clearInterval(progressInterval);
+                    console.log('[STREAM] Starting to read streaming response...');
+
+                    while (true) {
+                        const { done, value } = await reader.read();
+                        if (done) {
+                            console.log('[STREAM] Stream finished');
+                            break;
+                        }
+
+                        buffer += decoder.decode(value, { stream: true });
+                        const lines = buffer.split('\n');
+                        buffer = lines[lines.length - 1];
+
+                        for (let i = 0; i < lines.length - 1; i++) {
+                            const line = lines[i].trim();
+                            if (!line) continue;
+
+                            try {
+                                const event = JSON.parse(line);
+                                console.log('[EVENT]', event.stage, event);
+
+                                // Stage 0: Thinking message - show friendly thinking animation with typing effect
+                                if (event.stage === 'thinking') {
+                                    console.log('[THINKING] Showing thinking message:', event.text);
+                                    const agentConversation = loadingMsg.querySelector('.agent-conversation');
+                                    const thinkingDiv = document.createElement('div');
+                                    thinkingDiv.className = 'agent-thinking';
+                                    thinkingDiv.id = 'agent-thinking-msg';
+                                    thinkingDiv.innerHTML = `<span class="thinking-text"></span><span class="thinking-cursor"></span>`;
+                                    agentConversation.appendChild(thinkingDiv);
+
+                                    // Animate the thinking text with typing effect
+                                    animateThinkingText(thinkingDiv, event.text);
+                                }
+
+                                // Stage 1: Data fetched - show table immediately (and remove thinking)
+                                else if (event.stage === 'data_fetched' && !dataFetched) {
+                                    console.log('[TABLE] Rendering table with', event.query_results?.length, 'rows');
+                                    // Remove thinking message
+                                    const thinkingMsg = loadingMsg.querySelector('#agent-thinking-msg');
+                                    if (thinkingMsg) {
+                                        thinkingMsg.style.animation = 'fadeOut 0.3s ease-out forwards';
+                                        setTimeout(() => {
+                                            if (thinkingMsg.parentElement) {
+                                                thinkingMsg.remove();
+                                            }
+                                        }, 300);
+                                    }
+                                    queryResults = event.query_results;
+                                    renderInstantTable(queryResults);
+                                    updateProgress(50);
+                                    dataFetched = true;
+                                }
+
+                                // Stage 2: Partial answer - accumulate text (and remove thinking if still there)
+                                else if (event.stage === 'partial_answer') {
+                                    if (event.text) {
+                                        // Remove thinking message if it's still visible
+                                        const thinkingMsg = loadingMsg.querySelector('#agent-thinking-msg');
+                                        if (thinkingMsg) {
+                                            thinkingMsg.style.animation = 'fadeOut 0.3s ease-out forwards';
+                                            setTimeout(() => {
+                                                if (thinkingMsg.parentElement) {
+                                                    thinkingMsg.remove();
+                                                }
+                                            }, 300);
+                                        }
+                                        console.log('[TEXT] Receiving token:', event.text.substring(0, 30));
+                                        fullAnswer += event.text;
+                                        updateProgress(Math.min(90, progressValue + 1));
+                                    }
+                                }
+
+                                // Stage 2.5: Visualization - render charts as they arrive (PARALLEL)
+                                else if (event.stage === 'visualization' && event.chart) {
+                                    console.log('[VIZ] Rendering chart:', event.chart.title || 'Chart');
+                                    renderLiveVisualization(event.chart, loadingMsg);
+                                    updateProgress(Math.min(90, progressValue + 2));
+                                }
+
+                                // Stage 3: Complete - finalize with all data
+                                else if (event.stage === 'complete') {
+                                    fullAnswer = event.answer || fullAnswer;
+                                    sqlQuery = event.sql_query || sqlQuery;
+                                    queryResults = event.query_results || queryResults;
+                                    updateProgress(100);
+                                    break;
+                                }
+                            } catch (e) {
+                                // Incomplete JSON, continue buffering
+                            }
+                        }
+                    }
+
+                    // Handle remaining buffer
+                    if (buffer.trim()) {
+                        try {
+                            const event = JSON.parse(buffer);
+                            if (event.stage === 'thinking') {
+                                const agentConversation = loadingMsg.querySelector('.agent-conversation');
+                                const thinkingDiv = document.createElement('div');
+                                thinkingDiv.className = 'agent-thinking';
+                                thinkingDiv.id = 'agent-thinking-msg';
+                                thinkingDiv.innerHTML = `<span class="thinking-text"></span><span class="thinking-cursor"></span>`;
+                                agentConversation.appendChild(thinkingDiv);
+
+                                // Animate the thinking text with typing effect
+                                animateThinkingText(thinkingDiv, event.text);
+                            } else if (event.stage === 'data_fetched' && !dataFetched) {
+                                const thinkingMsg = loadingMsg.querySelector('#agent-thinking-msg');
+                                if (thinkingMsg) {
+                                    thinkingMsg.style.animation = 'fadeOut 0.3s ease-out forwards';
+                                    setTimeout(() => {
+                                        if (thinkingMsg.parentElement) {
+                                            thinkingMsg.remove();
+                                        }
+                                    }, 300);
+                                }
+                                queryResults = event.query_results;
+                                renderInstantTable(queryResults);
+                                dataFetched = true;
+                            } else if (event.stage === 'partial_answer' && event.text) {
+                                const thinkingMsg = loadingMsg.querySelector('#agent-thinking-msg');
+                                if (thinkingMsg) {
+                                    thinkingMsg.style.animation = 'fadeOut 0.3s ease-out forwards';
+                                    setTimeout(() => {
+                                        if (thinkingMsg.parentElement) {
+                                            thinkingMsg.remove();
+                                        }
+                                    }, 300);
+                                }
+                                fullAnswer += event.text;
+                            } else if (event.stage === 'visualization' && event.chart) {
+                                console.log('[VIZ-BUFFER] Rendering chart:', event.chart.title || 'Chart');
+                                renderLiveVisualization(event.chart, loadingMsg);
+                            } else if (event.stage === 'complete') {
+                                fullAnswer = event.answer || fullAnswer;
+                                sqlQuery = event.sql_query || sqlQuery;
+                                queryResults = event.query_results || queryResults;
+                            }
+                        } catch (e) {
+                            // Final buffer may be incomplete
+                        }
+                    }
+                }
+
+                // Final stage: Complete (100%)
+                updateProgress(100);
+
+                // Get final elapsed time
+                const totalElapsedSeconds = ((Date.now() - startTime) / 1000).toFixed(2);
+                const timerElement = loadingMsg.querySelector('.timer-text');
+                if (timerElement) {
+                    timerElement.textContent = `✓ Response received in ${totalElapsedSeconds}s`;
+                    timerElement.style.color = '#10b981';
+                }
+
+                // Brief delay to show completion
+                await new Promise(resolve => setTimeout(resolve, 400));
+
+                // Finalize: Fade out live stream and show final message
+                finalizeAnswer(fullAnswer, queryResults, sqlQuery, question, loadingMsg);
+
+            } catch (error) {
+                clearInterval(progressInterval);
+                const timerElement = loadingMsg.querySelector('.timer-text');
+                if (timerElement) {
+                    const totalElapsedSeconds = ((Date.now() - startTime) / 1000).toFixed(2);
+                    timerElement.textContent = `✗ Error after ${totalElapsedSeconds}s`;
+                    timerElement.style.color = '#ef4444';
+                }
+                setTimeout(() => {
+                    loadingMsg.remove();
+                    addMessage('Error: ' + error.message, 'assistant', 'error');
+                }, 500);
+            } finally {
+                clearInterval(progressInterval);
+                clearInterval(timerInterval);
+                sendBtn.disabled = false;
+                questionInput.focus();
+            }
+        }
+
+        function addMessage(text, sender, type = 'normal') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+
+            if (type === 'error') {
+                contentDiv.className += ' error-message';
+                contentDiv.textContent = text;
+            } else {
+                contentDiv.innerHTML = parseMarkdown(text);
+            }
+
+            messageDiv.appendChild(contentDiv);
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            return messageDiv;
+        }
+
+        function addMessageWithSQL(text, sqlQuery, sender, queryResults, userQuestion = '') {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+
+            messageDiv.appendChild(contentDiv);
+
+            // Add data table if results are available
+            if (queryResults && queryResults.length > 0) {
+                const tableContainer = createDataTable(queryResults, userQuestion, text, sqlQuery);
+                messageDiv.appendChild(tableContainer);
+            }
+
+            messagesDiv.appendChild(messageDiv);
+
+            // Animate text with character-by-character typing effect
+            contentDiv.innerHTML = '';
+            contentDiv.style.opacity = '1';
+
+            // Add typing animation for final response
+            animateFinalResponse(contentDiv, text);
+
+            return messageDiv;
+        }
+
+        function animateFinalResponse(contentDiv, text) {
+            // Apply markdown formatting immediately
+            contentDiv.innerHTML = parseMarkdown(text);
+
+            // Fade in animation
+            contentDiv.style.opacity = '0';
+            contentDiv.style.transition = 'opacity 0.5s ease-in';
+
+            // Trigger fade-in animation
+            setTimeout(() => {
+                contentDiv.style.opacity = '1';
+            }, 10);
+
+            // Final scroll to bottom when message is added
+            setTimeout(() => {
+                messagesDiv.scrollTop = messagesDiv.scrollHeight;
+            }, 500);
+        }
+
+        function createDataTable(data, userQuestion = '', answer = '', sqlQuery = '') {
+            const container = document.createElement('div');
+            container.className = 'data-table-container';
+
+            // Get column names from first row
+            const columns = Object.keys(data[0]);
+
+            // Create toggle button for table
+            const toggleBtn = document.createElement('button');
+            toggleBtn.className = 'table-toggle-btn collapsed';
+            toggleBtn.innerHTML = `<span>Show Data (${data.length} rows)</span><span class="arrow">▼</span>`;
+
+            // Create table content div
+            const tableDiv = document.createElement('div');
+            tableDiv.className = 'table-content collapsed';
+
+            // Create table
+            const table = document.createElement('table');
+            table.className = 'data-table';
+
+            // Create header
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            columns.forEach(col => {
+                const th = document.createElement('th');
+                th.textContent = col;
+                headerRow.appendChild(th);
+            });
+            thead.appendChild(headerRow);
+            table.appendChild(thead);
+
+            // Create body
+            const tbody = document.createElement('tbody');
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                columns.forEach(col => {
+                    const td = document.createElement('td');
+                    const value = row[col];
+                    td.textContent = value !== null ? value : '-';
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            table.appendChild(tbody);
+
+            tableDiv.appendChild(table);
+
+            // Create actions div (NOT collapsed - always visible)
+            const actionsDiv = document.createElement('div');
+            actionsDiv.className = 'table-actions';
+
+            const downloadBtn = document.createElement('button');
+            downloadBtn.className = 'csv-download-btn';
+            downloadBtn.textContent = 'Download as CSV';
+            downloadBtn.onclick = () => downloadTableAsCSV(data, columns);
+
+            const reportDownloadBtn = document.createElement('button');
+            reportDownloadBtn.className = 'report-download-btn';
+            reportDownloadBtn.textContent = 'Download Report (PDF)';
+            reportDownloadBtn.onclick = () => downloadReportPDF(userQuestion, answer, data, columns, sqlQuery);
+
+            actionsDiv.appendChild(downloadBtn);
+            actionsDiv.appendChild(reportDownloadBtn);
+
+            // Create visualization container (auto-display chart)
+            const vizContainer = document.createElement('div');
+            vizContainer.className = 'auto-visualization-container';
+            vizContainer.id = `viz-${Date.now()}`;
+
+            // Toggle functionality for table only
+            toggleBtn.addEventListener('click', () => {
+                toggleBtn.classList.toggle('collapsed');
+                tableDiv.classList.toggle('collapsed');
+            });
+
+            container.appendChild(toggleBtn);
+            container.appendChild(tableDiv);
+            container.appendChild(vizContainer);
+            container.appendChild(actionsDiv);
+
+            // Auto-generate visualization after container is added to DOM
+            setTimeout(() => {
+                createAutoVisualization(data, columns, vizContainer.id);
+            }, 100);
+
+            return container;
+        }
+
+        function downloadTableAsCSV(data, columns) {
+            // Create CSV content
+            let csv = columns.map(col => `"${col}"`).join(',') + '\n';
+            data.forEach(row => {
+                const rowData = columns.map(col => {
+                    const value = row[col];
+                    const stringValue = value !== null ? String(value) : '';
+                    return `"${stringValue.replace(/"/g, '""')}"`;
+                }).join(',');
+                csv += rowData + '\n';
+            });
+
+            // Create blob and download
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `data_${new Date().getTime()}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        async function downloadReportPDF(userQuestion, answer, data, columns, sqlQuery) {
+            try {
+                // Show loading state
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = 'Generating PDF...';
+                btn.disabled = true;
+
+                // Prepare request payload
+                const reportRequest = {
+                    question: userQuestion,
+                    answer: answer,
+                    data: data,
+                    columns: columns,
+                    sql_query: sqlQuery
+                };
+
+                // Send request to backend
+                const response = await fetch('http://localhost:8002/download-report', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(reportRequest)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to generate PDF');
+                }
+
+                // Get the PDF blob
+                const blob = await response.blob();
+
+                // Create download link
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = `chatbot_report_${new Date().getTime()}.pdf`;
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Restore button state
+                btn.textContent = originalText;
+                btn.disabled = false;
+            } catch (error) {
+                alert('Error downloading PDF: ' + error.message);
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        function parseMarkdown(text) {
+            // Convert markdown-like bullet points to HTML lists
+            text = text.replace(/^- (.+)$/gm, '<li>$1</li>');
+            text = text.replace(/^• (.+)$/gm, '<li>$1</li>');
+            text = text.replace(/^\* (.+)$/gm, '<li>$1</li>');
+
+            // Wrap consecutive list items in <ul> tags
+            text = text.replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>');
+
+            // Bold text
+            text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+            text = text.replace(/__(.+?)__/g, '<strong>$1</strong>');
+
+            // Line breaks
+            text = text.replace(/\n\n/g, '</p><p>');
+            text = '<p>' + text + '</p>';
+
+            return text;
+        }
+
+        function addLoadingMessage() {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message assistant';
+
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content loading';
+            contentDiv.style.width = '100%';
+            contentDiv.style.maxWidth = '100%';
+            contentDiv.innerHTML = `
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <div class="loading-content" style="width: 100%; max-width: 100%;">
+                        <span class="loading-text">
+                            Processing your request
+                            <span class="progress-percentage">0%</span>
+                        </span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="response-timer">
+                            <span class="timer-icon"></span>
+                            <span class="timer-text">Elapsed: 0.0s</span>
+                        </div>
+                        <div class="agent-conversation" id="agent-conversation">
+                            <div class="live-data-container" id="live-data-container"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            messageDiv.appendChild(contentDiv);
+            messagesDiv.appendChild(messageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+
+            return messageDiv;
+        }
+
+        function typeWriterAnimation(element, text, speed = 30) {
+            return new Promise((resolve) => {
+                let index = 0;
+                element.innerHTML = '';
+
+                function type() {
+                    if (index < text.length) {
+                        element.innerHTML += text.charAt(index);
+                        index++;
+                        setTimeout(type, speed);
+                    } else {
+                        resolve();
+                    }
+                }
+
+                type();
+            });
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        const visualizationModal = document.getElementById('visualization-modal');
+        const visualizationClose = document.getElementById('visualization-close');
+        let currentChartInstance = null;
+
+        visualizationClose.addEventListener('click', () => {
+            visualizationModal.classList.remove('active');
+            if (currentChartInstance) {
+                currentChartInstance.destroy();
+                currentChartInstance = null;
+            }
+        });
+
+        visualizationModal.addEventListener('click', (e) => {
+            if (e.target === visualizationModal) {
+                visualizationModal.classList.remove('active');
+                if (currentChartInstance) {
+                    currentChartInstance.destroy();
+                    currentChartInstance = null;
+                }
+            }
+        });
+
+        async function createAutoVisualization(data, columns, containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+
+            try {
+                const response = await fetch('http://localhost:8002/visualize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data: data,
+                        columns: columns
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Visualization generation failed');
+                }
+
+                const chartConfig = await response.json();
+
+                // Check if chart generation was successful
+                if (chartConfig.type === 'none' || chartConfig.type === undefined) {
+                    // Hide container if no valid chart can be generated
+                    container.style.display = 'none';
+                    return;
+                }
+
+                // Show container if chart can be generated
+                container.style.display = 'block';
+
+                // Create canvas element
+                const chartWrapper = document.createElement('div');
+                chartWrapper.className = 'chart-wrapper';
+                const canvas = document.createElement('canvas');
+                canvas.id = `auto-chart-${containerId}`;
+                canvas.className = 'chart-canvas';
+                chartWrapper.appendChild(canvas);
+                container.innerHTML = '';
+                container.appendChild(chartWrapper);
+
+                const ctx = canvas.getContext('2d');
+
+                // Create new chart
+                new Chart(ctx, chartConfig);
+
+            } catch (error) {
+                // Hide container on error instead of showing error message
+                container.style.display = 'none';
+            }
+        }
+
+        async function showVisualization(data, columns) {
+            const chartContainer = document.getElementById('chart-container');
+            chartContainer.innerHTML = '<div class="visualization-loading"><div class="spinner"></div><span>Generating visualization...</span></div>';
+
+            try {
+                const response = await fetch('http://localhost:8002/visualize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data: data,
+                        columns: columns
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Visualization generation failed');
+                }
+
+                const chartConfig = await response.json();
+
+                // Check if chart generation was successful
+                if (chartConfig.type === 'none' || chartConfig.type === undefined) {
+                    // Close modal and don't show visualization
+                    visualizationModal.classList.remove('active');
+                    return;
+                }
+
+                // Show modal only if chart can be generated
+                visualizationModal.classList.add('active');
+
+                // Clear loading state
+                chartContainer.innerHTML = '<div class="chart-wrapper"><canvas id="data-chart" class="chart-canvas"></canvas></div>';
+
+                const canvas = document.getElementById('data-chart');
+                const ctx = canvas.getContext('2d');
+
+                // Destroy previous chart if exists
+                if (currentChartInstance) {
+                    currentChartInstance.destroy();
+                }
+
+                // Create new chart
+                currentChartInstance = new Chart(ctx, chartConfig);
+
+            } catch (error) {
+                // Close modal on error
+                visualizationModal.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

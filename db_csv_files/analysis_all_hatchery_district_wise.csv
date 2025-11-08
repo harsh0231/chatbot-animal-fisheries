@@ -1,0 +1,53 @@
+id,sector_name,division_name,district_name,year,source,number_of_departmental_scheme_hatcheries_non_functional_Number,number_of_functional_hatcheries_Number,number_of_hatcheries_built_by_departmental_schemes_Number,number_of_hatcheries_built_by_owner_Number,number_of_non_functional_hatcheries_Number,total_number_of_hatcheries_Number,total_production_of_exotic_fingerling_Lakh,total_production_of_exotic_fry_Lakh,total_production_of_exotic_spawn_Lakh,total_production_of_imc_fingerling_Lakh,total_production_of_imc_fry_Lakh,total_production_of_imc_spawn_Lakh
+1,Animal & Fisheries Department,Bhagalpur,Banka,2023-24,Animal & Fisheries Department,1,3,3,1,1,4,2.1,7.8,83.0,4.8,58.0,585.0
+2,Animal & Fisheries Department,Bhagalpur,Bhagalpur,2023-24,Animal & Fisheries Department,0,4,3,1,0,4,55.0,85.0,730.0,130.0,195.0,1730.0
+3,Animal & Fisheries Department,Darbhanga,Darbhanga,2023-24,Animal & Fisheries Department,5,21,21,5,5,26,21.5,412.3,3290.0,50.5,762.5,6650.0
+4,Animal & Fisheries Department,Darbhanga,Madhubani,2023-24,Animal & Fisheries Department,2,24,5,21,16,40,687.0,1145.0,5725.0,804.36,1340.6,6703.0
+5,Animal & Fisheries Department,Darbhanga,Samastipur,2023-24,Animal & Fisheries Department,5,1,6,0,5,6,0.3,180.0,400.0,0.4,410.0,900.0
+6,Animal & Fisheries Department,Koshi,Purnia,2023-24,Animal & Fisheries Department,1,1,2,0,1,2,0.0,0.0,0.0,2.0,5.0,8.0
+7,Animal & Fisheries Department,Koshi,Saharsa,2023-24,Animal & Fisheries Department,0,2,0,2,0,2,0.0,0.0,0.0,90.0,215.0,500.0
+8,Animal & Fisheries Department,Magadh,Arwal,2023-24,Animal & Fisheries Department,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+9,Animal & Fisheries Department,Magadh,Aurangabad,2023-24,Animal & Fisheries Department,1,1,2,0,1,2,2.0,6.0,20.0,10.0,30.0,100.0
+10,Animal & Fisheries Department,Magadh,Gaya,2023-24,Animal & Fisheries Department,1,0,1,1,2,2,0.0,0.0,0.0,0.0,0.0,0.0
+11,Animal & Fisheries Department,Magadh,Nawada,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0
+12,Animal & Fisheries Department,Patna,Bhojpur,2023-24,Animal & Fisheries Department,2,0,2,1,3,3,0.0,0.0,0.0,0.0,0.0,0.0
+13,Animal & Fisheries Department,Patna,Kaimur,2023-24,Animal & Fisheries Department,4,0,4,0,4,4,0.0,0.0,0.0,0.0,0.0,0.0
+14,Animal & Fisheries Department,Patna,Nalanda,2023-24,Animal & Fisheries Department,2,6,8,2,4,10,6.21,58.4,886.0,31.23,69.5,1310.0
+15,Animal & Fisheries Department,Patna,Patna,2023-24,Animal & Fisheries Department,0,5,5,0,0,5,16.88,37.5,150.0,58.5,130.0,520.0
+16,Animal & Fisheries Department,Patna,Rohtas,2023-24,Animal & Fisheries Department,3,2,5,0,3,5,1.95,25.0,200.0,3.0,40.0,200.0
+17,Animal & Fisheries Department,Purnia,Araria,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,225.0,450.0,900.0,400.0,800.0,800.0
+18,Animal & Fisheries Department,Saran,Gopalganj,2023-24,Animal & Fisheries Department,0,5,3,2,0,5,0.5,3.0,10.0,2.0,7.0,35.0
+19,Animal & Fisheries Department,Saran,Saran,2023-24,Animal & Fisheries Department,0,5,5,0,0,5,10.5,21.0,80.0,20.0,42.0,130.0
+20,Animal & Fisheries Department,Saran,Siwan,2023-24,Animal & Fisheries Department,0,5,3,2,1,6,630.0,760.0,1620.0,710.0,980.0,2940.0
+21,Animal & Fisheries Department,Tirhut,East Champaran,2023-24,Animal & Fisheries Department,2,14,11,6,6,20,219.4,354.1,1201.0,499.45,741.5,2230.0
+22,Animal & Fisheries Department,Tirhut,Muzaffarpur,2023-24,Animal & Fisheries Department,2,5,6,1,2,7,1.1,220.0,520.0,13.36,578.81,1839.68
+23,Animal & Fisheries Department,Tirhut,Sheohar,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,4.5,8.0,20.0,20.0,32.0,80.0
+24,Animal & Fisheries Department,Tirhut,Sitamarhi,2023-24,Animal & Fisheries Department,1,17,1,4,6,23,92.0,319.6,1496.4,138.0,479.4,2244.6
+25,Animal & Fisheries Department,Tirhut,Vaishali,2023-24,Animal & Fisheries Department,3,2,5,0,3,5,4.5,8.0,30.0,14.0,25.0,100.0
+26,Animal & Fisheries Department,Tirhut,West Champaran,2023-24,Animal & Fisheries Department,5,11,13,5,7,18,11.0,31.0,1070.0,20.5,55.5,1830.0
+27,Animal & Fisheries Department,Bhagalpur,Banka,2023-24,Animal & Fisheries Department,1,3,3,1,1,4,2.1,7.8,83.0,4.8,58.0,585.0
+28,Animal & Fisheries Department,Bhagalpur,Bhagalpur,2023-24,Animal & Fisheries Department,0,4,3,1,0,4,55.0,85.0,730.0,130.0,195.0,1730.0
+29,Animal & Fisheries Department,Darbhanga,Darbhanga,2023-24,Animal & Fisheries Department,5,21,21,5,5,26,21.5,412.3,3290.0,50.5,762.5,6650.0
+30,Animal & Fisheries Department,Darbhanga,Madhubani,2023-24,Animal & Fisheries Department,2,24,5,21,16,40,687.0,1145.0,5725.0,804.36,1340.6,6703.0
+31,Animal & Fisheries Department,Darbhanga,Samastipur,2023-24,Animal & Fisheries Department,5,1,6,0,5,6,0.3,180.0,400.0,0.4,410.0,900.0
+32,Animal & Fisheries Department,Koshi,Purnia,2023-24,Animal & Fisheries Department,1,1,2,0,1,2,0.0,0.0,0.0,2.0,5.0,8.0
+33,Animal & Fisheries Department,Koshi,Saharsa,2023-24,Animal & Fisheries Department,0,2,0,2,0,2,0.0,0.0,0.0,90.0,215.0,500.0
+34,Animal & Fisheries Department,Magadh,Arwal,2023-24,Animal & Fisheries Department,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+35,Animal & Fisheries Department,Magadh,Aurangabad,2023-24,Animal & Fisheries Department,1,1,2,0,1,2,2.0,6.0,20.0,10.0,30.0,100.0
+36,Animal & Fisheries Department,Magadh,Gaya,2023-24,Animal & Fisheries Department,1,0,1,1,2,2,0.0,0.0,0.0,0.0,0.0,0.0
+37,Animal & Fisheries Department,Magadh,Nawada,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,0.0,0.0,0.0,0.0,0.0,0.0
+38,Animal & Fisheries Department,Patna,Bhojpur,2023-24,Animal & Fisheries Department,2,0,2,1,3,3,0.0,0.0,0.0,0.0,0.0,0.0
+39,Animal & Fisheries Department,Patna,Kaimur,2023-24,Animal & Fisheries Department,4,0,4,0,4,4,0.0,0.0,0.0,0.0,0.0,0.0
+40,Animal & Fisheries Department,Patna,Nalanda,2023-24,Animal & Fisheries Department,2,6,8,2,4,10,6.21,58.4,886.0,31.23,69.5,1310.0
+41,Animal & Fisheries Department,Patna,Patna,2023-24,Animal & Fisheries Department,0,5,5,0,0,5,16.88,37.5,150.0,58.5,130.0,520.0
+42,Animal & Fisheries Department,Patna,Rohtas,2023-24,Animal & Fisheries Department,3,2,5,0,3,5,1.95,25.0,200.0,3.0,40.0,200.0
+43,Animal & Fisheries Department,Purnia,Araria,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,225.0,450.0,900.0,400.0,800.0,800.0
+44,Animal & Fisheries Department,Saran,Gopalganj,2023-24,Animal & Fisheries Department,0,5,3,2,0,5,0.5,3.0,10.0,2.0,7.0,35.0
+45,Animal & Fisheries Department,Saran,Saran,2023-24,Animal & Fisheries Department,0,5,5,0,0,5,10.5,21.0,80.0,20.0,42.0,130.0
+46,Animal & Fisheries Department,Saran,Siwan,2023-24,Animal & Fisheries Department,0,5,3,2,1,6,630.0,760.0,1620.0,710.0,980.0,2940.0
+47,Animal & Fisheries Department,Tirhut,East Champaran,2023-24,Animal & Fisheries Department,2,14,11,6,6,20,219.4,354.1,1201.0,499.45,741.5,2230.0
+48,Animal & Fisheries Department,Tirhut,Muzaffarpur,2023-24,Animal & Fisheries Department,2,5,6,1,2,7,1.1,220.0,520.0,13.36,578.81,1839.68
+49,Animal & Fisheries Department,Tirhut,Sheohar,2023-24,Animal & Fisheries Department,0,1,1,0,0,1,4.5,8.0,20.0,20.0,32.0,80.0
+50,Animal & Fisheries Department,Tirhut,Sitamarhi,2023-24,Animal & Fisheries Department,1,17,1,4,6,23,92.0,319.6,1496.4,138.0,479.4,2244.6
+51,Animal & Fisheries Department,Tirhut,Vaishali,2023-24,Animal & Fisheries Department,3,2,5,0,3,5,4.5,8.0,30.0,14.0,25.0,100.0
+52,Animal & Fisheries Department,Tirhut,West Champaran,2023-24,Animal & Fisheries Department,5,11,13,5,7,18,11.0,31.0,1070.0,20.5,55.5,1830.0

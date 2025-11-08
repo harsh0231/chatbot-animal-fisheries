@@ -1,0 +1,206 @@
+division_name,block_name,panchayat_name,total_rakba_in_hectares,total_jamarashi_in_lakh_rupees,jalkars_located_in_multiple_panchayat,district_name,jalkar_name
+Bhagalpur,Shambhuganj,Kaswa,0.744,0.01321,Baidpur,Banka,Dighhi Pokhar
+Munger,Bakhri,Chakchanarpat (Bakhri East),42.816,0.525,"Ratan,Chakchanarpat (Bakhri East)",Begusarai,Chanha Nadi Babhain
+Munger,Balia,Parmanandpur,6.0,1.54,"Bhagatpur,Manserpur,Paharpur,Parmanandpur,Bhawanandpur,Tajpur",Begusarai,Majidpur Pargana Jalkar
+Munger,Mansurchak,Samsa- 1,1.1,0.03654,"Samsa- 1,Samsa- 2",Begusarai,Samasachair Nala
+Munger,Sahebpur Kamal,Sadpur (Eest),18.0,0.26,"Sadpur (Eest),Sadpur (West)",Begusarai,Sadpur Naya Moin
+Munger,Sahebpur Kamal,Sadpur (West),30.0,0.35,"Sadpur (Eest),Sadpur (West)",Begusarai,Boria Jalkar
+Bhagalpur,Kahalgaon,Parashathdih (Shankarpur Khawas),100.0,0.75,"Kodwar,Ghogha",Bhagalpur,Ghoga Nala Jalkar Lohari Sahit
+Bhagalpur,Kahalgaon,Bholsar,14.756,0.5,Pakkisarai,Bhagalpur,Khoka Nala Jalkar (Parmanandpur Mauja Se Aamapur Mauja Ke Pakartalla Gaon Tak)
+Bhagalpur,Kahalgaon,Bholsar,26.856,0.6,"Pakkisarai,Ekchari",Bhagalpur,"Gairua Bhaina Jalkar (Parmandpur, Bholsar, Sundarpur)"
+Bhagalpur,Kahalgaon,Mathurapur,200.0,0.69,Mohanpur Gogatta,Bhagalpur,Bhaurang Jalkar
+Bhagalpur,Goradih,Bisanpur- Jicho,2.0,0.03045,Manchhipur,Bhagalpur,Jamasi Jola Nadi
+Bhagalpur,Goradih,Agarpur,0.628,0.00735,Manchhipur,Bhagalpur,Dighhi Pokhar
+Bhagalpur,Goradih,Manchhipur,4.0,0.01155,Khutaha,Bhagalpur,Kichaniya Nadi
+Bhagalpur,Ismailpur,Ishmailpur East Bhitha,60.0,0.15015,Ishmailpur West Bhitha,Bhagalpur,Ismailpur Jalkar
+Bhagalpur,Jagdishpur,Bhawanipur Desri,0.5,0.01575,Baluachak Puraini,Bhagalpur,Bhawanipur Resdidich (Desaridich)
+Bhagalpur,Jagdishpur,Bhawanipur Desri,0.8,0.0126,Jagdishpur,Bhagalpur,Angari Jalkar
+Bhagalpur,Jagdishpur,Chandpur,2.8,0.01155,"Bhawanipur Desri,Sonuchak-Puraini",Bhagalpur,Chandpur Nadi Jalkar
+Bhagalpur,Jagdishpur,Chandpur,2.4,0.01365,"Jagdishpur,Chandpur,Purani North",Bhagalpur,Chand River
+Bhagalpur,Jagdishpur,Baluachak Puraini,0.5,0.0147,"Sanholi,Baijani",Bhagalpur,Kokra River
+Bhagalpur,Jagdishpur,Sanholi,2.0,0.01155,"Purani North,Baluachak Puraini,Sanholi,Baijani",Bhagalpur,Khalkhaliya Nadi Jalkar Vidha Nadi (Vidyanandi)
+Bhagalpur,Jagdishpur,Sanholi,0.4,0.00945,"Purani North,Baluachak Puraini,Sanholi,Baijani",Bhagalpur,Khalkhaliya Nadi Jalkar Ibrahimpur
+Bhagalpur,Jagdishpur,Sanholi,6.0,0.0336,"Purani North,Baluachak Puraini,Baijani",Bhagalpur,Khalkhaliya Nadi Jalkar Mustafachak
+Bhagalpur,Jagdishpur,Sanholi,0.15,0.01365,"Purani North,Baluachak Puraini,Baijani",Bhagalpur,Khal Nadi (Khalbaliya)
+Bhagalpur,Kharik,Raghopur,22.66,0.231,"Akidatpur,Khairpur",Bhagalpur,Brahm Sthan Laxmipur Jalkar
+Bhagalpur,Narayanpur,Raipur,1.284,0.3045,Bhawanipur,Bhagalpur,Makhnaadhar Jalkar
+Bhagalpur,Narayanpur,Nagarpara East,109.6,1.176,"Nagarpara South,Nagarpara East,Jaipurchuhar West,Singhpur East",Bhagalpur,Narayanpur Kol Narayanpur Anchal
+Bhagalpur,Nathnagar,Bhatauria,0.68,0.0126,Rampur Khurd,Bhagalpur,Sonvarsha Jalkar
+Bhagalpur,Nathnagar,Nisf Ambe,2.24,0.01995,Rampur Khurd,Bhagalpur,"Ganga Prasad Baitha, Ganga Prasad"
+Bhagalpur,Naugachhia,Dholbajja,10.484,0.273,Punama Pratapnagar,Bhagalpur,Tiljugga Dhar
+Bhagalpur,Pirpainti,Sri Matpur Hajur Nagar,100.0,1.302,"Srimatpur Gopalichak,Pirpainti",Bhagalpur,Singhiya Bhorang Nala Jalkar
+Bhagalpur,Pirpainti,Sri Matpur Hajur Nagar,1.2,0.1386,"Srimatpur Gopalichak,Pirpainti",Bhagalpur,Margang Jalkar
+Bhagalpur,Shahkund,Khulni,8.804,0.042,"Belthu,Makandpur",Bhagalpur,Chandan Kiranpur Pokhar
+Bhagalpur,Sonhaula/Sanhoula,Bora Pathakdih,1.496,0.0225,"Amdanda,Madhopur Bathani",Bhagalpur,Girua Nadi Jalkar (Chakhmaja)
+Bhagalpur,Sonhaula/Sanhoula,Bora Pathakdih,0.736,0.01,"Tadar,Amdanda,Madhopur Bathani",Bhagalpur,Girua Nadi Jalkar (Bhakanthu)
+Bhagalpur,Sultanganj,Ganganiya,0.916,0.1848,"Kamarganj,Asiyachak",Bhagalpur,Belharni Nadi Ganganiya
+Bhagalpur,Sultanganj,Masadi,0.7,0.08085,"Bhirkhurd,Abzuganj",Bhagalpur,Masdi Gadha Jalkar
+Bhagalpur,Sultanganj,Kumaitha,0.38,0.0273,Karhariya,Bhagalpur,Kitta Bandh Kumaitha
+Bhagalpur,Sultanganj,Khanpur,0.344,0.0378,Kathara,Bhagalpur,Jhonz Nadi Amba
+Bhagalpur,Sultanganj,Khanpur,3.98,0.05775,Karhariya,Bhagalpur,Gahira Nadi Gahira
+Bhagalpur,Sultanganj,Khanpur,1.984,0.0462,Kathara,Bhagalpur,Dahira Nadi Daulatpur
+Bhagalpur,Sultanganj,Mirhatti,3.56,0.0126,Khanpur,Bhagalpur,Chandan Nadi Mirhatti
+Bhagalpur,Sultanganj,Mahesi,0.22,0.0399,Mirhatti,Bhagalpur,Chandan Nadi Maheshi
+Bhagalpur,Sultanganj,Mahesi,3.6,0.1848,English-Chich Ron(Akwarnigar),Bhagalpur,Samna Bahari Khanta Jatak Jalhari
+Patna,Arrah/Ara,Agarsanda,1.234817814,0.078836625,Dhamar,Bhojpur,Pavatbhas Nadi
+Patna,Arrah/Ara,Jamira,3.619433198,0.0500976,Hasanpura,Bhojpur,Jamira Nadi
+Patna,Arrah/Ara,Hasanpura,0.352226721,0.004361175,Jamira,Bhojpur,Piprahiya Nadi
+Patna,Arrah/Ara,Gothahula,0.24291498,0.035784,"Jamira,Arrah/Ara Nagar Nigam",Bhojpur,Karwa Nadi
+Patna,Arrah/Ara,Gothahula,0.967611336,0.043052625,"Jamira,Arrah/Ara Nagar Nigam",Bhojpur,Gothaula Nadi
+Patna,Barhara,Semria Pararia(Pcht),1.020242915,0.0572544,"Barhara,Ekauna",Bhojpur,Gobri Nadi
+Patna,Behea/Bihiyan,Shivpur,0.303643725,0.007939575,"Kamariyan,Osai,Fingi",Bhojpur,Khrauni Nadi
+Patna,Behea/Bihiyan,Tiyar,2.975708502,0.007212713,"Majhauli,Fingi,Katya",Bhojpur,Mairath Nadi
+Patna,Behea/Bihiyan,Kamariyan,1.441295547,0.0129717,"Majhauli,Fingi",Bhojpur,Kamariya Nadi
+Patna,Behea/Bihiyan,Kamariyan,0.141700405,0.015767325,Shivpur,Bhojpur,Yogivir Nadi
+Patna,Behea/Bihiyan,Godhar Rudarnagar,0.809716599,0.0129717,"Kamariyan,Ghagha",Bhojpur,Dubauli Nadi
+Patna,Behea/Bihiyan,Osai,0.546558704,0.016494188,Godhar Rudarnagar,Bhojpur,Ausai Nadi
+Patna,Behea/Bihiyan,Majhauli,0.809716599,0.021526313,Shivpur,Bhojpur,Majhauli Nadi
+Patna,Behea/Bihiyan,Fingi,1.117408907,0.028683113,Behea/Bihiyan Nagar Panchayat,Bhojpur,Jamua Bibi Sahayak Nadi
+Patna,Shahpur,Gara,0.587044534,0.1145088,"Bharuli,Bohanpur",Bhojpur,Gaura Charghat Nadi
+Patna,Udwant Nagar,Chotti Sasaram,3.340080972,0.0572544,Asni,Bhojpur,Chhotki Sasaram Nadi
+Patna,Udwant Nagar,Masarah,2.518218623,0.071568,Bampali,Bhojpur,Masadh Nadi
+Patna,Udwant Nagar,Asni,1.441295547,0.0214704,Bampali,Bhojpur,Asani Nadi
+Patna,Brahampur,Gayaghat,164.0,7.176,"Gayaghat,Bairia,Harnathpur,Mahuar,North Nainijor",Buxar,Nainijor Bhagad Tauji Sankhya 1347
+Patna,Itadhi,Kukudha,2.0,0.01518,"Hakimpur,Kukudha,Bijhaura",Buxar,Noni Nadi
+Patna,Itadhi,Atrauna,4.0,0.08418,"Atrauna,Itadhi Nagar Panchayat",Buxar,Khatiba Nadi
+Patna,Itadhi,Barkagaon,4.0,0.02889,"Barkagaon,Harpur (Jaipur),Basao Kala",Buxar,Thora Nadi 01
+Patna,Itadhi,Harpur (Jaipur),0.8,0.03588,"Indaur,Unwas,Harpur (Jaipur)",Buxar,Kochani Nadi
+Patna,Itadhi,Harpur (Jaipur),4.0,0.02889,"Basudhar,Harpur (Jaipur)",Buxar,Thora Nadi 02
+Patna,Itadhi,Harpur (Jaipur),0.8,0.01794,"Harpur (Jaipur),Basao Kala",Buxar,Bhirkiri Nadi
+Patna,Simri/Cimari,Parari,258.12,3.312,"Majhwari,Parari,Kazipur",Buxar,Koliya Bansgitiya Dah
+Darbhanga,Baheri,Chakwa Bharwari,0.336032389,0.042,Hathauri South,Darbhanga,Machhli Sairat Nadi Bharwari
+Darbhanga,Keoti Runway,Asaraha,0.170040486,0.013,Jalwara,Darbhanga,Machhli Sairat Jalwara
+Darbhanga,Keoti Runway,Dighiyar,12.14574899,0.65,Lalganj,Darbhanga,Badh Pokhar Kewati Dighiyar
+Darbhanga,Singhwara,Hariharpur East,17.97165992,0.032,Hariharpur West,Darbhanga,Hariharpur Nadi Hariharpur
+Tirhut,Chirariya,Mahuawa East,0.96,0.07504,Mahuawa West,Purbi Champaran,Mahuawa Jalkar
+Saran,Bhorey,Kalyanpur,0.0,0.0,"Kalyanpur,Husepur,Jaghtauli",Gopalganj,Barhi Nadi (Navka Tola Se Chhitoji Tak)
+Saran,Bhorey,Kalyanpur,0.0,0.0,"Kalyanpur,Husepur,Jaghtauli",Gopalganj,Barhi Nadi (Kalyanpur Se Vishrampur Tak)
+Saran,Kuchaikote,Salehpur,13.36032389,0.1225,"Salehpur,Tola Sipaya,Matihniyakala,Sasamusa,Khajuri,Matihaniyatiwari",Gopalganj,Chhadan Nadi Se Daha Nahar Ka Udgam Sthal Se 3 Meel Doori Tay Kar Sasamusa NH0028 Tak
+Patna,Bhabua,Akhlaspur,5.32,0.01224,"Akhlaspur,Kohari,Sikthi,Sion",Kaimur(Bhabua),Kukanhiya Nadi Shivpur Se Darouli Tak
+Patna,Bhabua,Akhlaspur,4.79,0.01152,"Akhlaspur,Meeun",Kaimur(Bhabua),Kukanhiya Nadi Semariya Se Dharmapura Tak
+Patna,Bhagwanpur,Bhagwanpur,2.5,0.03312,Parhauti,Kaimur(Bhabua),Suara Nadi (Khiri Se Bhairpur Tak)
+Patna,Bhagwanpur,Mokaram,1.56,0.07632,Jaitpur Kalan,Kaimur(Bhabua),Kukanhiya Nadi (Natkar Se Bhariya Tak)
+Patna,Bhagwanpur,Mokaram,1.25,0.00864,Parhauti,Kaimur(Bhabua),Kukanhiya Nadi (Semariya Se Kushadiha Tak)
+Patna,Chand,Biuri,2.32,0.01,"Biuri,Goin",Kaimur(Bhabua),Karmanasha Nadi
+Patna,Chand,Chauri,3.61,0.008,"Chauri,Dulahi",Kaimur(Bhabua),Gehua Nadi (Dulhi Se Ledri Tal)
+Patna,Chand,Chauri,1.27,0.1512,"Chauri,Dulahi",Kaimur(Bhabua),Gehua Nadi (Gehua Se Dulhi)
+Patna,Durgawati,Kalyanpur,4.06,0.02016,"Cheharian,Kalyanpur",Kaimur(Bhabua),Kripalpur Garhi
+Patna,Durgawati,Masaurha,6.74,0.036,"Dumri,Masaurha",Kaimur(Bhabua),Ghinhu Patti Garhi
+Purnia,Amdabad,Jangalatal,8.890688259,0.441,"Jangalatal,Lakhanpur",Katihar,Garhel Jalkar
+Purnia,Amdabad,Bairia,34.71659919,0.356,"Jangalatal,Lakhanpur,Bairia",Katihar,Tegja Mahananda Kankhar Nadi
+Purnia,Amdabad,Bhawanipur Khatti,21.19433198,0.0135,"Pardiara,Bhawanipur Khatti",Katihar,Jeetan Dhav
+Purnia,Barari,Baisa Govindpur,104.55,1.7605,"Kabar,Baisa Govindpur,Mohana Chandpur",Katihar,Doria Ganghara Jalkar
+Purnia,Dandkhora,Bhamraili,24.5465587,0.29,Souriya,Katihar,Kankhar Nadi
+Purnia,Katihar,Sirinia East,12.82591093,0.39,"Sirinia West,Sirinia East",Katihar,Naya Kamla Naniya Jalkar Sah Makhana Mahal
+Purnia,Kohra/Korha,Chandwa,14.85020243,1.121,"Baharkhal,Chandwa",Katihar,Chainan Dhar Jalkar
+Purnia,Manihari,Narayanpur,34.32793522,0.352,"Fatteh Nagar,Narayanpur",Katihar,Gada Chatra
+Purnia,Manihari,Bouliya,27.97975709,0.08,"Bouliya,Baghmara",Katihar,Bauliya Jalkar
+Purnia,Mansahi,Sahebnagar,26.2145749,1.663,Mohanpur,Katihar,Dughael Kursel Jalkar
+Munger,Alauli,Chhilkauri,95.5,1.61,Sumbha,Khagaria,Nihai Hathaudi Jalkar
+Munger,Alauli,Sahsi,15.984,0.1736,Haripur,Khagaria,Bagmati Kodra Jalkar
+Munger,Alauli,Sumbha,2.24,0.1414,Goriyami,Khagaria,Situahi Dobh Jalkar
+Munger,Alauli,Amba Icharwa,16.208,0.378,Goriyami,Khagaria,Bagmati Sanjhoti Jalkar
+Munger,Beldaur,Telihar,252.42,0.0,"Dumri,Dighon,Balaitha,Chodhli,Itamadi",Khagaria,Chaidheli Sohar Athaniya Pachaniya (Usraha Se Kapasiya)
+Munger,Beldaur,Dumri,0.64,0.301,Belanowad,Khagaria,Balukundi Jalkar Dhar
+Munger,Beldaur,Bobil,6.18,0.049,Sakrohar,Khagaria,Mangrua Jalkar Chair
+Munger,Beldaur,Chodhli,14.82,1.141,"Dighon,Balaitha,Itamadi",Khagaria,Chedhli Sohar Athaniya Pachaniya Jalkar Evam Vibhinn Bhag
+Munger,Chautham,Buchha,8.0,0.14,Sarsawa,Khagaria,Thedi Mor Jalkar
+Munger,Chautham,Purbi Borne,10.0,1.12,"Paschimi Borne,Madhaya Borne",Khagaria,Vorne Jalkar
+Munger,Gogri,Maheshkhunt,20.0,1.134,Gauchhari,Khagaria,Tappa Jamalpur (LRD) Jalkar
+Munger,Gogri,Pakrail,18.524,1.134,"Banni,Samaspur,Maheshkhunt",Khagaria,Tappa Jamalpur Banaili Jalkar Pakrail Leba Gaon Se Kasariya Dhar Tak
+Munger,Gogri,Koela,50.0,4.648,"Maira,Pawra",Khagaria,Maira Jalkar Evam Vibhinn Bhag
+Munger,Gogri,Koela,50.0,3.71,"Maira,Baltara,Pawra,Deotha,Paikat",Khagaria,Athaniya Pachaniya Jalkar Evam Vibhinn Bhag
+Munger,Khagaria,Belasimri,68.16,1.47,"Olapur Gangour,Jalkoura,Janhagira",Khagaria,Chanha Lakshminiya Belasimri Jahangira Chair
+Munger,Khagaria,Belasimri,101.2,5.32,Rani Sakar-Pura,Khagaria,Denimoin Jalkar
+Munger,Khagaria,Olapur Gangour,19.492,0.077,Janhagira,Khagaria,Olapur Itwa Jalkar Chaur
+Munger,Khagaria,Mandar Dakshini,48.732,0.8776,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 1
+Munger,Khagaria,Mandar Dakshini,12.0,0.0896,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 2
+Munger,Khagaria,Mandar Dakshini,8.0,0.1379,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 3
+Munger,Khagaria,Mandar Dakshini,16.0,0.3479,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 4
+Munger,Khagaria,Mandar Dakshini,10.0,0.1358,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 5
+Munger,Khagaria,Mandar Dakshini,22.52,0.1792,Marar Uattari,Khagaria,Madar Madhura Jalkar Khand 6
+Munger,Parbatta,Dariyapur Bhelwa,76.0,7.0595,"Jorawarpur,Temtha Karari,Siyadatpur Aruwani",Khagaria,Madhopur Pat Par Se Tofir Tappa Jamalpur Jalkar (Kajalvan Man)
+Purnia,Bahadurganj,Samesar,6.32,0.02,"Palasmani,Samesar",Kishanganj,Satail Stamrar
+Purnia,Dighalbank,Lohagara,4.04,0.02205,"Singhimari,Lohagara",Kishanganj,Palsa Milik Jalkar
+Purnia,Dighalbank,Dhangarha,3.63,0.615,"Laxmipur,Dhangarha",Kishanganj,Kalpir Jalkar
+Purnia,Dighalbank,Athgachhiya,8.76,0.025,"Dhangarha,Athgachhiya",Kishanganj,Gorumara Jalkar
+Purnia,Kishanganj,Teusa,0.0,0.0,"Gachhpara,Teusa",Kishanganj,Ramjan Sudhani Jalkar
+Purnia,Kochadhaman,Haldikhora,0.8,0.0078,"Haldikhora,Sunderbari",Kishanganj,Mariya Dhar Jalkar Sundar Badi Se Chaiparabadi
+Purnia,Kochadhaman,Purandaha,0.0,0.0,"Purandaha,Majkuri,Balia",Kishanganj,Ratuua Jalkar
+Purnia,Kochadhaman,Nazarpur,0.3,0.01575,"Gurgaon,Nazarpur",Kishanganj,Rasulpur Harijan Tank
+Purnia,Kochadhaman,Modho,3.54,0.0265,"Bhagal,Modho",Kishanganj,Maudhau Jalkar
+Purnia,Kochadhaman,Barijan Pothimari Jagir,0.4,0.0145,"Bualdah,Barijan Pothimari Jagir",Kishanganj,Durgapur Mariya Kanakai Jalkar
+Purnia,Kochadhaman,Sunderbari,3.0,0.0285,"Haldikhora,Sunderbari",Kishanganj,Tupamari Jalkar
+Purnia,Kochadhaman,Sunderbari,7.45,0.055,"Sunderbari,Kochadhaman",Kishanganj,Mariya Kanakai Jalkar Titihha Se Rani
+Purnia,Kochadhaman,Himmatnagar,2.54,0.075,Kutti,Kishanganj,Mariya Kanakai Jalkar Kutti
+Purnia,Kochadhaman,Himmatnagar,28.15,0.118,"Bhagal,Himmatnagar",Kishanganj,Kankai Shahpur Bhagal Jalkar
+Purnia,Kochadhaman,Kochadhaman,8.0,0.0305,Sunderbari,Kishanganj,Mariya Kanakai Jalkar Turani
+Purnia,Kochadhaman,Kochadhaman,0.2,0.0115,Purandaha,Kishanganj,Alam Nagar High School Tank Jalkar
+Purnia,Kochadhaman,Balia,1.38,0.0036,"Balia,Bagalbari",Kishanganj,Jaidhal Jalkar
+Purnia,Kochadhaman,Deramari,13.44,0.975,"Deramari,Patkoikala",Kishanganj,Tetliya Jalkar Sah Makhana
+Purnia,Kochadhaman,Patkoikala,0.0,0.0,"Kutti,Bagalbari,Patkoikala",Kishanganj,Mahananda Jalkar
+Purnia,Thakurganj,Doodhaunti,13.0,0.01103,"Doodhaunti,Bhatagaon",Kishanganj,Mari Kunda Jalkar
+Koshi,Alamnagar,Kishanpur Ratwara,0.0,0.0,Gangapur,Madhepura,Anda Mahal Jalkar
+Koshi,Chausa,Phulaut East,20.0,1.2,Phulaut West,Madhepura,Phulauth Jalkar
+Koshi,Chausa,Laua Lagam East,4.84,1.425,Laua Lagan West,Madhepura,Laualgan Jalkar
+Koshi,Chausa,Laua Lagam East,0.648,0.105,"Laua Lagan West,Arajpur West",Madhepura,Bhagwati Sthan Talab
+Koshi,Shankarpur,Rampur Lahi,0.0,0.0,Maura -Jharkaha,Madhepura,Bariyahi
+Darbhanga,Kaluahi,Pursauliya,3.22,0.035,Kalikapur,Madhubani,Bharatpatti Jalkar Bharatpatti
+Munger,Asarganj,Amaiya,0.464,0.0182,"Amaiya,Chorganw",Munger,Belharni Pokhar
+Munger,Bariarpur,Jhauabahiyar,98.4,1.4,"Bindadiyara Harinmar,Jhauabahiyar,Kalyan Tola",Munger,Binda Diyarajalkar Tauji No 1351
+Munger,Bariarpur,Bariyarpur (North),534.8,0.83,"Bariyarpur (South),Paria,Bariyarpur (North)",Munger,Bariyarpurraj Jalkar Tauji No 1337
+Munger,Bariarpur,Karhariya (West),8.62,0.6,Nirpur,Munger,Karhadia Nala Chandani Jalkar
+Munger,Kharagpur,Baijalpur,5.508,0.018,"Agrahan,Badhouna,Kouriya,Ramanka Bad (W)",Munger,Maninadi Jalkar Baijalpur
+Munger,Kharagpur,Rataitha,1.5,0.012,Barui,Munger,Ratni Special
+Munger,Kharagpur,Ramanka Bad (W),163.04,2.0,Dariyapur,Munger,Khargpur Jheel
+Tirhut,Muraul/Dholi,Mahmamdpur Badal,0.0,0.0,Pilkhi Gajpatti,Muzaffarpur,Budhi Gandak Nadi Dighra Baisham Tepari Tak
+Tirhut,Minapur,Harser,140.0,0.0,Chandparna,Muzaffarpur,Budi Gandak Nadi
+Patna,Dulhin Bazar,Rajipur,4.048582996,0.0145,"Akabarpur Ranipur,Azadasikaria",Patna,Rajipur
+Patna,Dulhin Bazar,Aain Kha Vimanichak,0.275303644,0.0022,Agwanpur,Patna,Kasimchak
+Patna,Dulhin Bazar,Aain Kha Vimanichak,4.923076923,0.0022,Kalyanpur,Patna,Bhiminichak
+Patna,Dulhin Bazar,Aain Kha Vimanichak,4.267206478,0.0022,"Barah,Belchhi,East Saksohara",Patna,Bhiminichak
+Patna,Dulhin Bazar,Sihi,3.441295547,0.0029,"Bara,Berra",Patna,Jimadih
+Patna,Dulhin Bazar,Sihi,1.44534413,0.0029,Adla,Patna,Fatehpur
+Patna,Dulhin Bazar,Soniyawa,0.117408907,0.00175,Aunta,Patna,Jamui
+Patna,Dulhin Bazar,Soniyawa,7.125506073,0.00365,Baluwa,Patna,Soniyaon
+Purnia,Krityanand Nagar,Kajha,5.672,0.026,Ganeshpur,Purnia,Kaja Ganeshpur Liwari Dhar Jalkar
+Purnia,Rupauli,Basantpur,8.49,0.65,Goriyar Patti Srimatta,Purnia,Mara Koshi Nagardhar Jalkar Sah Makhana Mahal
+Koshi,Mahishi,Maheshi North,2.734022849,0.14175,"Maheshi North,Maheshi South",Sarhasa,Manua Sohjaniya Jalkar
+Koshi,Nauhatta,Kashimpur,35.22267206,0.06,"Hati,Kashimpur,Sahpur,Mohanpur,Chandrayan,Muradpur",Sarhasa,Dumra Jalnissaran Nala
+Koshi,Nauhatta,Mohanpur,43.72469636,0.03,"Mohanpur,Chandrayan",Sarhasa,Koshi Nala Mohanpur Se Uttar
+Koshi,Salkhua,Gordah,27.04519005,6.9,"Alani,Samhar Khurd",Sarhasa,Gordah Jalkar Evam Part Lagjora Jalkar
+Koshi,sonbarsa,Dehad,0.565490337,0.0336,"Dehad,Sahsaul",Sarhasa,Behta Main Ghar Se Sheetkamaldah Tak Drainage
+Koshi,sonbarsa,Dehad,19.12955466,0.0462,"Dehad,sonbarsa Nagar Panchayat",Sarhasa,Kajra Nala Jalkar
+Koshi,sonbarsa,Atalkha,2.105263158,0.04935,"Baraith,Atalkha",Sarhasa,Jemhra Ghat Se Bareith Jalkar
+Koshi,sonbarsa,Pararia,0.131128194,0.0462,"Dehad,sonbarsa Nagar Panchayat",Sarhasa,Mainadhar Se Soha Siman Jalkar
+Darbhanga,Khanpur,Bishanpur,10.0,0.194,Sadipur,Samastipur,Bagmati Nadi Sector (Kha)
+Tirhut,Purnahiya,Adauri,0.47,0.0297,Bakhar Chandiha,Sheohar,Adauri Bagmati Dhar
+Tirhut,Sursand,Radhaur,2.0,0.09,Pathanpura,Sitamarhi,Makunhiya Garaiba Pokhar
+Koshi,Basantpur,Banaili Patti,30.8,0.2,"Basantpur,Hirday Nagar,Parmannd Pur",Supaul,Koshikapur Jalkar
+Koshi,Basantpur,Basantpur,32.0,0.145,Hirday Nagar,Supaul,Dighhi Jalkar
+Koshi,Basantpur,Din Bandhi,122.0,0.293,"Basantpur,Bhim Nagar,Nirmali",Supaul,Kateya Kalyanpur Jalkar
+Koshi,Basantpur,Hirday Nagar,34.04,0.27,Koch Gama,Supaul,Sitapur Jalkar
+Koshi,Kishanpur,Naua Bakhar,0.2,0.06,"Bouraha,Maujha",Supaul,Nauwa Bakhar Jalkar
+Koshi,Marauna,Sisawni,300.0,0.0,"Berhara,Ganaura,Ghoghardiha",Supaul,Kachhua Mahal Marauna
+Koshi,Nirmali,Dagmara,37.5,0.032,"Dagmara,Kamalpur",Supaul,Tilyuga Nadi Jalkar
+Koshi,Pratapganj,Takuna,46.0,0.13,Bauraha,Supaul,Dharmdhat Dhar
+Koshi,Raghopur,Davipur,45.0,0.1164,Dumri,Supaul,Virdah Dhar
+Koshi,Saraigarh Bhaptiyahi,Murlai,45.0,0.03,Lalgang Bagava Tengraha,Supaul,Dhadhar Jalkar
+Koshi,Triveniganj,Aurlaha,1.04,0.0338,Guria,Supaul,Karnpatti Jalkar
+Koshi,Triveniganj,Barah Kurwa,0.884,0.025,Mirjawa,Supaul,Satgandi Jalkar
+Koshi,Triveniganj,Jadiya,105.0,0.025,Piluwaha,Supaul,Jadiya Jalkar
+Tirhut,Bidupur,Rahimapur,1.2,0.03225,Kanchanpur,Vaishali,Rahimapur Pokhar
+Tirhut,Desri,Dharampur Ramrai,7.92,0.03525,Desri,Vaishali,Ghaghra Nadi Kaila Se Kichni
+Tirhut,Desri,Dharampur Ramrai,2.0,0.02025,Jahangirpur Sam,Vaishali,Dharmapur Ramras Hajmir Chak Se Fatehpur Maghaul Harpur Chak Tak
+Tirhut,Desri,Jahangirpur Sam,3.77,0.0315,Dharampur Ramrai,Vaishali,Dharmapur Jahangir Sham Nala
+Tirhut,Desri,Zafarabad,1.0,0.00825,Desri,Vaishali,Vishunpur Ijra Nala
+Tirhut,Mahua,Rasulpur Urf Madhaul,1.4,0.0153,Bhadwas,Vaishali,Madhoul Banam Rasulpur Nala
+Tirhut,Narkatiaganj,Bheriharwa,12.1,0.1485,Bhasurari,Pashchim Champaran,Bhediharwa Jalkar
+Patna,Dumraon,Dumraon Nagar Parishad,6.0,0.0828,"Chilhari,Dumraon Nagar Parishad",Buxar,Bhaishahi Nadi Purana Bhojpur
+Patna,Itadhi,Itadhi Nagar Panchayat,4.0,0.01518,"Atrauna,Itadhi Nagar Panchayat",Buxar,Sikatouna Nadi
+Patna,Arrah/Ara,Arrah/Ara Nagar Nigam,1.226720648,0.214704,"Sundarpur Barja,Majuli,Daulatpur,Bhakura",Bhojpur,Gangi Nadi
+Patna,Bhabua,Bhabua Nagar Parishad,2.5,0.01728,"Dumdum,Kohari,Sion,Bhabua Nagar Parishad",Kaimur(Bhabua),Suara Nadi Machhiayav Se Pipariya Tak
+Patna,Bhabua,Bhabua Nagar Parishad,6.25,0.0216,"Dumdum,Kohari,Sion,Bhabua Nagar Parishad",Kaimur(Bhabua),Suara Nadi Palka Se Machhiayav Tak
+Koshi,Simri Bakhtiyarpur,Simri Bakhtiyarpur Nagar Parishad,20.48878034,4.25,"Taryama,Bhatoni",Sarhasa,Gordah Jalkar Evam Part Tilabe Tulsiyahi Bhatouni Simri Bhag
+Darbhanga,Singhwara,Singhwara Nagar Panchayat,13.11740891,0.44,Bharhulli,Darbhanga,Chokarba Baha Kauar Budhanad Nadi Singhwara
+Bhagalpur,Banka,Banka Nagar Panchayat,3.932,0.007,Lakrikola,Banka,Gomda Jor
