@@ -233,7 +233,8 @@ def introspect_mysql_schema():
 
 # Load database descriptions from description.json as supplementary metadata
 try:
-    with open(r'C:\Animal and Fisheries\chatbott\description.json', 'r', encoding='utf-8') as f:
+    description_path = os.path.join(os.path.dirname(__file__), 'description.json')
+    with open(description_path, 'r', encoding='utf-8') as f:
         DB_DESCRIPTIONS = json.load(f)
     logger.info(f"Database descriptions loaded successfully. Tables: {list(DB_DESCRIPTIONS.keys())}")
 except Exception as e:
