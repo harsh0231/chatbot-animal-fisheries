@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import mysql.connector
@@ -73,11 +72,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static files (logo.jpg, etc.) from the current directory
-import os
-static_dir = os.path.dirname(os.path.abspath(__file__))
-if os.path.exists(static_dir):
-    app.mount("/", StaticFiles(directory=static_dir, html=False), name="static")
+# Static files serving through dedicated route
+@app.get("/static/{file_path:path}")
+async def serve_static(file_path: str):
+    """Serve static files like logo.jpg"""
+    static_dir = os.path.dirname(os.path.abspath(__file__))
+    file_full_path = os.path.join(static_dir, file_path)
+
+    # Security: prevent directory traversal
+    if not os.path.abspath(file_full_path).startswith(os.path.abspath(static_dir)):
+        raise HTTPException(status_code=403, detail="Access denied")
+
+    if os.path.exists(file_full_path) and os.path.isfile(file_full_path):
+        return FileResponse(file_full_path)
+    raise HTTPException(status_code=404, detail="File not found")
 
 # Database configuration (IMPROVEMENT 7: Env-driven with sane defaults)
 # Uses CHATBOT_DB_* variables from .env for bpd_ai_storyboard database
