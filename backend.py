@@ -109,26 +109,15 @@ if GEMINI_API_KEY:
     ANSWER_GENERATOR_MODEL = "gemini-2.5-flash"
     FAST_MODEL = "gemini-2.5-flash"
 else:
-    logger.warning("GEMINI_API_KEY not found in environment variables. Using Ollama fallback.")
-    # Ollama configuration (fallback)
-    OLLAMA_BASE_URL = "http://localhost:11434/api"
-    ANSWER_GENERATOR_MODEL = "llama3:latest"
-    FAST_MODEL = "llama3:latest"
+    logger.warning("GEMINI_API_KEY not found in environment variables.")
+    ANSWER_GENERATOR_MODEL = "gemini-2.5-flash"
+    FAST_MODEL = "gemini-2.5-flash"
 
-# Ollama configuration (for fallback if Gemini is unavailable)
-OLLAMA_BASE_URL = "http://localhost:11434/api"
-SQL_GENERATOR_MODEL = "gpt-4o"  # Using GPT-4o instead of qwen2.5-coder
+# SQL Generator configuration
+SQL_GENERATOR_MODEL = "gpt-4o"  # Using GPT-4o for SQL generation
 
 # Evaluation logging configuration (REFINEMENT 6)
 EVAL_LOG_PATH = os.path.join(os.path.dirname(__file__), "evaluation_logs.jsonl")
-
-# Create persistent Ollama session with aggressive connection pooling
-ollama_session = requests.Session()
-retry_strategy = Retry(total=1, backoff_factor=0.3, status_forcelist=[500, 502, 503, 504])
-adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=100, pool_maxsize=100)
-ollama_session.mount("http://", adapter)
-ollama_session.mount("https://", adapter)
-ollama_session.headers.update({"Connection": "keep-alive", "User-Agent": "FastAPI-Chatbot/1.0"})
 
 # MySQL Connection Pool - reuse connections instead of creating new ones
 try:
@@ -560,10 +549,11 @@ Extract the following intent components and output ONLY valid JSON (no markdown,
 Rules:
 1. Use ONLY exact table and column names from the schema above
 2. metrics: columns to select or aggregate
-3. filters: WHERE clause conditions - FOLLOW GEOGRAPHIC RULES BELOW
-4. group_by: columns to group by (if aggregation is needed)
-5. order_by: sorting specification (use "ASC" or "DESC")
-6. **DO NOT include "limit" field. Always fetch ALL relevant data.** Only the final SQL generator should add LIMIT if the user explicitly asks for "top N".
+3. **⚠️ NEVER include `sector_name` in metrics, filters, or group_by** — this column is not useful and must be excluded
+4. filters: WHERE clause conditions - FOLLOW GEOGRAPHIC RULES BELOW
+5. group_by: columns to group by (if aggregation is needed)
+6. order_by: sorting specification (use "ASC" or "DESC")
+7. **DO NOT include "limit" field. Always fetch ALL relevant data.** Only the final SQL generator should add LIMIT if the user explicitly asks for "top N".
 
 ⚠️ CRITICAL GEOGRAPHIC RULES - READ CAREFULLY:
 - "Bihar" refers to the ENTIRE STATE, NOT a specific division
@@ -1356,9 +1346,9 @@ The chatbot database contains the following key tables and their real-world mean
 
 1. **ALWAYS use exact table and column names** from the schema above.
 2. **NEVER invent or guess columns** — only use those listed.
-3. Always include appropriate **WHERE filters** based on user question (district_name, year, division_name, etc.).
-
-4. **⚠️ CRITICAL: Bihar is the ENTIRE STATE, NOT a division**
+3. **⚠️ CRITICAL: NEVER select or include `sector_name` column in any query** — this column must be excluded from SELECT, WHERE, GROUP BY, and ORDER BY clauses at all times. Sector information is not useful for analysis.
+4. Always include appropriate **WHERE filters** based on user question (district_name, year, division_name, etc.).
+5. **⚠️ CRITICAL: Bihar is the ENTIRE STATE, NOT a division**
    - NEVER generate: WHERE division_name = 'Bihar' (returns ZERO rows — 'Bihar' is not in the division_name column)
    - For state-level questions about "Bihar as a whole":
      * Either omit geographic filters and aggregate across all rows, OR
@@ -1366,7 +1356,7 @@ The chatbot database contains the following key tables and their real-world mean
    - For specific division questions: use actual division names ONLY
    - Example: Question "Total jalkars in Bihar?" → Do NOT use division filter; aggregate all rows
 
-5. **Year Filter Handling**
+6. **Year Filter Handling**
    - If the user does not explicitly mention a year, you may omit the year filter.
    - The backend will automatically apply appropriate default year constraints via YEAR_RULES.
    - Only add a year filter when the user clearly specifies a year or year range in their question.
@@ -1401,16 +1391,16 @@ Valid division_name: Bhagalpur, Darbhanga, Koshi, Magadh, Munger, Patna, Purnia,
 Valid district_name: Araria, Arwal, Aurangabad, Banka, Begusarai, Bhagalpur, Bhojpur, Buxar, Darbhanga, East Champaran, Gaya, Gopalganj, Jamui, Jehanabad, Kaimur, Katihar, Khagaria, Kishanganj, Lakhisarai, Madhepura, Madhubani, Munger, Muzaffarpur, Nalanda, Nawada, Patna, Purnia, Rohtas, Saharsa, Samastipur, Saran, Sheikhpura, Sheohar, Sitamarhi, Siwan, Supaul, Vaishali, West Champaran
 Valid division_name: Bhagalpur, Darbhanga, Koshi, Magadh, Munger, Patna, Purnia, Saran, Tirhut
 
-6. Use **district_name** as the grouping level when user asks for totals or comparisons.
-7. Use `SUM()` for aggregations like "total," "count," or "overall."
-8. When comparing regions, use `ORDER BY` to sort results. Do NOT add `LIMIT` unless user explicitly asks for "top N".
-9. When user says "top" or "highest", sort `DESC`; when "lowest", sort `ASC`.
-10. **IMPORTANT: Do NOT use `LIMIT` by default. Fetch ALL relevant data. Only add `LIMIT` if user explicitly asks for "top N", "first few", or similar.**
-11. For area or land size queries, use `total_rakba_in_hectares`.
-12. For "settlement status" queries, filter by `settlement_status` values like:
+7. Use **district_name** as the grouping level when user asks for totals or comparisons.
+8. Use `SUM()` for aggregations like "total," "count," or "overall."
+9. When comparing regions, use `ORDER BY` to sort results. Do NOT add `LIMIT` unless user explicitly asks for "top N".
+10. When user says "top" or "highest", sort `DESC`; when "lowest", sort `ASC`.
+11. **IMPORTANT: Do NOT use `LIMIT` by default. Fetch ALL relevant data. Only add `LIMIT` if user explicitly asks for "top N", "first few", or similar.**
+12. For area or land size queries, use `total_rakba_in_hectares`.
+13. For "settlement status" queries, filter by `settlement_status` values like:
     - 'Settled With Co-Operative', 'Unsettled', 'Free Fishing', 'Restricted By Court Unsettled', 'Settlement in Progress (Unsettled)'
-13. For revenue-related queries, use `total_revenue_jalkar_report`.
-14. For fish seed production, use `analysis_all_hatchery_district_wise` or `total_revenue_jalkar_report` depending on metric requested.
+14. For revenue-related queries, use `total_revenue_jalkar_report`.
+15. For fish seed production, use `analysis_all_hatchery_district_wise` or `total_revenue_jalkar_report` depending on metric requested.
 
 ### ⚠️ CRITICAL: NO LIMIT CLAUSES (UNLESS EXPLICITLY ASKED)
 
@@ -2647,17 +2637,126 @@ def detect_question_keywords(question: str) -> dict:
     return detected_keywords
 
 # ============================================================================
+# FALLBACK: Ollama Functions for SQL Generation and Answer Generation
+# ============================================================================
+
+def call_gemini_sql_generator(prompt: str, temperature: float = 0.3) -> str:
+    """
+    Fallback to Gemini API (gemini-2.5-flash) for SQL query generation.
+    Used when OpenAI API key is missing or API fails.
+    """
+    if not GEMINI_API_KEY:
+        logger.error("GEMINI_API_KEY not configured. Cannot use Gemini fallback for SQL.")
+        raise Exception("GEMINI_API_KEY not configured")
+
+    logger.debug(f"Calling Gemini SQL Generator (gemini-2.5-flash) with temperature: {temperature}")
+    try:
+        genai_model = genai.GenerativeModel("gemini-2.5-flash")
+        response = genai_model.generate_content(
+            prompt,
+            generation_config=genai.types.GenerationConfig(
+                temperature=temperature,
+                max_output_tokens=1024,
+                top_p=0.95,
+                top_k=40
+            )
+        )
+
+        try:
+            result = response.text.strip() if hasattr(response, 'text') and response.text else ""
+        except Exception as e:
+            logger.warning(f"Could not extract text from Gemini response: {str(e)}")
+            result = ""
+
+        if not result:
+            logger.warning(f"Gemini SQL Generator returned empty response")
+            raise Exception("Gemini SQL Generator returned empty response")
+
+        logger.debug(f"Gemini SQL Generator response received, length: {len(result)}")
+        return result
+
+    except Exception as e:
+        logger.error(f"Gemini SQL Generator error: {str(e)}")
+        raise Exception(f"Gemini SQL Generator error: {str(e)}")
+
+def call_openai_answer_generator(prompt: str, temperature: float = 0.5, stream: bool = False):
+    """
+    Fallback to OpenAI API (GPT-4o) for final bot response.
+    Used when Gemini API fails.
+    Returns full text or yields streaming tokens.
+    """
+    if not OPENAI_API_KEY or OPENAI_API_KEY == "your_gpt_4o_api_key_here":
+        logger.warning("OPENAI_API_KEY not configured. Cannot use OpenAI fallback.")
+        raise Exception("OPENAI_API_KEY not configured")
+
+    logger.debug(f"Calling OpenAI Answer Generator (GPT-4o) with temperature: {temperature}, stream: {stream}")
+    try:
+        headers = {
+            "Authorization": f"Bearer {OPENAI_API_KEY}",
+            "Content-Type": "application/json"
+        }
+
+        payload = {
+            "model": "gpt-4o",
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": temperature,
+            "max_tokens": 512,
+            "top_p": 0.85,
+            "stream": stream
+        }
+
+        timeout = get_api_timeout("gpt4o")
+        response = requests.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers=headers,
+            json=payload,
+            timeout=timeout,
+            stream=stream
+        )
+        response.raise_for_status()
+
+        if not stream:
+            result = response.json().get("choices", [{}])[0].get("message", {}).get("content", "").strip()
+            logger.debug(f"OpenAI Answer Generator response received, length: {len(result)}")
+            return result
+        else:
+            # Streaming: yield tokens as they arrive
+            def token_generator():
+                for line in response.iter_lines():
+                    if line:
+                        try:
+                            if line.startswith(b'data: '):
+                                data_str = line[6:].decode('utf-8')
+                                if data_str == '[DONE]':
+                                    break
+                                data = json.loads(data_str)
+                                token = data.get("choices", [{}])[0].get("delta", {}).get("content", "")
+                                if token:
+                                    yield token
+                        except (json.JSONDecodeError, UnicodeDecodeError):
+                            continue
+            return token_generator()
+
+    except Exception as e:
+        logger.error(f"OpenAI Answer Generator error: {str(e)}")
+        raise Exception(f"OpenAI Answer Generator error: {str(e)}")
+
+
+# ============================================================================
 # GPT-4o API Call Function for SQL Query Generation
 # ============================================================================
 
 def call_gpt4o(prompt: str, temperature: float = 0.3) -> str:
     """
-    Call OpenAI GPT-4o API for SQL query generation.
+    Call OpenAI GPT-4o API for SQL query generation with Gemini fallback.
     Returns the model's response text.
+    Falls back to Gemini API if GPT-4o fails.
     """
     if not OPENAI_API_KEY or OPENAI_API_KEY == "your_gpt_4o_api_key_here":
-        logger.error("OPENAI_API_KEY not configured in .env file")
-        raise Exception("OPENAI_API_KEY not configured. Please add your API key to .env file.")
+        logger.warning("OPENAI_API_KEY not configured. Falling back to Gemini API")
+        return call_gemini_sql_generator(prompt, temperature)
 
     logger.debug(f"Calling GPT-4o API with temperature: {temperature}")
     try:
@@ -2690,8 +2789,8 @@ def call_gpt4o(prompt: str, temperature: float = 0.3) -> str:
         return result
 
     except Exception as e:
-        logger.error(f"GPT-4o API error: {str(e)}")
-        raise Exception(f"GPT-4o API error: {str(e)}")
+        logger.error(f"GPT-4o API error: {str(e)}. Falling back to Gemini API")
+        return call_gemini_sql_generator(prompt, temperature)
 
 # ============================================================================
 # REFINEMENT 8: Future-proofing - Timeout guards and async support placeholders
@@ -2700,7 +2799,7 @@ def call_gpt4o(prompt: str, temperature: float = 0.3) -> str:
 # Timeout configuration for API calls (in seconds)
 API_TIMEOUT_CONFIG = {
     "gpt4o": 45,
-    "ollama": 45,
+    "gemini": 45,
     "database": 30
 }
 
@@ -2716,52 +2815,6 @@ def get_api_timeout(api_type: str) -> int:
     """
     return API_TIMEOUT_CONFIG.get(api_type, 45)
 
-def call_ollama(model: str, prompt: str, temperature: float = 0.3, stream: bool = False):
-    """Call Ollama API with optimized parameters - returns full text or yields streaming tokens"""
-    logger.debug(f"Calling Ollama API with model: {model}, temperature: {temperature}, stream: {stream}")
-    try:
-        payload = {
-            "model": model,
-            "prompt": prompt,
-            "stream": stream,
-            "temperature": temperature,
-            "num_predict": 512,
-            "top_p": 0.85,
-            "repeat_penalty": 1.1,
-            "top_k": 40
-        }
-
-        timeout = get_api_timeout("ollama")  # IMPROVEMENT 5: Use centralized timeout
-        response = ollama_session.post(
-            f"{OLLAMA_BASE_URL}/generate",
-            json=payload,
-            timeout=timeout,
-            stream=stream
-        )
-        response.raise_for_status()
-
-        if not stream:
-            # Non-streaming: return full response
-            result = response.json().get("response", "").strip()
-            logger.debug(f"Ollama API response received, length: {len(result)}")
-            return result
-        else:
-            # Streaming: yield tokens as they arrive
-            def token_generator():
-                for line in response.iter_lines():
-                    if line:
-                        try:
-                            data = json.loads(line)
-                            token = data.get("response", "")
-                            if token:
-                                yield token
-                        except json.JSONDecodeError:
-                            continue
-            return token_generator()
-
-    except Exception as e:
-        logger.error(f"Ollama API error: {str(e)}")
-        raise Exception(f"Ollama API error: {str(e)}")
 
 def call_gemini(model: str, prompt: str, temperature: float = 0.3, stream: bool = False):
     """Call Google Gemini API - returns full text or yields streaming tokens"""
@@ -2780,25 +2833,51 @@ def call_gemini(model: str, prompt: str, temperature: float = 0.3, stream: bool 
                     top_k=40
                 )
             )
-            result = response.text.strip() if response.text else ""
+            try:
+                result = response.text.strip() if hasattr(response, 'text') and response.text else ""
+            except Exception as e:
+                logger.warning(f"Could not extract text from Gemini response: {str(e)}")
+                result = ""
+
+            # If response is empty, raise exception to trigger fallback
+            if not result:
+                logger.warning(f"Gemini returned empty response (finish_reason may be blocking)")
+                raise Exception("Gemini returned empty response")
+
             logger.debug(f"Gemini API response received, length: {len(result)}")
             return result
         else:
             # Streaming: yield tokens as they arrive
             def token_generator():
-                response = genai_model.generate_content(
-                    prompt,
-                    generation_config=genai.types.GenerationConfig(
-                        temperature=temperature,
-                        max_output_tokens=512,
-                        top_p=0.85,
-                        top_k=40
-                    ),
-                    stream=True
-                )
-                for chunk in response:
-                    if chunk.text:
-                        yield chunk.text
+                has_yielded = False
+                try:
+                    response = genai_model.generate_content(
+                        prompt,
+                        generation_config=genai.types.GenerationConfig(
+                            temperature=temperature,
+                            max_output_tokens=512,
+                            top_p=0.85,
+                            top_k=40
+                        ),
+                        stream=True
+                    )
+                    for chunk in response:
+                        try:
+                            if hasattr(chunk, 'text') and chunk.text:
+                                has_yielded = True
+                                yield chunk.text
+                        except Exception as chunk_error:
+                            logger.debug(f"Skipping chunk with error: {str(chunk_error)}")
+                            continue
+
+                    # If no chunks were yielded, raise exception to trigger fallback
+                    if not has_yielded:
+                        logger.warning("Gemini streaming returned no text chunks")
+                        raise Exception("Gemini streaming returned no content")
+
+                except Exception as stream_error:
+                    logger.error(f"Streaming error in Gemini: {str(stream_error)}")
+                    raise Exception(f"Gemini streaming error: {str(stream_error)}")
             return token_generator()
 
     except Exception as e:
@@ -2925,20 +3004,15 @@ def generate_sql_query_direct(question: str, language: str = "english") -> tuple
 
 def safe_generate_sql_with_fallback(prompt: str, temperature: float = 0.0) -> str:
     """
-    Generate SQL with GPT-4o, fallback to Ollama if GPT-4o fails.
+    Generate SQL with GPT-4o, fallback to Gemini if GPT-4o fails.
     IMPROVEMENT 9: Ensures SQL generation never fully fails.
     """
     try:
         logger.info("Attempting SQL generation with GPT-4o")
         return call_gpt4o(prompt, temperature=temperature)
     except Exception as e:
-        logger.error(f"GPT-4o failed ({str(e)}), falling back to Ollama Qwen2.5-coder")
-        try:
-            # Fallback to local Qwen model
-            return call_ollama("qwen2.5-coder:7b", prompt, temperature=temperature)
-        except Exception as e2:
-            logger.error(f"Ollama fallback also failed: {str(e2)}")
-            raise Exception(f"SQL generation failed in both GPT-4o and Ollama: {str(e)}")
+        logger.error(f"GPT-4o failed ({str(e)}), fallback to Gemini is already in call_gpt4o")
+        raise Exception(f"SQL generation failed: {str(e)}")
 
 def generate_sql_fallback(question: str, candidate_tables: List[str]) -> tuple:
     """
@@ -3604,11 +3678,27 @@ User question: {question}
 Response (2-3 lines only):"""
 
     try:
-        # Use Gemini if available, fall back to Ollama
+        # Use Gemini if available, otherwise use OpenAI
+        thinking_text = ""
         if GEMINI_API_KEY:
-            thinking_text = call_gemini(FAST_MODEL, prompt, temperature=0.8)
+            try:
+                thinking_text = call_gemini(FAST_MODEL, prompt, temperature=0.8)
+            except Exception as gemini_error:
+                logger.warning(f"Gemini API failed for thinking message: {str(gemini_error)}. Trying OpenAI...")
+                if OPENAI_API_KEY and OPENAI_API_KEY != "your_gpt_4o_api_key_here":
+                    try:
+                        thinking_text = call_openai_answer_generator(prompt, temperature=0.8)
+                    except Exception as openai_error:
+                        logger.warning(f"OpenAI also failed for thinking message: {str(openai_error)}")
         else:
-            thinking_text = call_ollama(FAST_MODEL, prompt, temperature=0.8)
+            if OPENAI_API_KEY and OPENAI_API_KEY != "your_gpt_4o_api_key_here":
+                try:
+                    thinking_text = call_openai_answer_generator(prompt, temperature=0.8)
+                except Exception as openai_error:
+                    logger.warning(f"OpenAI failed for thinking message: {str(openai_error)}")
+
+        if not thinking_text:
+            thinking_text = "Let me analyze the data and pull together the insights you're looking for..."
 
         thinking_text = thinking_text.strip()
         if len(thinking_text) > 200:
@@ -3674,34 +3764,82 @@ async def chat(request: ChatRequest):
                     # Build answer prompt
                     answer_prompt = build_answer_prompt(question, insights, data_summary, language)
 
-                    # Get streaming token generator (Gemini or Ollama)
+                    # Get streaming token generator with fallback chain: Gemini → OpenAI → Ollama
+                    token_stream = None
+                    current_provider = None
+
+                    # Try Gemini first
                     if GEMINI_API_KEY:
-                        token_stream = await asyncio.to_thread(
-                            lambda: call_gemini(
-                                ANSWER_GENERATOR_MODEL,
-                                answer_prompt,
-                                temperature=0.5,
-                                stream=True
+                        try:
+                            logger.info("Trying Gemini API for answer generation")
+                            token_stream = await asyncio.to_thread(
+                                lambda: call_gemini(
+                                    ANSWER_GENERATOR_MODEL,
+                                    answer_prompt,
+                                    temperature=0.5,
+                                    stream=True
+                                )
                             )
-                        )
-                    else:
-                        token_stream = await asyncio.to_thread(
-                            lambda: call_ollama(
-                                ANSWER_GENERATOR_MODEL,
-                                answer_prompt,
-                                temperature=0.5,
-                                stream=True
+                            current_provider = "Gemini"
+                        except Exception as gemini_error:
+                            logger.warning(f"Gemini API failed: {str(gemini_error)}. Trying OpenAI fallback...")
+                            token_stream = None
+
+                    # Try OpenAI if Gemini failed
+                    if not token_stream and OPENAI_API_KEY and OPENAI_API_KEY != "your_gpt_4o_api_key_here":
+                        try:
+                            logger.info("Trying OpenAI API for answer generation")
+                            token_stream = await asyncio.to_thread(
+                                lambda: call_openai_answer_generator(
+                                    answer_prompt,
+                                    temperature=0.5,
+                                    stream=True
+                                )
                             )
-                        )
+                            current_provider = "OpenAI"
+                        except Exception as openai_error:
+                            logger.warning(f"OpenAI API failed: {str(openai_error)}")
+                            token_stream = None
 
                     full_answer = ""
-                    for token in token_stream:
-                        if token:
-                            full_answer += token
-                            yield yield_json_line("partial_answer", text=token)
+                    try:
+                        if token_stream:
+                            for token in token_stream:
+                                if token:
+                                    full_answer += token
+                                    yield yield_json_line("partial_answer", text=token)
+                    except Exception as stream_error:
+                        logger.warning(f"Token streaming from {current_provider} failed: {str(stream_error)}")
+                        # Try next fallback provider
+                        if current_provider == "Gemini":
+                            logger.info("Gemini streaming failed, trying OpenAI")
+                            if OPENAI_API_KEY and OPENAI_API_KEY != "your_gpt_4o_api_key_here":
+                                try:
+                                    full_answer = ""
+                                    token_stream = await asyncio.to_thread(
+                                        lambda: call_openai_answer_generator(
+                                            answer_prompt,
+                                            temperature=0.5,
+                                            stream=True
+                                        )
+                                    )
+                                    for token in token_stream:
+                                        if token:
+                                            full_answer += token
+                                            yield yield_json_line("partial_answer", text=token)
+                                    current_provider = "OpenAI"
+                                except Exception as e:
+                                    logger.warning(f"OpenAI fallback also failed: {str(e)}")
+                                    full_answer = ""
+                            else:
+                                logger.error("All answer generation providers failed")
 
                     # Validate answer against data
-                    full_answer = await asyncio.to_thread(validate_answer_against_data, full_answer, query_results)
+                    if full_answer:
+                        full_answer = await asyncio.to_thread(validate_answer_against_data, full_answer, query_results)
+                    else:
+                        full_answer = f"Found {len(query_results)} records. Please review the data table below for details."
+                        yield yield_json_line("partial_answer", text=full_answer)
 
                     answer_time = time.time() - answer_start
                     logger.info(f"✓ Answer generation: {answer_time:.1f}s")
@@ -3837,17 +3975,23 @@ async def refresh_schema():
 
 # GPU warm-up function
 def warm_up_gpu():
-    """Warm up GPU by running dummy inference on both models"""
+    """Warm up API by running dummy inference on both models"""
     try:
-        logger.info("Warming up GPU with dummy inference...")
-        for model in [SQL_GENERATOR_MODEL, ANSWER_GENERATOR_MODEL]:
+        logger.info("Warming up API with dummy inference...")
+        if GEMINI_API_KEY:
             try:
-                call_ollama(model, "ping", temperature=0.1)
-                logger.info(f"✓ GPU warmed up for model: {model}")
+                call_gemini(ANSWER_GENERATOR_MODEL, "ping", temperature=0.1)
+                logger.info(f"✓ API warmed up for Gemini: {ANSWER_GENERATOR_MODEL}")
             except Exception as e:
-                logger.warning(f"GPU warm-up failed for {model}: {str(e)}")
+                logger.warning(f"API warm-up failed for Gemini: {str(e)}")
+        if OPENAI_API_KEY and OPENAI_API_KEY != "your_gpt_4o_api_key_here":
+            try:
+                call_openai_answer_generator("ping", temperature=0.1)
+                logger.info(f"✓ API warmed up for OpenAI: {GPT_MODEL}")
+            except Exception as e:
+                logger.warning(f"API warm-up failed for OpenAI: {str(e)}")
     except Exception as e:
-        logger.warning(f"GPU warm-up skipped: {str(e)}")
+        logger.warning(f"API warm-up skipped: {str(e)}")
 
 if __name__ == "__main__":
     import sys
