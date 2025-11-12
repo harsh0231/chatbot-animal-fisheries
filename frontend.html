@@ -1550,6 +1550,153 @@
                 padding: 16px;
             }
         }
+
+        /* Data Information Section Styles */
+        .data-info-section {
+            margin-top: 20px;
+            padding: 0;
+            position: relative;
+            z-index: 4;
+        }
+
+        .data-info-toggle {
+            width: 100%;
+            padding: 14px 18px;
+            background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+            border: 1.5px solid #d0d9f0;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e40af;
+            transition: all 0.3s ease;
+        }
+
+        .data-info-toggle:hover {
+            background: linear-gradient(135deg, #e0ecff 0%, #f8fbff 100%);
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+
+        .data-info-toggle.active {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            color: white;
+            border-color: #1e40af;
+        }
+
+        .data-info-arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 18px;
+        }
+
+        .data-info-toggle.active .data-info-arrow {
+            transform: rotate(180deg);
+        }
+
+        .data-info-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+
+        .data-info-content.active {
+            max-height: 1200px;
+            opacity: 1;
+            padding: 16px 0;
+        }
+
+        .data-info-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .data-info-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f5f8ff 100%);
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .data-info-item:hover {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e8eeff 100%);
+            border-color: #3b82f6;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .data-info-item-title {
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .data-info-item-icon {
+            font-size: 16px;
+        }
+
+        .data-info-item-description {
+            font-size: 12px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+
+        .data-info-item-stats {
+            font-size: 11px;
+            color: #9ca3af;
+            background: rgba(59, 130, 246, 0.08);
+            padding: 6px 8px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .data-info-summary {
+            margin-top: 16px;
+            padding: 14px;
+            background: linear-gradient(135deg, #eff6ff 0%, #f0f4ff 100%);
+            border-left: 4px solid #3b82f6;
+            border-radius: 6px;
+            font-size: 13px;
+            color: #1e3a8a;
+            line-height: 1.6;
+        }
+
+        .data-info-summary strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 768px) {
+            .data-info-items {
+                grid-template-columns: 1fr;
+            }
+
+            .data-info-toggle {
+                padding: 12px 16px;
+                font-size: 13px;
+            }
+
+            .data-info-item {
+                padding: 12px;
+            }
+
+            .data-info-item-description {
+                font-size: 11px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1587,6 +1734,88 @@
                 <div class="hero-content">
                     <h2 class="hero-title">Welcome to मत्स्य साथी</h2>
                     <p class="hero-subtitle">Ask me any questions related to animal and fisheries data, and I will provide you with detailed reports and insights.</p>
+                </div>
+
+                <!-- Data Information Section -->
+                <div class="data-info-section">
+                    <button class="data-info-toggle" id="data-info-toggle">
+                        <span>📊 What data can I answer questions about?</span>
+                        <span class="data-info-arrow">▼</span>
+                    </button>
+                    <div class="data-info-content" id="data-info-content">
+                        <div class="data-info-items">
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">🐟</span>
+                                    <span>Jalkars (Water Bodies)</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    Comprehensive inventory of 31,036 water bodies with settlement status, security deposits, court cases, and special designations (PERTA, free fishing zones).
+                                </div>
+                                <span class="data-info-item-stats">31,036 records • All 38 districts</span>
+                            </div>
+
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">👥</span>
+                                    <span>FCS (Cooperative Societies)</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    Fisheries Cooperative Society aggregate statistics including total cooperatives, gender-wise membership distribution, and block-wise data across districts.
+                                </div>
+                                <span class="data-info-item-stats">38 districts • Member details</span>
+                            </div>
+
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">🆕</span>
+                                    <span>New FCS Records</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    Individual records of newly formed cooperative societies with names, locations, membership details, registration dates, and classification (Inland/Marine).
+                                </div>
+                                <span class="data-info-item-stats">497 records • Complete details</span>
+                            </div>
+
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">🏭</span>
+                                    <span>Hatchery Analysis</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    Hatchery infrastructure tracking functional/non-functional hatcheries, fish seed production (fingerling, fry, spawn) for exotic and Indian Major Carp.
+                                </div>
+                                <span class="data-info-item-stats">26 districts • Production capacity</span>
+                            </div>
+
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">📈</span>
+                                    <span>Revenue & Production</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    District-level fisheries production targets, revenue collection, fish exports/imports across states, and inter-state trade data.
+                                </div>
+                                <span class="data-info-item-stats">38 districts • Annual reports</span>
+                            </div>
+
+                            <div class="data-info-item">
+                                <div class="data-info-item-title">
+                                    <span class="data-info-item-icon">🌍</span>
+                                    <span>Geographic Coverage</span>
+                                </div>
+                                <div class="data-info-item-description">
+                                    Multi-panchayat water bodies, areas without jalkars, and administrative hierarchy mapping across all 9 divisions, 38 districts, and blocks.
+                                </div>
+                                <span class="data-info-item-stats">1,675+ records • Panchayat level</span>
+                            </div>
+                        </div>
+
+                        <div class="data-info-summary">
+                            <strong>💡 How to use this chatbot:</strong>
+                            Ask questions about jalkar counts by district, FCS membership, hatchery production, revenue collection, water body settlements, free fishing zones, court cases, or any specific data points available in these datasets. The chatbot can provide district-wise, division-wise, or block-wise breakdowns.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1642,6 +1871,17 @@
                 currentLanguage = btn.dataset.lang;
             });
         });
+
+        // Data Information Toggle
+        const dataInfoToggle = document.getElementById('data-info-toggle');
+        const dataInfoContent = document.getElementById('data-info-content');
+
+        if (dataInfoToggle) {
+            dataInfoToggle.addEventListener('click', () => {
+                dataInfoToggle.classList.toggle('active');
+                dataInfoContent.classList.toggle('active');
+            });
+        }
 
         // Send message
         sendBtn.addEventListener('click', sendMessage);
@@ -2290,6 +2530,88 @@
             animateFinalResponse(contentDiv, text);
 
             return messageDiv;
+        }
+
+        function addTTSButton(messageDiv, text) {
+            const ttsButton = document.createElement('button');
+            ttsButton.className = 'tts-button';
+            ttsButton.innerHTML = '🔊 Read Aloud';
+            ttsButton.onclick = () => speakText(text, ttsButton);
+            messageDiv.appendChild(ttsButton);
+        }
+
+        function speakText(text, button) {
+            // Check if currently playing - if so, stop
+            if (window.audioPlayer && window.currentSpeaking) {
+                window.audioPlayer.pause();
+                window.audioPlayer.currentTime = 0;
+                window.currentSpeaking = false;
+                button.classList.remove('speaking');
+                button.innerHTML = '🔊 Read Aloud';
+                return;
+            }
+
+            // Mark as currently speaking
+            window.currentSpeaking = true;
+            button.classList.add('speaking');
+            button.innerHTML = '⏸️ Stop';
+
+            // Call Google TTS API
+            callGoogleTTS(text, button);
+        }
+
+        async function callGoogleTTS(text, button) {
+            try {
+                const response = await fetch('/tts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ text: text })
+                });
+
+                if (!response.ok) {
+                    throw new Error('TTS request failed');
+                }
+
+                // Get audio blob
+                const audioBlob = await response.blob();
+                const audioUrl = URL.createObjectURL(audioBlob);
+
+                // Create and play audio
+                if (!window.audioPlayer) {
+                    window.audioPlayer = new Audio();
+                }
+
+                window.audioPlayer.src = audioUrl;
+
+                window.audioPlayer.onplay = () => {
+                    button.classList.add('speaking');
+                    button.innerHTML = '⏸️ Stop';
+                };
+
+                window.audioPlayer.onended = () => {
+                    button.classList.remove('speaking');
+                    button.innerHTML = '🔊 Read Aloud';
+                    window.currentSpeaking = false;
+                };
+
+                window.audioPlayer.onerror = () => {
+                    button.classList.remove('speaking');
+                    button.innerHTML = '🔊 Read Aloud';
+                    window.currentSpeaking = false;
+                    console.error('Audio playback error');
+                };
+
+                window.audioPlayer.play();
+
+            } catch (error) {
+                console.error('TTS error:', error);
+                button.classList.remove('speaking');
+                button.innerHTML = '🔊 Read Aloud';
+                window.currentSpeaking = false;
+                alert('Failed to generate speech. Please try again.');
+            }
         }
 
         function animateFinalResponse(contentDiv, text) {
